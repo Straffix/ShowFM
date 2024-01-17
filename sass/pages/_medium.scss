@@ -1,0 +1,42 @@
+@media (min-width: 768px) {
+	.burger-icon {
+		display: none;
+	}
+
+	.logo-bg {
+		width: 20%;
+	}
+
+	.logo {
+		&--scaled {
+			transform: scale(0.5) translateX(0px) translateY(-60px);
+			background-image: url('../img/logo_small.png');
+
+			&:hover {
+				background-image: url('../img/logo2_mini.png');
+			}
+		}
+	}
+
+	.nav-desktop {
+		display: block;
+	}
+
+	.nav {
+		top: 35px;
+		height: 50px;
+		width: 100%;
+		transform: scale(0.9);
+
+		&__item {
+			margin: 10px;
+			font-size: 17px;
+		}
+
+		&--scaled {
+			transform: scale(1) translateX(0) translateY(-20px);
+		}
+	}
+}
+
+// ========================= MEDIA landscape || 768

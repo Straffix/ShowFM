@@ -1,0 +1,168 @@
+@media (min-width: 900px) {
+	.nav {
+		&__item {
+			margin: 17px;
+			font-size: 18px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.home {
+		&__bg {
+			background-image: url('../img/dj-6472628_1920.jpg');
+		}
+	}
+
+	.logo-bg {
+		width: 20%;
+	}
+
+	.logo {
+		top: 0;
+		left: 30px;
+		width: 200px;
+		height: 200px;
+		background-size: cover;
+
+		&--scaled {
+			transform: scale(0.7) translateX(-10px) translateY(-50px);
+			background-image: url('../img/logo_mid.png');
+
+			&:hover {
+				background-image: url('../img/logo2_mini.png');
+			}
+		}
+	}
+
+	.burger-icon {
+		display: none;
+	}
+
+	.nav {
+		top: 60px;
+		width: 100%;
+		// transform: scale(1);
+
+		&__item {
+			margin: 20px;
+			font-size: 20px;
+		}
+
+		&--scaled {
+			transform: scale(0.9) translateX(-10px) translateY(-50px);
+		}
+	}
+}
+
+// ============================= M1200
+
+@media (min-width: 1200px) {
+	.logo-bg {
+		width: 30%;
+	}
+
+	.logo {
+		top: 0;
+		left: 30px;
+		width: 200px;
+		height: 200px;
+		background-size: cover;
+
+		&--scaled {
+			transform: scale(0.7) translateX(-10px) translateY(-50px);
+			background-image: url('../img/logo_mid.png');
+
+			&:hover {
+				background-image: url('../img/logo2_mini.png');
+			}
+		}
+	}
+
+	.burger-icon {
+		display: none;
+	}
+
+	.nav {
+		top: 60px;
+		width: 100%;
+		transform: scale(1);
+
+		&__item {
+			margin: 20px;
+			font-size: 22px;
+		}
+
+		&--scaled {
+			transform: scale(0.9) translateX(-10px) translateY(-50px);
+		}
+	}
+}
+
+// ============================= M1400
+
+@media (min-width: 1400px) {
+	.logo {
+		top: 20px;
+		left: 100px;
+		width: 200px;
+		height: 200px;
+		background-image: url('../img/logo.png');
+
+		&--scaled {
+			transform: scale(0.6) translateX(150px) translateY(-110px);
+			background-image: url('../img/logo_mid.png');
+
+			&:hover {
+				background-image: url('../img/logo2_mini.png');
+			}
+		}
+	}
+
+	.nav {
+		&__item {
+			margin: 30px;
+		}
+
+		&--scaled {
+			transform: scale(0.9) translateX(-120px) translateY(-50px);
+
+			.nav__item {
+				font-size: 18px;
+			}
+		}
+	}
+
+	.home {
+		&__text {
+			h1 {
+				font-size: 55px;
+			}
+
+			h2 {
+				font-size: 25px;
+			}
+
+			&_bg {
+				right: 18%;
+				bottom: 34%;
+				width: 400px;
+				height: 322px;
+			}
+		}
+	}
+
+	.girl {
+		left: 2%;
+		bottom: 0;
+		width: 500px;
+		height: 500px;
+
+		&__bg {
+			left: 5%;
+			bottom: 20px;
+			width: 400px;
+			height: 500px;
+		}
+	}
+}
