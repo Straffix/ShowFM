@@ -1,3 +1,41 @@
+@media (min-width: 700px) {
+	.home {
+		&__text {
+			top: 75%;
+			left: 45%;
+
+			h1 {
+				font-size: 38px;
+			}
+
+			h2 {
+				font-size: 20px;
+			}
+
+			&_bg {
+				left: 45%;
+				top: 450px;
+				width: 280px;
+				height: 230px;
+			}
+		}
+	}
+
+	.girl {
+		left: 10px;
+		bottom: 0;
+		width: 300px;
+		height: 300px;
+
+		&__bg {
+			left: 50px;
+			top: 400px;
+			width: 200px;
+			height: 300px;
+		}
+	}
+}
+
 @media (min-width: 768px) {
 	.burger-icon {
 		display: none;

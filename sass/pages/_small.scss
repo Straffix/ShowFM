@@ -1,6 +1,53 @@
+@media (min-width: 560px) {
+	.logo {
+		width: 120px;
+		height: 120px;
+	}
+
+	.home {
+		&__text {
+			top: 80%;
+			left: 40%;
+
+			h1 {
+				font-size: 29px;
+			}
+
+			h2 {
+				font-size: 14px;
+			}
+
+			&_bg {
+				display: block;
+				left: 40%;
+				top: 510px;
+				width: 200px;
+				height: 160px;
+			}
+		}
+	}
+
+	.girl {
+		left: -10px;
+		bottom: 0;
+		width: 220px;
+		height: 220px;
+
+		&__bg {
+			left: 10px;
+			top: 480px;
+			width: 180px;
+			height: 220px;
+		}
+	}
+}
+
 @media (min-width: 560px) and (orientation: landscape) {
 	.logo {
 		width: 120px;
 		height: 120px;
 	}
 }
+
+// @media (min-width: 576px) {
+// }

@@ -12,6 +12,26 @@
 		&__bg {
 			background-image: url('../img/dj-6472628_1920.jpg');
 		}
+
+		&__text {
+			top: 67%;
+			left: 48%;
+
+			h1 {
+				font-size: 50px;
+			}
+
+			h2 {
+				font-size: 25px;
+			}
+
+			&_bg {
+				left: 49%;
+				top: 350px;
+				width: 370px;
+				height: 300px;
+			}
+		}
 	}
 
 	.logo-bg {
@@ -51,6 +71,20 @@
 
 		&--scaled {
 			transform: scale(0.9) translateX(-10px) translateY(-50px);
+		}
+	}
+
+	.girl {
+		left: 10px;
+		bottom: 0;
+		width: 350px;
+		height: 350px;
+
+		&__bg {
+			left: 35px;
+			top: 350px;
+			width: 300px;
+			height: 400px;
 		}
 	}
 }
@@ -96,6 +130,10 @@
 		&--scaled {
 			transform: scale(0.9) translateX(-10px) translateY(-50px);
 		}
+	}
+
+	.players {
+		justify-content: end;
 	}
 }
 
@@ -151,18 +189,22 @@
 			}
 		}
 	}
+}
 
+@media (min-width: 1610px) {
 	.girl {
-		left: 2%;
-		bottom: 0;
-		width: 500px;
-		height: 500px;
+		display: none;
 
 		&__bg {
-			left: 5%;
-			bottom: 20px;
-			width: 400px;
-			height: 500px;
+			display: none;
+		}
+	}
+
+	.girl2 {
+		display: block;
+
+		&__bg {
+			display: block;
 		}
 	}
 }
