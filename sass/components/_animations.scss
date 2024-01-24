@@ -1,3 +1,5 @@
+@use './colors' as *;
+
 @keyframes wavezoom {
 	0%,
 	50%,
@@ -125,5 +127,26 @@
 	100% {
 		transform: scale(1);
 		opacity: 90%;
+	}
+}
+
+@keyframes pulsate {
+	100% {
+		text-shadow: 0 0 4px $c_purple, 0 0 11px $c_purple, 0 0 19px $c_purple, 0 0 40px #bc13fe, 0 0 80px #bc13fe,
+			0 0 90px #bc13fe, 0 0 100px #bc13fe, 0 0 150px #bc13fe;
+	}
+
+	0% {
+		text-shadow: 0 0 2px $c_purple, 0 0 4px $c_purple, 0 0 6px $c_purple, 0 0 10px #bc13fe, 0 0 45px #bc13fe,
+			0 0 55px #bc13fe, 0 0 70px #bc13fe, 0 0 80px #bc13fe;
+	}
+}
+
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(200%);
+	}
+	to {
+		transform: translateX(0);
 	}
 }

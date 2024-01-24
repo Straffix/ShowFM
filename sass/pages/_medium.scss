@@ -1,7 +1,8 @@
+// ============================= M700
 @media (min-width: 700px) {
 	.home {
 		&__text {
-			top: 75%;
+			top: 70%;
 			left: 45%;
 
 			h1 {
@@ -14,7 +15,7 @@
 
 			&_bg {
 				left: 45%;
-				top: 450px;
+				top: 52%;
 				width: 280px;
 				height: 230px;
 			}
@@ -29,12 +30,14 @@
 
 		&__bg {
 			left: 50px;
-			top: 400px;
+			bottom: 3%;
 			width: 200px;
 			height: 300px;
 		}
 	}
 }
+
+// ============================= M768
 
 @media (min-width: 768px) {
 	.burger-icon {
@@ -61,18 +64,22 @@
 	}
 
 	.nav {
-		top: 35px;
+		top: 40px;
 		height: 50px;
 		width: 100%;
 		transform: scale(0.9);
 
 		&__item {
-			margin: 10px;
-			font-size: 17px;
+			margin: 6px;
+			font-size: 18px;
+
+			&:nth-child(2) {
+				display: none;
+			}
 		}
 
 		&--scaled {
-			transform: scale(1) translateX(0) translateY(-20px);
+			transform: scale(1) translateX(0) translateY(-24px);
 		}
 	}
 }

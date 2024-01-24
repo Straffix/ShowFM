@@ -8,7 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Montserrat:wght@400;700&family=Radio+Canada:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/a16198b6e5.js" crossorigin="anonymous"></script>
 
@@ -16,6 +18,8 @@
 </head>
 
 <body>
+
+    <!-- // --------   ..:: HEADER ::..   -------- \\ -->
 
     <header class="header">
         <div class="smallNavBg"></div>
@@ -28,15 +32,18 @@
 
         </div>
 
+        <!-- // --------   ..:: NAVIGATION ::..   -------- \\ -->
+
 
         <!-- desktop -->
         <nav class="nav">
             <div class="nav-desktop">
                 <a class="nav__item" href="#home">home</a>
-                <a class="nav__item" href="#about-us">historia</a>
+                <a class="nav__item" href="#players">słuchaj!</a>
                 <a class="nav__item" href="#schedule">ramówka</a>
                 <a class="nav__item" href="#crew">ekipa</a>
-                <a class="nav__item" href="#showlist">ShowLista</a>
+                <a class="nav__item" href="#showlist">showlista</a>
+                <a class="nav__item" href="#about-us">historia</a>
                 <a class="nav__item" href="#contact">kontakt</a>
             </div>
         </nav>
@@ -47,15 +54,18 @@
         <div class="nav-mobile">
             <div class="nav-mobile__items">
                 <a class="nav__item" href="#">home</a>
-                <a class="nav__item" href="#about-us">historia</a>
+                <a class="nav__item" href="#players">słuchaj!</a>
                 <a class="nav__item" href="#schedule">ramówka</a>
                 <a class="nav__item" href="#crew">ekipa</a>
-                <a class="nav__item" href="#showlist">ShowLista</a>
+                <a class="nav__item" href="#showlist">showlista</a>
+                <a class="nav__item" href="#about-us">historia</a>
                 <a class="nav__item" href="#contact">kontakt</a>
             </div>
         </div>
 
     </header>
+
+    <!-- // --------   ..:: MAIN ::..   -------- \\ -->
 
     <main class="main">
 
@@ -71,91 +81,632 @@
                 <h1>Twój świat muzyki!</h1>
                 <h2>w jednym miejscu w sieci</h2>
             </div>
-            <div class="girl__bg"></div>
-            <div class="girl"></div>
+            <div class="girl-box">
+                <div class="girl__bg"></div>
+                <div class="girl"></div>
+            </div>
         </section>
 
-        <!-- players -->
+        <!-- // --------   ..:: PLAYERS ::..   -------- \\ -->
 
-        <section class="players">
-
+        <section class="player-box" id="players">
             <div class="girl2__bg"></div>
             <div class="girl2"></div>
 
-            <div class="players-bg">
-                <div class="player">
-                    <div class="player__title">
-                        <p>Kanał Główny</p>
-                    </div>
-
-                    <div class="player__stats">
-                        <script type="text/javascript"
-                            src="https://staty.portalradiowy.pl/wstats/wstats.php?var1=1&var2=14&var3=1&var4=1&var5=238&var6=FFFFFF&var7=1&var8=1&var9=14&var10=1&var11=24&var12=238&var13=FFFFFF&var14=1&var15=0&var16=14&var17=105&var18=1&var19=000000&var20=1&var27=1&var28=14&var29=1&var30=48&var31=222&var32=FFFFFF&var33=1&var34=0&var35=160&var36=1&var37=50&var38=50&var39=240&var40=80&var41=https%3A%2F%2Falisiecki.pl%2Fimages%2Fbackground.png&var42=eu1.fastcast4u.com&var43=1938"></script>
-                    </div>
-                    <div class="player__button__bg"></div>
-                    <div class="player__button" id="play-button"><i class="fas fa-circle-play"></i></div>
-
-                    <a class="greetings_panel" href="https://wp.pl" target="_blank">Pozdrów</a>
-                    <a class="schedule_panel" href="https://wp.pl" target="_blank">Ramówka</a>
+            <!-- trance channel -->
+            <div class="player">
+                <div class="player__title">
+                    <p>Kanał Główny</p>
                 </div>
+
+                <div class="player__stats">
+                    <script type="text/javascript"
+                        src="https://staty.portalradiowy.pl/wstats/wstats.php?var1=1&var2=15&var3=1&var4=4&var5=298&var6=FFFFFF&var7=1&var8=1&var9=15&var10=1&var11=28&var12=298&var13=FFFFFF&var14=1&var15=0&var16=14&var17=105&var18=1&var19=000000&var20=1&var27=1&var28=15&var29=1&var30=52&var31=298&var32=FFFFFF&var33=1&var34=0&var35=160&var36=1&var37=50&var38=50&var39=300&var40=80&var41=https%3A%2F%2Falisiecki.pl%2Fimages%2F300x80.png&var42=eu1.fastcast4u.com&var43=1938"></script>
+                </div>
+                <div class="player__button__bg">
+                    <div class="player__button" id="play-button"><i class="fa-solid fa-play"></i></div>
+                </div>
+
+                <a class="greetings_panel" href="https://wp.pl" target="_blank">Pozdrów</a>
+                <a class="schedule_panel" href="https://wp.pl" target="_blank">Ramówka</a>
             </div>
 
-            <!-- kanał chill -->
-            <div class="players-bg">
-                <div class="player-chill">
+            <!-- chill channel -->
+            <div class="player-chill">
 
-                    <div class="player-chill__title">
-                        <p>Kanał Chill</p>
-                    </div>
-
-                    <div class="player-chill__stats">
-                        <script type="text/javascript"
-                            src="https://staty.portalradiowy.pl/wstats/wstats.php?var1=1&var2=14&var3=1&var4=1&var5=238&var6=FFFFFF&var7=1&var8=1&var9=14&var10=1&var11=24&var12=238&var13=FFFFFF&var14=1&var15=0&var16=14&var17=105&var18=1&var19=000000&var20=1&var27=1&var28=14&var29=1&var30=48&var31=223&var32=FFFFFF&var33=1&var34=0&var35=160&var36=1&var37=50&var38=50&var39=240&var40=80&var41=https%3A%2F%2Falisiecki.pl%2Fimages%2Fbackground.png&var42=eu1.fastcast4u.com&var43=1942"></script>
-                    </div>
-
-
-                    <div class="player-chill__button__bg"></div>
-                    <div class="player-chill__button" id="play-button2"><i class="fas fa-circle-play"></i></div>
-
-                    <a class="greetings_panel" href="https://wp.pl" target="_blank">Pozdrów</a>
-                    <a class="schedule_panel" href="https://wp.pl" target="_blank">Ramówka</a>
+                <div class="player-chill__title">
+                    <p>Kanał Chill</p>
                 </div>
+
+                <div class="player-chill__stats">
+                    <script type="text/javascript"
+                        src="https://staty.portalradiowy.pl/wstats/wstats.php?var1=1&var2=15&var3=1&var4=3&var5=298&var6=ffffff&var7=1&var8=1&var9=15&var10=1&var11=28&var12=298&var13=ffffff&var14=1&var15=0&var16=14&var17=105&var18=1&var19=ffffff&var20=1&var27=1&var28=15&var29=1&var30=53&var31=298&var32=ffffff&var33=1&var34=0&var35=160&var36=1&var37=50&var38=50&var39=300&var40=80&var41=https%3A%2F%2Falisiecki.pl%2Fimages%2F300x80.png&var42=eu1.fastcast4u.com&var43=1942"></script>
+                </div>
+
+
+                <div class="player-chill__button__bg">
+                    <div class="player-chill__button" id="play-button2"><i class="fa-solid fa-play"></i></div>
+                </div>
+
+
+                <a class="greetings_panel" href="https://wp.pl" target="_blank">Pozdrów</a>
+                <a class="schedule_panel" href="https://wp.pl" target="_blank">Ramówka</a>
             </div>
 
-            <!-- kanał rock -->
-            <div class="players-bg">
-                <div class="player-rock">
+            <!-- rock channel -->
+            <div class="player-rock">
 
-                    <div class="player-rock__title">
-                        <p>Kanał Rock</p>
-                    </div>
-
-                    <div class="player-rock__stats">
-                        <script type="text/javascript"
-                            src="https://staty.portalradiowy.pl/wstats/wstats.php?var1=1&var2=14&var3=1&var4=1&var5=238&var6=FFFFFF&var7=1&var8=1&var9=14&var10=1&var11=24&var12=238&var13=FFFFFF&var14=1&var15=0&var16=14&var17=105&var18=1&var19=000000&var20=1&var27=1&var28=14&var29=1&var30=48&var31=223&var32=FFFFFF&var33=1&var34=0&var35=160&var36=1&var37=50&var38=50&var39=240&var40=80&var41=https%3A%2F%2Falisiecki.pl%2Fimages%2Fbackground.png&var42=eu1.fastcast4u.com&var43=1942"></script>
-                    </div>
-
-                    <div class="player-rock__button__bg"></div>
-                    <div class="player-rock__button" id="play-button2"><i class="fas fa-circle-play"></i></div>
-
-                    <a class="greetings_panel" href="https://wp.pl" target="_blank">Pozdrów</a>
-                    <a class="schedule_panel" href="https://wp.pl" target="_blank">Ramówka</a>
+                <div class="player-rock__title">
+                    <p>Kanał Rock</p>
                 </div>
+
+                <div class="player-rock__stats">
+                    <script type="text/javascript"
+                        src="https://staty.portalradiowy.pl/wstats/wstats.php?var1=1&var2=15&var3=1&var4=2&var5=298&var6=FFFFFF&var7=1&var8=1&var9=15&var10=1&var11=27&var12=298&var13=FFFFFF&var14=1&var15=0&var16=14&var17=105&var18=1&var19=000000&var20=1&var27=1&var28=15&var29=1&var30=54&var31=298&var32=FFFFFF&var33=1&var34=0&var35=160&var36=1&var37=50&var38=50&var39=300&var40=80&var41=https%3A%2F%2Falisiecki.pl%2Fimages%2F300x80.png&var42=eu1.fastcast4u.com&var43=2050"></script>
+                </div>
+
+                <div class="player-rock__button__bg">
+                    <div class="player-rock__button" id="play-button3"><i class="fa-solid fa-play"></i></div>
+                </div>
+
+
+                <a class="greetings_panel" href="https://wp.pl" target="_blank">Pozdrów</a>
+                <a class="schedule_panel" href="https://wp.pl" target="_blank">Ramówka</a>
             </div>
         </section>
 
-        <section class="about-us" id="about-us">historia</section>
-        <section class="schedule" id="schedule">ramówka</section>
-        <section class="crew" id="crew">ekipa</section>
-        <section class="showlist" id="showlist">playlista</section>
+        <!-- // --------   ..:: SCHEDULE ::..   -------- \\ -->
+        <section class="schedule" id="schedule">
+
+            <div class="schedule__title">
+                <p>Nasze audycje radiowe</p>
+            </div>
+
+
+            <div class="container-schedule">
+                <div class="content-schedule">
+                    <div class="gw">
+                        <div class="g one-whole tablet-two-thirds">
+                            <div class="event-tiles-container">
+
+                                <div class="event event-tile one-half ">
+                                    <div class="event-start">
+                                        <div class="event-start-date">13</div>
+                                        <div class="event-start-month"><small>wrz</small></div>
+                                    </div>
+
+                                    <div class="event-end">
+                                        <div class="event-end-date">-&nbsp;15</div>
+                                        <div class="event-end-month"><small>wrz</small></div>
+                                    </div>
+
+                                    <div class="event-title">20 Urodziny radia!</div>
+
+                                    <div class="event-time">
+                                        <small>
+                                            <i class="fa fa-clock-o"></i>&nbsp;&nbsp;
+                                            8:00 - 04:00
+                                        </small>
+                                    </div>
+
+
+                                    <div class="event-location">
+                                        <small>
+                                            <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                                            Kanał Trance
+                                        </small>
+                                    </div>
+
+                                </div>
+
+                                <div class="event event-tile one-half alternate-1">
+                                    <div class="event-start">
+                                        <div class="event-start-date">20</div>
+                                        <div class="event-start-month"><small>wrz</small></div>
+                                    </div>
+
+                                    <div class="event-title">Global Trance</div>
+
+                                    <div class="event-time">
+                                        <small>
+                                            <i class="fa fa-clock-o"></i>&nbsp;&nbsp;
+                                            20:00 - 00:00
+                                        </small>
+                                    </div>
+
+
+                                    <div class="event-location">
+                                        <small>
+                                            <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                                            Kanał Trance
+                                        </small>
+                                    </div>
+
+                                </div>
+
+                                <div class="event event-tile one-half alternate-2">
+                                    <div class="event-start">
+                                        <div class="event-start-date">27</div>
+                                        <div class="event-start-month"><small>sep</small></div>
+                                    </div>
+
+                                    <div class="event-title">Glass Animals</div>
+
+                                    <div class="event-time">
+                                        <small>
+                                            <i class="fa fa-clock-o"></i>&nbsp;&nbsp;
+                                            6:30 PM - 11:00 PM
+                                        </small>
+                                    </div>
+
+
+                                    <div class="event-location">
+                                        <small>
+                                            <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                                            St. Paul Theater
+                                        </small>
+                                    </div>
+
+                                </div>
+
+                                <div class="event event-tile one-half alternate-3">
+                                    <div class="event-start">
+                                        <div class="event-start-date">03</div>
+                                        <div class="event-start-month"><small>oct</small></div>
+                                    </div>
+
+                                    <div class="event-title">Surly's Brewery Tour</div>
+
+                                    <div class="event-time">
+                                        <small>
+                                            <i class="fa fa-clock-o"></i>&nbsp;&nbsp;
+                                            2:00 PM - 3:30 PM
+                                        </small>
+                                    </div>
+
+
+                                    <div class="event-location">
+                                        <small>
+                                            <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                                            Surly's Brewery
+                                        </small>
+                                    </div>
+
+                                </div>
+
+                                <div class="event event-tile one-half alternate-4">
+                                    <div class="event-start">
+                                        <div class="event-start-date">21</div>
+                                        <div class="event-start-month"><small>oct</small></div>
+                                    </div>
+
+                                    <div class="event-title">Homecoming Football Game</div>
+
+                                    <div class="event-time">
+                                        <small>
+                                            <i class="fa fa-clock-o"></i>&nbsp;&nbsp;
+                                            11:00 AM - 3:30 PM
+                                        </small>
+                                    </div>
+
+
+                                    <div class="event-location">
+                                        <small>
+                                            <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                                            TCF Bank Stadium
+                                        </small>
+                                    </div>
+
+                                </div>
+
+                                <div class="event event-tile one-half ">
+                                    <div class="event-start">
+                                        <div class="event-start-date">28</div>
+                                        <div class="event-start-month"><small>oct</small></div>
+                                    </div>
+
+                                    <div class="event-title">Spirited Away</div>
+
+                                    <div class="event-time">
+                                        <small>
+                                            <i class="fa fa-clock-o"></i>&nbsp;&nbsp;
+                                            7:00 PM - 9:30 PM
+                                        </small>
+                                    </div>
+
+
+                                    <div class="event-location">
+                                        <small>
+                                            <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                                            Theater Downtown
+                                        </small>
+                                    </div>
+
+                                </div>
+
+                                <div class="event event-tile one-half alternate-1">
+                                    <div class="event-start">
+                                        <div class="event-start-date">31</div>
+                                        <div class="event-start-month"><small>oct</small></div>
+                                    </div>
+
+                                    <div class="event-end">
+                                        <div class="event-end-date">-&nbsp;01</div>
+                                        <div class="event-end-month"><small>nov</small></div>
+                                    </div>
+
+                                    <div class="event-title">Halloween Bash</div>
+
+                                    <div class="event-time">
+                                        <small>
+                                            <i class="fa fa-clock-o"></i>&nbsp;&nbsp;
+                                            9:00 PM - 2:00 AM
+                                        </small>
+                                    </div>
+
+
+                                    <div class="event-location">
+                                        <small>
+                                            <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                                            The Library
+                                        </small>
+                                    </div>
+
+                                </div>
+
+                                <div class="event event-tile one-half alternate-2">
+                                    <div class="event-start">
+                                        <div class="event-start-date">05</div>
+                                        <div class="event-start-month"><small>nov</small></div>
+                                    </div>
+
+                                    <div class="event-title">Comedy Show</div>
+
+                                    <div class="event-time">
+                                        <small>
+                                            <i class="fa fa-clock-o"></i>&nbsp;&nbsp;
+                                            7:00 PM - 10:30 PM
+                                        </small>
+                                    </div>
+
+
+                                    <div class="event-location">
+                                        <small>
+                                            <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                                            Skyway Theater Minneapolis
+                                        </small>
+                                    </div>
+
+                                </div>
+
+                                <div class="event event-tile one-half alternate-3">
+                                    <div class="event-start">
+                                        <div class="event-start-date">17</div>
+                                        <div class="event-start-month"><small>nov</small></div>
+                                    </div>
+
+                                    <div class="event-title">Open Season Minneapolis</div>
+
+                                    <div class="event-time">
+                                        <small>
+                                            <i class="fa fa-clock-o"></i>&nbsp;&nbsp;
+                                            11:00 AM - 2:30 PM
+                                        </small>
+                                    </div>
+
+
+                                    <div class="event-location">
+                                        <small>
+                                            <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                                            Sculpture Garden
+                                        </small>
+                                    </div>
+
+                                </div>
+
+                                <div class="event event-tile one-half alternate-4">
+                                    <div class="event-start">
+                                        <div class="event-start-date">25</div>
+                                        <div class="event-start-month"><small>nov</small></div>
+                                    </div>
+
+                                    <div class="event-title">Howl's Moving Castle</div>
+
+                                    <div class="event-time">
+                                        <small>
+                                            <i class="fa fa-clock-o"></i>&nbsp;&nbsp;
+                                            7:00 PM - 9:30 PM
+                                        </small>
+                                    </div>
+
+
+                                    <div class="event-location">
+                                        <small>
+                                            <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                                            Theater Downtown
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ---------------------------------------------- -->
+
+                <div class="container-channel">
+
+                    <!--========= Card 1 =========-->
+                    <input type="radio" name="slide" id="c1" checked>
+                    <label for="c1" class="card">
+                        <div class=row>
+                            <div class="icon">1</div>
+                            <div class="description">
+                                <h4>Inspiration</h4>
+                                <p>Recherche et inspiration en écoutant de la musique</p>
+                            </div>
+                        </div>
+                    </label>
+
+                    <!--========= Card 2 =========-->
+                    <input type="radio" name="slide" id="c2">
+                    <label for="c2" class="card">
+                        <div class=row>
+                            <div class="icon">2</div>
+                            <div class="description">
+                                <h4>Production</h4>
+                                <p>Ecriture et composition d'un projet musicale</p>
+                            </div>
+                        </div>
+                    </label>
+
+                    <!--========= Card 3 =========-->
+                    <input type="radio" name="slide" id="c3">
+                    <label for="c3" class="card">
+                        <div class=row>
+                            <div class="icon">3</div>
+                            <div class="description">
+                                <h4>Streaming</h4>
+                                <p>Diffusion du projet musicale sur des plateforme de streaming</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+        </section>
+
+        <!-- // --------   ..:: CREW ::..   -------- \\ -->
+
+
+        <section class="crew" id="crew">
+
+            <div class="background">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="crew__title">
+                <p>Ekipa radia ShowFM!</p>
+            </div>
+
+            <div class="crew-bg">
+                <div class="container">
+                    <div class="box" data-color="clr1">
+                        <div class="imgBx">
+                            <img src="./img/ekipa/Nexi.png" alt="">
+                            <div class="glass">
+                                <h3>Dj Nexi<br><span>Założyciel Radia<br><br>House, Electro House</span></h3>
+                                <ul>
+                                    <a href="#" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
+                                    <a href="#" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
+                                    <a href="#" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                    <div class="dj-music"><i class="fa-solid fa-play fa-beat-fade"></i></div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box" data-color="clr2">
+                        <div class="imgBx">
+                            <img src="./img/ekipa/djka.png" alt="">
+                            <div class="glass">
+                                <h3>Dj Jody<br><span>Lokalna gwiazda<br><br>Deep House / Chill</span></h3>
+                                <ul>
+                                    <a href="#" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
+                                    <a href="#" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
+                                    <a href="#" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box" data-color="clr3">
+                        <div class="imgBx">
+                            <img src="./img/ekipa/dj-1449978_1280.png" alt="">
+                            <div class="glass">
+                                <h3>Dj Antex<br><span>Rezydent klubu w Łodzi<br><br>DnB / Techno / Remix</span></h3>
+                                <ul>
+                                    <a href="#" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
+                                    <a href="#" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
+                                    <a href="#" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box" data-color="clr4">
+                        <div class="imgBx">
+                            <img src="./img/ekipa/tomek.png" alt="">
+                            <div class="glass">
+                                <h3>Dj Kris<br><span>DJ<br><br>Trance / Vocal Trance</span></h3>
+                                <ul>
+                                    <a href="#" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
+                                    <a href="#" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
+                                    <a href="#" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box" data-color="clr5">
+                        <div class="imgBx">
+                            <img src="./img/ekipa/dj-5057795_1280.jpg" alt="">
+                            <div class="glass">
+                                <h3>Robert<br><span>Prezenter<br><br>Rock / Metal</span></h3>
+                                <ul>
+                                    <a href="#" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
+                                    <a href="#" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
+                                    <a href="#" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            </div>
+        </section>
+
+        <!-- // --------   ..:: SHOWLIST ::..   -------- \\ -->
+
+        <section class="showlist" id="showlist">
+
+            <!-- Card -->
+            <div class="showlist-card">
+                <!-- Title -->
+                <div class="title">
+                    <h1>Top chart</h1>
+                    <p>The world listened a lot of music this week.<br />Discover the ranking.</p>
+                </div>
+
+                <!--Rancking -->
+                <div class="box"> <!-- #01 -->
+                    <!-- Number-->
+                    <div class="number">01</div>
+                    <!-- Cover -->
+                    <div class="cover"><img src="https://m.media-amazon.com/images/I/91-kmdlsEsL._SS500_.jpg" alt="01">
+                    </div>
+                    <!-- Name -->
+                    <div class="name"><span>Mi gente</span> J Balin & Willy William</div>
+                    <!-- Button -->
+                    <div class="link"><a href="https://www.youtube.com/watch?v=wnJ6LuUFpMo">Listen</a></div>
+                </div>
+
+                <!-- Separator -->
+                <div class="separator"></div>
+
+                <div class="box"> <!-- #02 -->
+                    <!-- Number-->
+                    <div class="number">02</div>
+                    <!-- Cover -->
+                    <div class="cover"><img src="http://bit.ly/2vlCeWf" alt="02"></div>
+                    <!-- Name -->
+                    <div class="name"><span>Feels</span> Calvin Harris</div>
+                    <!-- Button -->
+                    <div class="link"><a href="https://www.youtube.com/watch?v=ozv4q2ov3Mk">Listen</a></div>
+                </div>
+
+                <!-- Separator -->
+                <div class="separator"></div>
+
+                <div class="box"> <!-- #03 -->
+                    <!-- Number-->
+                    <div class="number">03</div>
+                    <!-- Cover -->
+                    <div class="cover"><img src="http://bit.ly/2vlRum1" alt="03"></div>
+                    <!-- Name -->
+                    <div class="name"><span>Attention</span> Charlie Puth</div>
+                    <!-- Button -->
+                    <div class="link"><a href="https://www.youtube.com/watch?v=nfs8NYg7yQM">Listen</a></div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+        </section>
+
+        <!-- // --------   ..:: ABOUT-US ::..   -------- \\ -->
+
+        <!-- <section class="about-us" id="about-us">
+            <div class="about-us__bg">
+                <div class="about-us__text wrapper">
+
+                    <h2 class="about-us__neon">
+                        Historia radia ShowFM
+                    </h2>
+
+                    <p>Aby opowiedzieć całą historię radia ShowFM, musimy się cofnać do roku 2006, kiedy to po raz
+                        pierwszy czternastoletni wówczas Arkadiusz (Dj Aras) wraz z ekipą postanowił założyć własny
+                        projekt radiowy oparty na serwerach ShoutCast. Projekt nosił nazwę "Music Experience" i był dla
+                        chłopaków pierwszym radiowym doświadczeniem, które jak się później okazało, zapoczątkowało
+                        niesamowitą
+                        przygodę jednego z członków ekipy.<br><br>
+
+                        Po roku od założenia radia, młoda ekipa postanowiła zawiesić projekt, który nie przynosił
+                        zamierzonej słuchalności z uwagi na okres wakacyjny. Po dwóch miesiacach nastąpiła reaktywacja
+                        Music Experience w nowej, odświeżonej wersji (nowa strona WWW stworzona na podstawie Macromedia
+                        Flash, nowi prezenterzy, nowa muzyka). Niestety nowości nie przypadły do gustu słuchaczom i
+                        projekt Music Experience przestał nadawać w sieci.<br><br>
+
+                        DJ Aras nie poddając się po pierwszej porażce, postanowił poszukać ekipy, która wraz z nim
+                        stworzy "projekt życia". Szukając ludzi do swojego muzycznego dzieła, grywał na takich stacjach
+                        jak RadioTP, RED7, Radio Party, Miasto Muzyki i wiele innych. Był znany jako DJ Archer, Sonix
+                        oraz Suzos. Arek lubił także grać w gry komputerowe - i popularnego
+                        w tamtych czasach SAMP (GTA San Andreas Multiplayer). Pewnego dnia wpadł na pomysł połączenia
+                        swoich dwóch
+                        pasji. Tak powstało Radio ExtremeRP - autorski skrypt sprawił, że gracze
+                        GTA mogli posłuchać muzyki z radia internetowego w wirtualnych klubach oraz w swoich wirtualnych
+                        pojazdach.
+                        <br><br>
+
+                        Po upadku serwera gry, ekipa radia ExtremeRP przeniosła się na inny serwer SAMP o nazwie
+                        MrucznikRP. Na serwerze powstał wirtualny klub stworzony przez Arka w kodzie PAWN (LUA) <a
+                            href="https://www.youtube.com/watch?v=Nm91TRczz9c&ab_channel=FMDesign%3A%3AKretywnyarchitektwizualizacji">Ibiza
+                            Club</a> (klub w grze SAMP). Radio niestety nie utrzymało sie zbyt długo. <br><br>
+
+                        Ekipa z Ibiza Club postanowiła założyć osobny projekt radiowy o nazwie ShowFM, który miał
+                        nawiązywać muzyką do lat 2006/2007 oraz stażyszch.
+                    </p>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- // --------   ..:: CONTACT ::..   -------- \\ -->
         <section class="contact" id="contact">kontakt</section>
     </main>
 
+
+    <!-- // --------   ..:: FOOTER ::..   -------- \\ -->
     <footer class="footer">Footer</footer>
 
     <script src="./js/smoke.js"></script>
-    <script src="./js/script.js"></script>
     <script src="./js/burger.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

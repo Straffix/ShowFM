@@ -1,3 +1,5 @@
+// ============================= M560
+
 @media (min-width: 560px) {
 	.logo {
 		width: 120px;
@@ -5,9 +7,11 @@
 	}
 
 	.home {
+		height: 40vh;
+
 		&__text {
-			top: 80%;
-			left: 40%;
+			top: 72%;
+			left: 45%;
 
 			h1 {
 				font-size: 29px;
@@ -19,8 +23,8 @@
 
 			&_bg {
 				display: block;
-				left: 40%;
-				top: 510px;
+				left: 45%;
+				top: 60%;
 				width: 200px;
 				height: 160px;
 			}
@@ -28,26 +32,108 @@
 	}
 
 	.girl {
-		left: -10px;
+		left: 2%;
 		bottom: 0;
 		width: 220px;
 		height: 220px;
 
 		&__bg {
-			left: 10px;
-			top: 480px;
+			left: 6%;
+			bottom: 4%;
 			width: 180px;
 			height: 220px;
 		}
 	}
-}
 
-@media (min-width: 560px) and (orientation: landscape) {
-	.logo {
-		width: 120px;
+	.player-box {
+		height: 60vh;
+		padding: 0;
+	}
+
+	@mixin player {
+		width: 350px;
 		height: 120px;
+		margin-right: 10px;
+
+		&__stats {
+			width: 300px;
+			height: 80px;
+			right: 0;
+		}
+
+		&__button {
+			font-size: 80px;
+
+			&__bg {
+				width: 120px;
+				height: 120px;
+			}
+		}
+	}
+
+	@mixin miniPanels {
+		width: 80px;
+		height: 30px;
+		font-size: 14px;
+	}
+
+	.player {
+		@include player;
+
+		.greetings_panel {
+			@include miniPanels;
+			left: 130px;
+			bottom: -30px;
+		}
+
+		.schedule_panel {
+			@include miniPanels;
+			right: 40px;
+			bottom: -30px;
+		}
+	}
+
+	.player-chill {
+		@include player;
+
+		&__title {
+			color: $c_lime;
+		}
+
+		.greetings_panel {
+			@include miniPanels;
+			background-color: $c_lime;
+			left: 130px;
+			bottom: -30px;
+		}
+
+		.schedule_panel {
+			@include miniPanels;
+			background-color: $c_lime;
+			right: 40px;
+			bottom: -30px;
+		}
+	}
+
+	.player-rock {
+		@include player;
+
+		&__title {
+			color: $c_red;
+		}
+
+		.greetings_panel {
+			@include miniPanels;
+			background-color: $c_red;
+			left: 130px;
+			bottom: -30px;
+		}
+
+		.schedule_panel {
+			@include miniPanels;
+			background-color: $c_red;
+			right: 40px;
+			bottom: -30px;
+		}
 	}
 }
-
-// @media (min-width: 576px) {
-// }
