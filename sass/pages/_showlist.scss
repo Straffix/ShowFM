@@ -1,5 +1,17 @@
+@use '../components/colors' as *;
+@use '../components/animations' as *;
+
 /* Import */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+// --------   ..:: SHOWLIST ::..   -------- \\
+
+.showlist {
+	width: 100%;
+	height: 100vh;
+	padding-top: 80px;
+	background-color: white;
+}
 
 /* Variables */
 $whiteColor: #fbfbfb;

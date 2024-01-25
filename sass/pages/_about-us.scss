@@ -1,0 +1,33 @@
+@use '../components/colors' as *;
+@use '../components/animations' as *;
+
+// --------   ..:: ABOUT-US ::..   -------- \\
+
+.about-us {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	padding-top: 180px;
+	background-image: url('../img/wall-2059909_640.png');
+	background-size: cover;
+
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #00000042;
+	}
+
+	&__text {
+		width: 100%;
+		height: 100%;
+		color: #fff;
+	}
+
+	&__neon {
+		font-size: 40px;
+		margin-bottom: 40px;
+		color: #fff;
+		animation: pulsate 1.5s infinite alternate;
+	}
+}

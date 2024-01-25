@@ -1,4 +1,5 @@
 @use '../components/colors' as *;
+@use '../components/animations' as *;
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
@@ -14,6 +15,42 @@
 	--icon-color: #fff8;
 	--color-2: #001833;
 	--color-4: #201135;
+}
+
+// --------   ..:: CREW ::..   -------- \\
+
+.crew {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+
+	&__title {
+		position: absolute;
+		top: 120px;
+		width: 100%;
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		background-color: #ffffff17;
+
+		p {
+			font-family: 'Merienda', cursive;
+			font-size: 40px;
+			color: white;
+			margin-left: 400px;
+		}
+	}
+}
+
+.crew-bg {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .container {
