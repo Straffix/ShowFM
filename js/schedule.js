@@ -1,62 +1,58 @@
-'use strict'
+let cards = document.querySelectorAll('.poster-card')
+cards.forEach(card => {
+	card.addEventListener('mousemove', e => {
+		conicBg(card, e)
+		tiltEle(card, e)
+		//console.log(alpha);
+	})
+	card.addEventListener('mouseenter', e => {
+		card.classList.add('bg')
+	})
+	card.addEventListener('mouseleave', e => {
+		card.classList.remove('bg')
+		tiltEle(card, e, 1)
+	})
+})
 
-// function that creates dummy data for demonstration
-function createDummyData() {
-	var date = new Date()
-	var data = {}
+function conicBg(card, e) {
+	let cardDim = card.getBoundingClientRect()
+	//console.log(cardDim);
+	let centerX = cardDim.width / 2
+	let centerY = cardDim.height / 2
+	let cursorX = e.clientX - cardDim.x
+	let cursorY = e.clientY - cardDim.y
+	let cursorPercentX = (cursorX / cardDim.width) * 100
+	let cursorPercentY = (cursorY / cardDim.width) * 100
+	let base = centerX - cursorX
+	let height = centerY - cursorY
+	//console.log(cursorX,cursorY);
+	let hypotenuse = Math.hypot(base, height)
+	let alpha = Math.asin(height / hypotenuse) * (180 / 3.14)
 
-	for (var i = 0; i < 10; i++) {
-		data[date.getFullYear() + i] = {}
+	card.style.backgroundPosition = `${cursorPercentX * 0.05}% ${cursorPercentY * 0.5}%`
 
-		for (var j = 0; j < 12; j++) {
-			data[date.getFullYear() + i][j + 1] = {}
-
-			for (var k = 0; k < Math.ceil(Math.random() * 10); k++) {
-				var l = Math.ceil(Math.random() * 28)
-
-				try {
-					data[date.getFullYear() + i][j + 1][l].push({
-						startTime: '10:00',
-						endTime: '12:00',
-						text: 'Some Event Here',
-					})
-				} catch (e) {
-					data[date.getFullYear() + i][j + 1][l] = []
-					data[date.getFullYear() + i][j + 1][l].push({
-						startTime: '10:00',
-						endTime: '12:00',
-						text: 'Some Event Here',
-					})
-				}
-			}
-		}
+	console.log(cursorPercentX + 50)
+	if (base > 0 && height > 0) {
+		card.style.setProperty('--deg', alpha + 270 + 'deg')
 	}
-
-	return data
+	if (base > 0 && height < 0) {
+		card.style.setProperty('--deg', alpha + 270 + 'deg')
+	}
+	if (base < 0 && height > 0) {
+		card.style.setProperty('--deg', -(alpha - 180 - 270) + 'deg')
+	}
+	if (base < 0 && height < 0) {
+		card.style.setProperty('--deg', -(alpha - 180 - 270) + 'deg')
+	}
 }
+function tiltEle(ele, e, reset) {
+	if (reset) {
+		ele.style.transform = 'rotateY(' + 0 + 'deg) rotateX(' + 0 + 'deg)'
+		return
+	}
+	let eledim = ele.getBoundingClientRect()
 
-// creating the dummy static data
-var data = createDummyData()
-
-// initializing a new calendar object, that will use an html container to create itself
-var calendar = new Calendar(
-	'calendarContainer', // id of html container for calendar
-	'small', // size of calendar, can be small | medium | large
-	[
-		'Wednesday', // left most day of calendar labels
-		3, // maximum length of the calendar labels
-	],
-	[
-		'#E91E63', // primary color
-		'#C2185B', // primary dark color
-		'#FFFFFF', // text color
-		'#F8BBD0', // text dark color
-	]
-)
-
-// initializing a new organizer object, that will use an html container to create itself
-var organizer = new Organizer(
-	'organizerContainer', // id of html container for calendar
-	calendar, // defining the calendar that the organizer is related to
-	data // giving the organizer the static data that should be displayed
-)
+	let x = -(e.offsetX - eledim.width / 2) / 10
+	let y = -(e.offsetY - eledim.height / 2) / 10
+	ele.style.transform = 'rotateY(' + x + 'deg) rotateX(' + -y + 'deg)'
+}

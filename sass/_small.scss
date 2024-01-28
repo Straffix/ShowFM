@@ -136,4 +136,12 @@
 			bottom: -30px;
 		}
 	}
+
+	.crew {
+		&__title {
+			p {
+				font-size: 40px;
+			}
+		}
+	}
 }

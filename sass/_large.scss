@@ -243,6 +243,31 @@
 			font-size: 28px;
 		}
 	}
+
+	.crew {
+		height: 100vh;
+	}
+
+	.crew-container {
+		height: 80vh;
+		padding: 0;
+		padding: 100px 0 100px 0;
+	}
+
+	.crew-box {
+		width: 300px;
+		height: 500px;
+	}
+
+	// .schedule {
+	// 	height: 100vh;
+
+	// 	&__title {
+	// 		p {
+	// 			font-size: 40px;
+	// 		}
+	// 	}
+	// }
 }
 
 // ============================= M1650
