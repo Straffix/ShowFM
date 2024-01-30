@@ -695,7 +695,7 @@
 }
 .schedule__title {
   width: 100%;
-  height: 20vh;
+  height: 17vh;
   display: flex;
   justify-content: end;
   align-items: end;
@@ -704,118 +704,184 @@
 .schedule__title p {
   width: 100%;
   font-family: "Merienda", cursive;
-  font-size: 40px;
+  font-size: 20px;
   padding: 10px;
   color: #520b4a;
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.1607843137);
   z-index: 20;
 }
 
-small {
-  font-size: 15px;
-}
-
-.container-schedule {
+html,
+body {
+  background: #f7f5e6;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: 80vh;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
-.content-schedule {
-  width: 100%;
-  padding: 50px 0 50px 0;
-  background-color: rgba(0, 8, 255, 0);
+.slider {
+  margin: 0 auto;
+  max-width: 940px;
 }
 
-.event-tiles-container {
-  display: flex;
-  flex-flow: row wrap;
+.slide_viewer {
+  height: 340px;
   overflow: hidden;
-  border-radius: 5px;
+  position: relative;
 }
 
-.event-tile {
-  padding: 1.6rem !important;
-  color: #f7f7f7;
-  background: #edab5c;
-  flex: 2 1 250px;
-}
-
-.event-tile .event-title {
-  text-transform: uppercase;
-  padding: 0.7rem 0;
-  clear: both;
-}
-
-.event-tile .event-start,
-.event-tile .event-end {
-  text-transform: uppercase;
-  float: left;
-}
-
-.event-tile .event-start-date {
-  font-size: 1.4rem;
-  margin-bottom: -5px;
-}
-
-.event-tile .event-end-date {
-  font-size: 0.9rem;
-  margin-bottom: -2px;
-}
-
-.event-tile .event-start-month,
-.event-tile .event-end-month {
-  text-align: right;
-}
-
-.event-tile .event-end {
-  opacity: 0.9;
-  font-size: 65%;
-  padding-left: 5px;
-}
-
-.event-tile .event-time,
-.event-tile .event-location {
-  font-size: 80%;
-}
-
-.event-tile.alternate-1 {
-  background-color: #da3636;
-}
-
-.event-tile.alternate-2 {
-  background-color: #00ccff;
-}
-
-.event-tile.alternate-3 {
-  background-color: #8dd80c;
-}
-
-.event-cards-container {
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.poster-box {
+.slide_group {
+  height: 100%;
+  position: relative;
   width: 100%;
-  padding: 100px;
+}
+
+.slide {
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.slide:first-child {
+  display: block;
+}
+
+.slide:nth-of-type(1) {
+  background: #d7a151;
+  background-image: url("/img/plakaty/9350699.png");
+}
+
+.slide:nth-of-type(2) {
+  background: #f4e4cd;
+  background-image: url("/img/plakaty/burn_paradise.png");
+}
+
+.slide:nth-of-type(3) {
+  background: #c75534;
+  background-image: url("/img/plakaty/global_chill.png");
+}
+
+.slide:nth-of-type(4) {
+  background: #d1d1d4;
+  background-image: url("/img/plakaty/night_party.png");
+}
+
+.slide_buttons {
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+a.slide_btn {
+  color: #474544;
+  font-size: 42px;
+  margin: 0 0.175em;
+  transition: all 0.4s ease-in-out;
+}
+
+.slide_btn.active,
+.slide_btn:hover {
+  color: #428cc6;
+  cursor: pointer;
+}
+
+.directional_nav {
+  height: 340px;
+  margin: 0 auto;
+  max-width: 940px;
+  position: relative;
+  top: -340px;
+}
+
+.previous_btn {
+  bottom: 0;
+  left: 100px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+}
+
+.next_btn {
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  right: 100px;
+  top: 0;
+}
+
+.previous_btn,
+.next_btn {
+  cursor: pointer;
+  height: 65px;
+  opacity: 0.5;
+  transition: opacity 0.4s ease-in-out;
+  width: 65px;
+}
+
+.previous_btn:hover,
+.next_btn:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  .previous_btn {
+    left: 50px;
+  }
+  .next_btn {
+    right: 50px;
+  }
+}
+.schedule-buttons {
+  top: 0;
+  width: 100%;
+  background-color: #520b4a;
+}
+.schedule-buttons__bg {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
-
-.poster-center {
-  display: grid;
-  place-items: center;
+.schedule-buttons__title {
+  font-size: 7px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.schedule-buttons button {
+  width: 90px;
+  height: 60px;
+  font-size: 15px;
+  padding: 5px;
+  font-family: "Merienda", cursive;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.schedule-buttons .b-trance {
+  background-color: #00ccff;
+}
+.schedule-buttons .b-chill {
+  background-color: #8dd80c;
+}
+.schedule-buttons .b-rock {
+  background-color: #da3636;
 }
 
 .posters {
+  inset: 0;
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
+  padding: 20px;
 }
 
 .poster-tilt {
@@ -825,6 +891,11 @@ small {
 
 .poster-bg {
   position: relative;
+}
+
+.poster-center {
+  display: grid;
+  place-items: center;
 }
 
 .bg:before {
@@ -852,8 +923,8 @@ small {
   background-repeat: no-repeat;
   color: #fff;
   text-shadow: 0 0 10px var(--color);
-  width: 400px;
-  height: 550px;
+  width: 350px;
+  height: 500px;
   border-radius: 10px;
   font-size: 3rem;
   line-height: 0;
@@ -1588,6 +1659,9 @@ body {
   .crew__title p {
     font-size: 40px;
   }
+  .schedule__title p {
+    font-size: 40px;
+  }
 }
 @media (min-width: 700px) {
   .home__text {
@@ -1866,6 +1940,9 @@ body {
     top: 45%;
     width: 520px;
     height: 422px;
+  }
+  .schedule {
+    height: 100vh;
   }
 }
 @media (min-width: 1870px) {

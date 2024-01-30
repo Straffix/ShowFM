@@ -10,7 +10,7 @@
 
 	&__title {
 		width: 100%;
-		height: 20vh;
+		height: 17vh; // 20 + poster-box + schedule-buttons = 100vh
 		display: flex;
 		justify-content: end;
 		align-items: end;
@@ -19,117 +19,225 @@
 		p {
 			width: 100%;
 			font-family: 'Merienda', cursive;
-			font-size: 40px;
+			font-size: 20px;
 			padding: 10px;
 			color: $c_purple;
+			color: #fff;
 			background-color: #00000029;
 			z-index: 20;
 		}
 	}
 }
 
-small {
-	font-size: 15px;
-}
+// =========== SLIPER [mobile only]
 
-.container-schedule {
+html,
+body {
+	background: #f7f5e6;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 	width: 100%;
-	height: 80vh;
-	display: flex;
-	align-items: start;
-	justify-content: center;
-	flex-wrap: wrap;
 }
 
-.content-schedule {
+.slider {
+	margin: 0 auto;
+	max-width: 940px;
+}
+
+.slide_viewer {
+	height: 340px;
+	overflow: hidden;
+	position: relative;
+}
+
+.slide_group {
+	height: 100%;
+	position: relative;
 	width: 100%;
-	padding: 50px 0 50px 0;
-	background-color: #0008ff00;
 }
 
-.event-tiles-container {
-	display: flex;
-	flex-flow: row wrap;
-	overflow: hidden;
-	border-radius: 5px;
+.slide {
+	display: none;
+	height: 100%;
+	position: absolute;
+	width: 100%;
 }
-.event-tile {
-	padding: 1.6rem !important;
-	color: #f7f7f7;
-	background: #edab5c;
-	flex: 2 1 250px;
+
+.slide:first-child {
+	display: block;
 }
-.event-tile .event-title {
-	text-transform: uppercase;
-	padding: 0.7rem 0;
-	clear: both;
+
+.slide:nth-of-type(1) {
+	background: #d7a151;
+	background-image: url('/img/plakaty/9350699.png');
 }
-.event-tile .event-start,
-.event-tile .event-end {
-	text-transform: uppercase;
-	float: left;
+
+.slide:nth-of-type(2) {
+	background: #f4e4cd;
+	background-image: url('/img/plakaty/burn_paradise.png');
 }
-.event-tile .event-start-date {
-	font-size: 1.4rem;
-	margin-bottom: -5px;
+
+.slide:nth-of-type(3) {
+	background: #c75534;
+	background-image: url('/img/plakaty/global_chill.png');
 }
-.event-tile .event-end-date {
-	font-size: 0.9rem;
-	margin-bottom: -2px;
+
+.slide:nth-of-type(4) {
+	background: #d1d1d4;
+	background-image: url('/img/plakaty/night_party.png');
 }
-.event-tile .event-start-month,
-.event-tile .event-end-month {
-	text-align: right;
+
+.slide_buttons {
+	left: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
 }
-.event-tile .event-end {
-	opacity: 0.9;
-	font-size: 65%;
-	padding-left: 5px;
+
+a.slide_btn {
+	color: #474544;
+	font-size: 42px;
+	margin: 0 0.175em;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
 }
-.event-tile .event-time,
-.event-tile .event-location {
-	font-size: 80%;
+
+.slide_btn.active,
+.slide_btn:hover {
+	color: #428cc6;
+	cursor: pointer;
 }
-.event-tile.alternate-1 {
-	background-color: $c_red;
+
+.directional_nav {
+	height: 340px;
+	margin: 0 auto;
+	max-width: 940px;
+	position: relative;
+	top: -340px;
 }
-.event-tile.alternate-2 {
-	background-color: $c_blue;
+
+.previous_btn {
+	bottom: 0;
+	left: 100px;
+	margin: auto;
+	position: absolute;
+	top: 0;
 }
-.event-tile.alternate-3 {
-	background-color: $c_lime;
+
+.next_btn {
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+	right: 100px;
+	top: 0;
 }
-.event-cards-container {
-	border-radius: 5px;
-	overflow: hidden;
+
+.previous_btn,
+.next_btn {
+	cursor: pointer;
+	height: 65px;
+	opacity: 0.5;
+	-webkit-transition: opacity 0.4s ease-in-out;
+	-moz-transition: opacity 0.4s ease-in-out;
+	-ms-transition: opacity 0.4s ease-in-out;
+	-o-transition: opacity 0.4s ease-in-out;
+	transition: opacity 0.4s ease-in-out;
+	width: 65px;
+}
+
+.previous_btn:hover,
+.next_btn:hover {
+	opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+	.previous_btn {
+		left: 50px;
+	}
+	.next_btn {
+		right: 50px;
+	}
 }
 
 // =========== POSTERS
 
-.poster-box {
+.schedule-buttons {
+	top: 0; //bottom
 	width: 100%;
-	padding: 100px;
+	background-color: $c_purple;
+
+	&__bg {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 20px;
+		gap: 30px;
+		flex-wrap: wrap;
+	}
+
+	&__title {
+		font-size: 7px;
+		text-transform: uppercase;
+		color: #fff;
+	}
+
+	button {
+		width: 90px;
+		height: 60px;
+		font-size: 15px;
+		padding: 5px;
+		font-family: 'Merienda', cursive;
+		// border: 3px solid rgba(0, 0, 0, 0.552);
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+
+		// &:hover {
+		// 	background-color: $c_yellow;    //TYLKO NA DESKTOP
+		// }
+	}
+
+	.b-trance {
+		background-color: $c_blue;
+	}
+
+	.b-chill {
+		background-color: $c_lime;
+	}
+
+	.b-rock {
+		background-color: $c_red;
+	}
+}
+
+.posters {
+	inset: 0;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-wrap: wrap;
+	gap: 30px;
+	padding: 20px;
+}
+.poster-tilt {
+	position: relative;
+	perspective: 500px;
+}
+
+.poster-bg {
+	position: relative;
 }
 
 .poster-center {
 	display: grid;
 	place-items: center;
 }
-.posters {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-}
-.poster-tilt {
-	position: relative;
-	perspective: 500px;
-}
-.poster-bg {
-	position: relative;
-}
+
 .bg:before {
 	content: '';
 	display: block;
@@ -162,8 +270,8 @@ small {
 	background-repeat: no-repeat;
 	color: #fff;
 	text-shadow: 0 0 10px var(--color);
-	width: 400px;
-	height: 550px;
+	width: 350px;
+	height: 500px;
 	border-radius: 10px;
 	font-size: 3rem;
 	line-height: 0;
