@@ -1,10 +1,10 @@
 @use '../sass/components/colors' as *;
 @use '../sass/components/animations' as *;
+@use './pages/schedule' as *;
 @use '../sass/pages/crew' as *;
 @use './pages/showlist' as *;
 @use './pages/contact' as *;
 @use './pages/about-us' as *;
-@use './pages/schedule' as *;
 
 * {
 	box-sizing: border-box;
@@ -21,6 +21,41 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+/* ===== Scrollbar CSS ===== */
+
+/* Firefox */
+@-moz-document url-prefix() {
+	* {
+		scrollbar-color: #00ccff #210027;
+		scrollbar-width: thin;
+	}
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 10px $c_purple;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.3);
+	-webkit-box-shadow: inset 0 0 10px $c_blue;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== ========================= ===== */
+
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
@@ -36,6 +71,17 @@ body {
 	width: 100%;
 	height: 80px;
 	z-index: 1000;
+}
+
+.body-line {
+	width: 100%;
+	height: 5px;
+	background-color: $c_blue;
+}
+.body-line2 {
+	width: 100%;
+	height: 2px;
+	background-color: $c_pink;
 }
 
 .smallNavBg {
@@ -59,10 +105,10 @@ body {
 
 .logo {
 	position: absolute;
-	top: 9px;
-	left: 5px;
-	width: 70px;
-	height: 70px;
+	top: 10%;
+	left: 10%;
+	width: 90px;
+	height: 90px;
 	background-image: url('../img/logo.png');
 	background-size: cover;
 	animation: flicker 2s linear both;
@@ -70,17 +116,13 @@ body {
 	cursor: pointer;
 	z-index: 100;
 
-	&:hover {
-		background-image: url('../img/logo2.png');
+	&--scaled {
+		transform: scale(0.9) translateY(-12px);
 	}
 
-	&--scaled {
-		transform: scale(0.9) translateY(-4px);
-		background-image: url('../img/logo_mid.png');
-
-		&:hover {
-			background-image: url('../img/logo2_mini.png');
-		}
+	&:hover {
+		filter: blur(1px);
+		transform: rotate(-10deg);
 	}
 }
 
@@ -101,6 +143,7 @@ body {
 		color: white;
 		text-transform: uppercase;
 		text-decoration: none;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.548);
 
 		&:nth-child(2) {
 			display: block;
@@ -118,7 +161,7 @@ body {
 
 .burger-icon {
 	position: fixed;
-	top: 12px;
+	top: 15px;
 	right: 30px;
 	width: 45px;
 	height: 45px;
@@ -128,6 +171,11 @@ body {
 	border-radius: 7px;
 	border: none;
 	background: none;
+	cursor: pointer;
+
+	&:hover {
+		color: #fff;
+	}
 }
 
 .nav-desktop {
@@ -177,6 +225,17 @@ body {
 
 // --------   ..:: MAIN ::..   -------- \\
 
+.round-bg {
+	position: absolute;
+	bottom: 15%;
+	right: 24%;
+	width: 300px;
+	height: 320px;
+	background-image: url('../img/round-bg.png');
+	background-size: cover;
+	animation: wavezoom 2s infinite linear both;
+}
+
 .home {
 	position: relative;
 	width: 100%;
@@ -193,8 +252,8 @@ body {
 		&--overlay {
 			width: 100%;
 			height: 100%;
-			background-color: #d2009747;
-			opacity: 90%;
+			background-color: #d2009e48;
+			opacity: 100%;
 		}
 	}
 
@@ -209,19 +268,20 @@ body {
 	&__text {
 		position: absolute;
 		top: 25px;
-		left: 25%;
+		left: 32%;
 		font-family: 'Merienda', cursive;
 
 		h1 {
 			color: #fff;
 			font-size: 14px;
-			text-shadow: 0 0 3px black;
+			text-shadow: 0 0 3px #88aeff;
 		}
 
 		h2 {
-			color: $c_blue;
+			position: absolute;
+			left: 40px;
+			color: black;
 			font-size: 8px;
-			text-shadow: 0 0 3px rgba(0, 0, 86, 0.715);
 		}
 
 		&_bg {
@@ -252,7 +312,6 @@ body {
 	position: absolute;
 	background-image: url('../img/girl.png');
 	background-size: cover;
-	opacity: 90%;
 	animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
 	&__bg {
@@ -285,7 +344,6 @@ body {
 	height: 600px;
 
 	&__bg {
-		display: none;
 		left: 6%;
 		bottom: 60px;
 		width: 500px;
@@ -298,11 +356,11 @@ body {
 .player-box {
 	position: relative;
 	width: 100%;
-	height: 100vh;
 	display: flex;
-	padding-top: 120px;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	gap: 60px;
 	flex-wrap: wrap;
 	background-color: #210027;
 	overflow: hidden;
@@ -311,13 +369,10 @@ body {
 @mixin player {
 	position: relative;
 	width: 300px;
-	height: 80px;
+	height: 90px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(144, 144, 144, 0.173);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.485);
-	border-radius: 80px 30px 30px 80px;
 
 	&__title {
 		position: absolute;
@@ -325,24 +380,23 @@ body {
 		right: 10px;
 		font-size: 25px;
 		font-family: 'Merienda', cursive;
+		color: #fff;
 	}
 
 	&__stats {
 		position: absolute;
-		width: 225px;
-		height: 55px;
-		right: 0;
+		width: 250px;
+		height: 40px;
+		right: 5px;
+		overflow: hidden;
+		background-color: #ae00ff15;
+		border-radius: 0 4px 4px 0;
 	}
 
 	&__button {
 		position: absolute;
-		font-size: 50px;
-		color: #ffffff;
+		font-size: 35px;
 		cursor: pointer;
-
-		&:hover {
-			color: rgb(56, 56, 56);
-		}
 
 		&__bg {
 			position: absolute;
@@ -350,16 +404,17 @@ body {
 			align-items: center;
 			justify-content: center;
 			left: 1px;
-			width: 80px;
-			height: 80px;
-			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			border-radius: 20px 0 20px 0;
 			box-shadow: 0 0 20px rgba(0, 0, 0, 0.599);
 		}
 	}
 
 	.fa-play {
 		position: relative;
-		left: 6px;
+		left: 3px;
+		padding: 20px;
 	}
 }
 
@@ -370,29 +425,22 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: $c_blue;
-	border-radius: 0 0 3px 3px;
+	padding: 13px;
 	text-decoration: none;
 	font-size: 12px;
-	font-weight: bold;
-	color: $c_grey;
+	color: #ffffff62;
+	background-color: #ae00ff15;
+	border-radius: 0 0 3px 3px;
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 	&:hover {
-		background-color: orange;
+		color: #fff;
+		background-color: $c_purple;
 	}
 }
 
 .player {
 	@include player;
-
-	&__button__bg {
-		background-color: $c_blue;
-	}
-
-	&__title {
-		color: $c_blue;
-	}
 
 	.greetings_panel {
 		@include miniPanels;
@@ -405,57 +453,98 @@ body {
 		right: 40px;
 		bottom: -20px;
 	}
+
+	&__color {
+		color: $c_blue;
+	}
+
+	&__button {
+		color: #fff;
+
+		&:hover {
+			color: #fff;
+			color: $c_blue;
+		}
+
+		&__bg {
+			border: 2px solid #82d7dd;
+
+			&:hover {
+				background-color: #00b7ff69;
+			}
+		}
+	}
 }
 
 .player-chill {
 	@include player;
 
-	&__button__bg {
-		background-color: $c_lime;
-	}
-
-	&__title {
-		color: $c_lime;
-	}
-
 	.greetings_panel {
 		@include miniPanels;
-		background-color: $c_lime;
 		left: 90px;
 		bottom: -20px;
 	}
 
 	.schedule_panel {
 		@include miniPanels;
-		background-color: $c_lime;
 		right: 40px;
 		bottom: -20px;
+	}
+
+	&__color {
+		color: $c_lime;
+	}
+
+	&__button {
+		color: #fff;
+
+		&:hover {
+			color: #1eff00;
+		}
+
+		&__bg {
+			border: 2px solid #8ddd82;
+
+			&:hover {
+				background-color: #2bff004f;
+			}
+		}
 	}
 }
 
 .player-rock {
 	@include player;
 
-	&__button__bg {
-		background-color: $c_red;
-	}
-
-	&__title {
-		color: $c_red;
-	}
-
 	.greetings_panel {
 		@include miniPanels;
-		background-color: $c_red;
 		left: 90px;
 		bottom: -20px;
 	}
 
 	.schedule_panel {
 		@include miniPanels;
-		background-color: $c_red;
 		right: 40px;
 		bottom: -20px;
+	}
+
+	&__color {
+		color: $c_red;
+	}
+
+	&__button {
+		color: $c_red;
+
+		&:hover {
+			color: #f00;
+		}
+
+		&__bg {
+			border: 2px solid #dd8282;
+
+			&:hover {
+				background-color: #ff00004f;
+			}
+		}
 	}
 }
 

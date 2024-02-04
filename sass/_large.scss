@@ -1,7 +1,7 @@
 // ============================= M900
 @media (min-width: 900px) {
-	.logo-bg {
-		width: 10%;
+	.logo {
+		left: 50%;
 	}
 
 	.nav {
@@ -16,29 +16,27 @@
 
 @media (min-width: 992px) {
 	.home {
-		height: 80vh;
-
 		&__bg {
 			background-image: url('../img/dj-6472628_1920.jpg');
 		}
 
 		&__text {
-			top: 75%;
-			left: 48%;
+			top: 60%;
+			left: 54%;
 
 			h1 {
-				font-size: 50px;
+				font-size: 40px;
 			}
 
 			h2 {
-				font-size: 25px;
+				font-size: 20px;
 			}
 
 			&_bg {
-				left: 49%;
-				top: 65%;
-				width: 370px;
-				height: 300px;
+				top: 45%;
+				left: 55%;
+				width: 320px;
+				height: 250px;
 			}
 		}
 	}
@@ -48,26 +46,20 @@
 	}
 
 	.logo {
-		top: 0;
+		top: 20%;
 		left: 30px;
-		width: 200px;
-		height: 200px;
+		width: 160px;
+		height: 160px;
 		background-size: cover;
 
 		&--scaled {
-			transform: scale(0.7) translateX(-10px) translateY(-50px);
-			background-image: url('../img/logo_mid.png');
-
-			&:hover {
-				background-image: url('../img/logo2_mini.png');
-			}
+			transform: scale(0.5) translateY(-110px);
 		}
 	}
 
 	.nav {
 		top: 60px;
 		width: 100%;
-		// transform: scale(1);
 
 		&__item {
 			margin: 10px;
@@ -80,76 +72,119 @@
 	}
 
 	.girl {
-		left: 10px;
+		left: 10%;
 		bottom: 0;
-		width: 300px;
-		height: 300px;
+		width: 260px;
+		height: 260px;
 
 		&__bg {
-			left: 6%;
-			bottom: 7%;
+			left: 13%;
+			bottom: 4%;
 			width: 200px;
 			height: 250px;
 		}
 	}
-}
 
-@media (min-width: 1102px) {
 	.player-box {
-		height: 20vh;
+		justify-content: end;
+		gap: 40px;
+	}
+
+	@mixin player {
+		width: 260px;
+
+		&__title {
+			top: -25px;
+			right: 10px;
+			font-size: 19px;
+		}
+
+		&__stats {
+			width: 190px;
+		}
+	}
+
+	@mixin miniPanels {
+		width: 60px;
+		height: 20px;
+	}
+
+	.player {
+		@include player;
+
+		.greetings_panel {
+			@include miniPanels;
+			left: 80px;
+			bottom: -20px;
+		}
+
+		.schedule_panel {
+			@include miniPanels;
+			right: 40px;
+			bottom: -20px;
+		}
+	}
+
+	.player-chill {
+		@include player;
+
+		.greetings_panel {
+			@include miniPanels;
+			left: 80px;
+			bottom: -20px;
+		}
+
+		.schedule_panel {
+			@include miniPanels;
+			right: 40px;
+			bottom: -20px;
+		}
+	}
+
+	.player-rock {
+		@include player;
+		margin-right: 40px;
+
+		.greetings_panel {
+			@include miniPanels;
+			left: 80px;
+			bottom: -20px;
+		}
+
+		.schedule_panel {
+			@include miniPanels;
+			right: 40px;
+			bottom: -20px;
+		}
 	}
 }
 
 // ============================= M1200
 
 @media (min-width: 1200px) {
-	.logo-bg {
-		width: 30%;
-	}
-
 	.logo {
-		top: 0;
-		left: 30px;
-		width: 200px;
-		height: 200px;
-		background-size: cover;
+		left: 40%;
+	}
 
-		&--scaled {
-			transform: scale(0.7) translateX(-10px) translateY(-50px);
-			background-image: url('../img/logo_mid.png');
+	.home {
+		&__text {
+			top: 50%;
+			left: 59%;
 
-			&:hover {
-				background-image: url('../img/logo2_mini.png');
+			h1 {
+				font-size: 40px;
 			}
-		}
-	}
 
-	.nav {
-		top: 60px;
-		width: 100%;
-		transform: scale(1);
+			h2 {
+				font-size: 20px;
+			}
 
-		&__item {
-			margin: 20px;
-			font-size: 22px;
-		}
-
-		&--scaled {
-			transform: scale(0.9) translateX(-10px) translateY(-50px);
-		}
-	}
-
-	.girl {
-		left: 80px;
-		bottom: 0;
-		width: 400px;
-		height: 400px;
-
-		&__bg {
-			left: 130px;
-			bottom: 2%;
-			width: 300px;
-			height: 400px;
+			&_bg {
+				top: 36%;
+				left: 60%;
+				width: 370px;
+				height: 200px;
+			}
 		}
 	}
 }
@@ -157,26 +192,7 @@
 // ============================= M1400
 
 @media (min-width: 1400px) {
-	.logo {
-		top: 20px;
-		left: 10px;
-		width: 200px;
-		height: 200px;
-		background-image: url('../img/logo.png');
-
-		&--scaled {
-			transform: scale(0.6) translateX(150px) translateY(-110px);
-			background-image: url('../img/logo_mid.png');
-
-			&:hover {
-				background-image: url('../img/logo2_mini.png');
-			}
-		}
-	}
-
 	.nav {
-		top: 60px;
-		right: 0;
 		&__item {
 			margin: 25px;
 		}
@@ -190,117 +206,6 @@
 		}
 	}
 
-	.home {
-		&__text {
-			top: 72%;
-			left: 58%;
-
-			h1 {
-				font-size: 55px;
-			}
-
-			h2 {
-				font-size: 25px;
-			}
-
-			&_bg {
-				left: 58%;
-				top: 60%;
-				width: 400px;
-				height: 322px;
-			}
-		}
-	}
-
-	.player-box {
-		justify-content: end;
-		overflow: visible;
-	}
-
-	@mixin player {
-		margin-right: 100px;
-	}
-
-	.player {
-		@include player;
-	}
-
-	.player-chill {
-		@include player;
-	}
-
-	.player-rock {
-		@include player;
-	}
-}
-
-// ============================= M1470
-
-@media (min-width: 1470px) {
-	.nav {
-		&__item {
-			margin: 25px;
-			font-size: 28px;
-		}
-	}
-
-	.crew {
-		height: 100vh;
-	}
-
-	.crew-container {
-		height: 80vh;
-		padding: 0;
-		padding: 100px 0 100px 0;
-	}
-
-	.crew-box {
-		width: 300px;
-		height: 500px;
-	}
-
-	// .schedule {
-	// 	height: 100vh;
-
-	// 	&__title {
-	// 		p {
-	// 			font-size: 40px;
-	// 		}
-	// 	}
-	// }
-}
-
-// ============================= M1650
-
-@media (min-width: 1680px) {
-	.home {
-		&__text {
-			top: 58%;
-			left: 58%;
-
-			h1 {
-				font-size: 75px;
-			}
-
-			h2 {
-				font-size: 40px;
-			}
-
-			&_bg {
-				left: 58%;
-				top: 45%;
-				width: 520px;
-				height: 422px;
-			}
-		}
-	}
-
-	.schedule {
-		height: 100vh;
-	}
-}
-
-@media (min-width: 1870px) {
 	.girl {
 		display: none;
 
@@ -309,11 +214,24 @@
 		}
 	}
 
+	.player-box {
+		overflow: visible;
+		gap: 80px;
+	}
+
 	.girl2 {
+		@include girl;
 		display: block;
+		left: 5%;
+		bottom: 0;
+		width: 400px;
+		height: 400px;
 
 		&__bg {
-			display: block;
+			left: 7%;
+			bottom: 200px;
+			width: 320px;
+			height: 200px;
 		}
 	}
 }

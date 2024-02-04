@@ -153,3 +153,88 @@ $('.slider').each(function () {
 
 	advance()
 })
+
+function slider(flag) {
+	var current = document.querySelector('.item.current'),
+		next
+
+	if (!current) {
+		return
+	}
+
+	if (!flag) {
+		next = current.nextElementSibling || document.querySelector('.item:first-child')
+	} else {
+		next = current.previousElementSibling || document.querySelector('.item:last-child')
+	}
+
+	if (!next) {
+		return
+	}
+
+	next.classList.add('current')
+	current.classList.remove('current')
+}
+
+var setSlider = setInterval(function () {
+	slider()
+}, 4000)
+
+document.querySelectorAll('.button').forEach(function (button) {
+	button.addEventListener('click', function () {
+		clearInterval(setSlider)
+		var flag = this.classList.contains('prev')
+		slider(flag)
+		setSlider = setInterval(function () {
+			slider()
+		}, 4000)
+	})
+})
+
+// ---------------------------
+
+// Funkcja podmieniająca zawartość ramówki Trance
+function tranceSchedule() {
+	const nowaZawartosc =
+		'<iframe src="https://vulpine.panelradiowy.pl/embed.php?script=ramowka" scrolling="auto" border="0" marginwidth="0" marginheight="0" frameborder="no" width="100%" height="100%"></iframe>'
+
+	let contentSchedule = document.getElementById('contentSchedule')
+
+	if (contentSchedule) {
+		contentSchedule.innerHTML = nowaZawartosc
+	} else {
+		console.error("Nie znaleziono elementu o ID 'contentSchedule'.")
+	}
+}
+
+// Funkcja podmieniająca zawartość ramówki Chill
+function chillSchedule() {
+	const nowaZawartosc =
+		'<iframe src="https://chill.panelradiowy.pl/embed.php?script=ramowka" scrolling="auto" border="0" marginwidth="0" marginheight="0" frameborder="no" width="100%" height="100%"></iframe>'
+
+	let contentSchedule = document.getElementById('contentSchedule')
+
+	if (contentSchedule) {
+		contentSchedule.innerHTML = nowaZawartosc
+	} else {
+		console.error("Nie znaleziono elementu o ID 'contentSchedule'.")
+	}
+}
+
+// Funkcja podmieniająca zawartość ramówki Rock
+function rockSchedule() {
+	const nowaZawartosc =
+		'<iframe src="https://rock.panelradiowy.pl/embed.php?script=ramowka" scrolling="auto" border="0" marginwidth="0" marginheight="0" frameborder="no" width="100%" height="100%"></iframe>'
+
+	let contentSchedule = document.getElementById('contentSchedule')
+
+	if (contentSchedule) {
+		contentSchedule.innerHTML = nowaZawartosc
+	} else {
+		console.error("Nie znaleziono elementu o ID 'contentSchedule'.")
+	}
+}
+
+function openImageInNewTab(imageUrl, color) {
+	window.open(imageUrl, '_blank')
+}

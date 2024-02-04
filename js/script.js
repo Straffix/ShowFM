@@ -81,4 +81,29 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 })
 
-// --------------
+//============ nav
+
+function scrollToElement(elementId) {
+	var element = document.getElementById(elementId)
+	if (element) {
+		var offset = 80
+		var elementPosition = element.offsetTop - offset
+
+		window.scrollTo({
+			top: elementPosition,
+			behavior: 'smooth',
+		})
+	}
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+	var navLinks = document.querySelectorAll('.nav__item')
+
+	navLinks.forEach(function (link) {
+		link.addEventListener('click', function (event) {
+			event.preventDefault()
+			var targetId = this.getAttribute('href').substring(1)
+			scrollToElement(targetId)
+		})
+	})
+})

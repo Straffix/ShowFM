@@ -5,228 +5,145 @@
 .schedule {
 	position: relative;
 	width: 100%;
+	height: calc(100vh - 80px);
+	padding-top: 40px;
 	background-color: #fff;
-	overflow: hidden;
 
 	&__title {
-		width: 100%;
-		height: 17vh; // 20 + poster-box + schedule-buttons = 100vh
-		display: flex;
-		justify-content: end;
-		align-items: end;
-		text-align: center;
+		font-size: 23px;
+		margin-left: 80px;
+		color: $c_blue;
+		font-weight: bold;
 
-		p {
-			width: 100%;
-			font-family: 'Merienda', cursive;
-			font-size: 20px;
-			padding: 10px;
-			color: $c_purple;
+		&--color {
 			color: #fff;
-			background-color: #00000029;
-			z-index: 20;
 		}
 	}
 }
 
-// =========== SLIPER [mobile only]
-
-html,
-body {
-	background: #f7f5e6;
-	height: 100%;
-	margin: 0;
-	padding: 0;
+.schedule-bar {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-wrap: wrap;
 	width: 100%;
-}
-
-.slider {
-	margin: 0 auto;
-	max-width: 940px;
-}
-
-.slide_viewer {
-	height: 340px;
-	overflow: hidden;
-	position: relative;
-}
-
-.slide_group {
-	height: 100%;
-	position: relative;
-	width: 100%;
-}
-
-.slide {
-	display: none;
-	height: 100%;
-	position: absolute;
-	width: 100%;
-}
-
-.slide:first-child {
-	display: block;
-}
-
-.slide:nth-of-type(1) {
-	background: #d7a151;
-	background-image: url('/img/plakaty/9350699.png');
-}
-
-.slide:nth-of-type(2) {
-	background: #f4e4cd;
-	background-image: url('/img/plakaty/burn_paradise.png');
-}
-
-.slide:nth-of-type(3) {
-	background: #c75534;
-	background-image: url('/img/plakaty/global_chill.png');
-}
-
-.slide:nth-of-type(4) {
-	background: #d1d1d4;
-	background-image: url('/img/plakaty/night_party.png');
-}
-
-.slide_buttons {
-	left: 0;
-	position: absolute;
-	right: 0;
-	text-align: center;
-}
-
-a.slide_btn {
-	color: #474544;
-	font-size: 42px;
-	margin: 0 0.175em;
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-ms-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
-}
-
-.slide_btn.active,
-.slide_btn:hover {
-	color: #428cc6;
-	cursor: pointer;
-}
-
-.directional_nav {
-	height: 340px;
-	margin: 0 auto;
-	max-width: 940px;
-	position: relative;
-	top: -340px;
-}
-
-.previous_btn {
-	bottom: 0;
-	left: 100px;
-	margin: auto;
-	position: absolute;
-	top: 0;
-}
-
-.next_btn {
-	bottom: 0;
-	margin: auto;
-	position: absolute;
-	right: 100px;
-	top: 0;
-}
-
-.previous_btn,
-.next_btn {
-	cursor: pointer;
-	height: 65px;
-	opacity: 0.5;
-	-webkit-transition: opacity 0.4s ease-in-out;
-	-moz-transition: opacity 0.4s ease-in-out;
-	-ms-transition: opacity 0.4s ease-in-out;
-	-o-transition: opacity 0.4s ease-in-out;
-	transition: opacity 0.4s ease-in-out;
-	width: 65px;
-}
-
-.previous_btn:hover,
-.next_btn:hover {
-	opacity: 1;
-}
-
-@media only screen and (max-width: 767px) {
-	.previous_btn {
-		left: 50px;
-	}
-	.next_btn {
-		right: 50px;
-	}
-}
-
-// =========== POSTERS
-
-.schedule-buttons {
-	top: 0; //bottom
-	width: 100%;
+	height: 80px;
 	background-color: $c_purple;
+	border-top: 4px solid $c_blue;
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.452);
+	// box-shadow: 0 6px 10px rgba(247, 0, 255, 0.452);
+}
 
-	&__bg {
+// GŁÓWNA PODKATEGORIA RAMÓWKI
+.schedule-boxes {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: calc(100% - 80px);
+}
+
+//box odpowiedzialny za tło ramówki
+.schedule-box {
+	position: relative;
+	width: 50%;
+	height: 100%;
+
+	&__bar {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 20px;
-		gap: 30px;
 		flex-wrap: wrap;
-	}
-
-	&__title {
-		font-size: 7px;
-		text-transform: uppercase;
-		color: #fff;
+		gap: 20px;
+		width: 100%;
+		min-height: 60px;
+		padding: 20px;
 	}
 
 	button {
-		width: 90px;
-		height: 60px;
-		font-size: 15px;
-		padding: 5px;
-		font-family: 'Merienda', cursive;
-		// border: 3px solid rgba(0, 0, 0, 0.552);
+		width: 160px;
+		height: 40px;
+		border-radius: 5px;
 		border: none;
-		border-radius: 4px;
 		cursor: pointer;
-
-		// &:hover {
-		// 	background-color: $c_yellow;    //TYLKO NA DESKTOP
-		// }
+		font-size: 17px;
 	}
 
 	.b-trance {
-		background-color: $c_blue;
+		border: 2px solid #242424;
+
+		&:hover {
+			background-color: $c_blue;
+		}
 	}
 
 	.b-chill {
-		background-color: $c_lime;
+		border: 2px solid #242424;
+
+		&:hover {
+			background-color: $c_lime;
+		}
 	}
 
 	.b-rock {
-		background-color: $c_red;
+		border: 2px solid #242424;
+
+		&:hover {
+			background-color: $c_red;
+		}
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: calc(100% - 80px);
+		padding: 0 20px 20px 20px;
+
+		//box odpowiedzialny za RAMÓWKĘ
+		.contentSchedule {
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+		}
+	}
+
+	.schedule-board {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		color: #fff;
+		background-color: #242424;
+		box-shadow: 0 0 5px black;
+		border-radius: 7px;
+		font-size: 30px;
 	}
 }
 
+.posters-box {
+	position: relative;
+	width: 50%;
+	height: 100%;
+}
+
 .posters {
-	inset: 0;
-	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: 30px;
-	padding: 20px;
+	width: 100%;
+	height: 100%;
+	gap: 20px;
+	cursor: pointer;
 }
+
 .poster-tilt {
 	position: relative;
 	perspective: 500px;
+
 }
 
 .poster-bg {
@@ -270,8 +187,8 @@ a.slide_btn {
 	background-repeat: no-repeat;
 	color: #fff;
 	text-shadow: 0 0 10px var(--color);
-	width: 350px;
-	height: 500px;
+	width: 200px;
+	height: 300px;
 	border-radius: 10px;
 	font-size: 3rem;
 	line-height: 0;

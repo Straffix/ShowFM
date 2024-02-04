@@ -1,66 +1,8 @@
-// ============================= M700
-@media (min-width: 700px) {
-	.home {
-		&__text {
-			top: 70%;
-			left: 45%;
-
-			h1 {
-				font-size: 38px;
-			}
-
-			h2 {
-				font-size: 20px;
-			}
-
-			&_bg {
-				left: 45%;
-				top: 52%;
-				width: 280px;
-				height: 230px;
-			}
-		}
-	}
-
-	.girl {
-		left: 10px;
-		bottom: 0;
-		width: 300px;
-		height: 300px;
-
-		&__bg {
-			left: 50px;
-			bottom: 3%;
-			width: 200px;
-			height: 300px;
-		}
-	}
-}
-
 // ============================= M768
 
 @media (min-width: 768px) {
 	.burger-icon {
 		display: none;
-	}
-
-	.logo-bg {
-		width: 20%;
-	}
-
-	.logo {
-		&--scaled {
-			transform: scale(0.5) translateX(0px) translateY(-60px);
-			background-image: url('../img/logo_small.png');
-
-			&:hover {
-				background-image: url('../img/logo2_mini.png');
-			}
-		}
-	}
-
-	.nav-desktop {
-		display: block;
 	}
 
 	.nav {
@@ -82,6 +24,141 @@
 			transform: scale(1) translateX(0) translateY(-24px);
 		}
 	}
-}
 
-// ========================= MEDIA landscape || 768
+	.nav-desktop {
+		display: block;
+	}
+
+	.logo {
+		left: 20%;
+	}
+
+	.logo-bg {
+		width: 150px;
+	}
+
+	.girl {
+		left: 10%;
+		width: 300px;
+		height: 300px;
+
+		&__bg {
+			left: 17%;
+			bottom: 60px;
+			width: 200px;
+			height: 250px;
+		}
+	}
+
+	.home {
+		height: 80vh;
+		&__bg {
+			background-image: url('../img/dj-6472628_1920.jpg');
+		}
+
+		&__text {
+			top: 70%;
+			left: 55%;
+
+			h1 {
+				font-size: 30px;
+			}
+
+			h2 {
+				font-size: 15px;
+			}
+
+			&_bg {
+				display: block;
+				left: 55%;
+				top: 60%;
+				width: 250px;
+				height: 200px;
+			}
+		}
+	}
+
+	.player-box {
+		height: 20vh;
+		flex-direction: row;
+		gap: 30px;
+		padding: 0;
+	}
+
+	@mixin player {
+		width: 200px;
+		height: 60px;
+
+		&__title {
+			top: -22px;
+			right: 10px;
+			font-size: 17px;
+		}
+
+		&__stats {
+			width: 150px;
+		}
+
+		&__button {
+			
+			&__bg {
+				left: 1px;
+				// width: 50px;
+				// height: 50px;
+			}
+		}
+	}
+
+	@mixin miniPanels {
+		width: 60px;
+		height: 15px;
+	}
+
+	.player {
+		@include player;
+
+		.greetings_panel {
+			@include miniPanels;
+			left: 55px;
+			bottom: -16px;
+		}
+
+		.schedule_panel {
+			@include miniPanels;
+			right: 14px;
+			bottom: -16px;
+		}
+	}
+
+	.player-chill {
+		@include player;
+
+		.greetings_panel {
+			@include miniPanels;
+			left: 55px;
+			bottom: -16px;
+		}
+
+		.schedule_panel {
+			@include miniPanels;
+			right: 14px;
+			bottom: -16px;
+		}
+	}
+
+	.player-rock {
+		@include player;
+
+		.greetings_panel {
+			@include miniPanels;
+			left: 55px;
+			bottom: -16px;
+		}
+
+		.schedule_panel {
+			@include miniPanels;
+			right: 14px;
+			bottom: -16px;
+		}
+	}
+}
