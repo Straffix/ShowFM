@@ -12,6 +12,8 @@
         href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Montserrat:wght@400;700&family=Radio+Canada:wght@400;700&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
     <script src="https://kit.fontawesome.com/a16198b6e5.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./css/main.css">
@@ -197,24 +199,26 @@
                 </div>
                 <div class="posters-box">
                     <div class="posters">
-                        <div class="poster-tilt"
+                        <div class="poster-tilt rotate-tilt-1"
                             onclick="openImageInNewTab('../img/plakaty/burn_paradise.png', '#e69d00')">
                             <div class="poster-card poster-bg poster-center"
                                 style="--color:#e69d00;--url:url('../img/plakaty/burn_paradise.png');">
                             </div>
                         </div>
-                        <div class="poster-tilt" onclick="openImageInNewTab('../img/plakaty/9350699.png', '#da70d6')">
+                        <div class="poster-tilt rotate-tilt-2"
+                            onclick="openImageInNewTab('../img/plakaty/9350699.png', '#da70d6')">
                             <div class="poster-card poster-bg poster-center"
                                 style="--color:#da70d6;--url:url('../img/plakaty/9350699.png');">
                             </div>
                         </div>
-                        <div class="poster-tilt"
+                        <div class="poster-tilt rotate-tilt-3"
                             onclick="openImageInNewTab('../img/plakaty/global_chill.png', '#9bc744')">
                             <div class="poster-card poster-bg poster-center"
                                 style="--color:#9bc744;--url:url('../img/plakaty/global_chill.png');">
                             </div>
                         </div>
                     </div>
+
 
                 </div>
             </div>
@@ -250,6 +254,8 @@
                 <span></span>
             </div>
 
+            <div class="crew-round"></div>
+
             <div class="crew__overlay"></div>
 
             <div class="crew-bar">
@@ -260,7 +266,7 @@
 
             <div class="crew-container">
 
-                <div class="crew-box clr1">
+                <div class="crew-box nexi clr1">
                     <div class="imgBx">
                         <img src="./img/ekipa/Nexi.png" alt="dj nexi photo">
                         <div class="glass">
@@ -269,13 +275,13 @@
                                 <a href="#" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
                                 <a href="#" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
                                 <a href="#" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
-                                <div class="dj-music"><i class="fa-solid fa-play fa-beat-fade"></i></div>
+                                <div class="djPrev" id="djNexi"><i class="fa-solid fa-play"></i></div>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="crew-box clr1">
+                <div class="crew-box jody clr1">
                     <div class="imgBx">
                         <img src="./img/ekipa/djka.png" alt="dj jody photo">
                         <div class="glass">
@@ -284,12 +290,13 @@
                                 <a href="#" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
                                 <a href="#" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
                                 <a href="#" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                <div class="djPrev" id="djJody"><i class="fa-solid fa-play"></i></div>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="crew-box clr1">
+                <div class="crew-box antex clr1">
                     <div class="imgBx">
                         <img src="./img/ekipa/dj-1449978_1280.png" alt="dj antex photo">
                         <div class="glass">
@@ -298,12 +305,13 @@
                                 <a href="#" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
                                 <a href="#" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
                                 <a href="#" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                <div class="djPrev" id="djAntex"><i class="fa-solid fa-play"></i></div>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="crew-box clr1">
+                <div class="crew-box kris clr1">
                     <div class="imgBx">
                         <img src="./img/ekipa/tomek.png" alt="dj kris photo">
                         <div class="glass">
@@ -312,12 +320,13 @@
                                 <a href="#" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
                                 <a href="#" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
                                 <a href="#" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                <div class="djPrev" id="djKris"><i class="fa-solid fa-play"></i></div>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="crew-box clr1">
+                <div class="crew-box robert clr1">
                     <div class="imgBx">
                         <img src="./img/ekipa/dj-5057795_1280.jpg" alt="presenter robert photo">
                         <div class="glass">
@@ -326,11 +335,13 @@
                                 <a href="#" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
                                 <a href="#" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
                                 <a href="#" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                <div class="djPrev" id="robert"><i class="fa-solid fa-play"></i></div>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
+
         </section>
 
         <!-- // --------   ..:: SHOWLIST ::..   -------- \\ -->
@@ -347,82 +358,94 @@
 
                 <div class="box">
                     <div class="number">01</div>
-                    <div class="cover"><img src="https://m.media-amazon.com/images/I/91-kmdlsEsL._SS500_.jpg" alt="01">
+                    <div class="cover"><img
+                            src="https://topmusicarts.com/cdn/shop/files/T.-Matthias-_-Alimish---Exhale-TMA_540x.png?v=1697164841"
+                            alt="01">
                     </div>
-                    <div class="name"><span>Mi gente</span> J Balin & Willy William</div>
-                    <div class="link"><a href="https://www.youtube.com/watch?v=wnJ6LuUFpMo">Listen</a></div>
+                    <div class="name"><span>Exhale</span> T.Matthias & Alimish</div>
+                    <div class="link" id="no_1"><i class="ti ti-player-play"></i></div>
                 </div>
 
                 <div class="separator"></div>
                 <div class="box">
                     <div class="number">02</div>
-                    <div class="cover"><img src="http://bit.ly/2vlCeWf" alt="02"></div>
-                    <div class="name"><span>Feels</span> Calvin Harris</div>
-                    <div class="link"><a href="https://www.youtube.com/watch?v=ozv4q2ov3Mk">Listen</a></div>
+                    <div class="cover"><img
+                            src="https://iknurow.pl/wp-content/uploads/2023/01/69D22903-08FE-4D3F-BBEA-47BFD8948181.jpeg"
+                            alt="02"></div>
+                    <div class="name"><span>Milkshake</span> C-Bool</div>
+                    <div class="link" id="no_2"><i class="ti ti-brand-youtube"></i></div>
                 </div>
 
                 <div class="separator"></div>
                 <div class="box">
                     <div class="number">03</div>
-                    <div class="cover"><img src="http://bit.ly/2vlRum1" alt="03"></div>
+                    <div class="cover"><img
+                            src="https://topmusicarts.com/cdn/shop/files/Marnik-x-Naeleck---Boyz-In-Paris-_with-VINAI_-TMA_540x.png?v=1703715643"
+                            alt="03"></div>
                     <div class="name"><span>Attention</span> Charlie Puth</div>
-                    <div class="link"><a href="https://www.youtube.com/watch?v=nfs8NYg7yQM">Listen</a></div>
+                    <div class="link" id="no_3"><i class="ti ti-player-play"></i></div>
                 </div>
 
                 <div class="separator"></div>
                 <div class="box">
                     <div class="number">04</div>
-                    <div class="cover"><img src="http://bit.ly/2vlRum1" alt="03"></div>
+                    <div class="cover"><img
+                            src="https://topmusicarts.com/cdn/shop/files/John-Summit-_-Mathame---Hungover-_with-Camden-Cox_TMA_540x.png?v=1703281917"
+                            alt="04"></div>
                     <div class="name"><span>Attention</span> Charlie Puth</div>
-                    <div class="link"><a href="https://www.youtube.com/watch?v=nfs8NYg7yQM">Listen</a></div>
+                    <div class="link" id="no_4"><i class="ti ti-player-play"></i></div>
                 </div>
 
                 <div class="separator"></div>
                 <div class="box">
                     <div class="number">05</div>
-                    <div class="cover"><img src="http://bit.ly/2vlRum1" alt="03"></div>
+                    <div class="cover"><img
+                            src="https://topmusicarts.com/cdn/shop/files/Skrillex-_-BEAM---Selecta-TMA_540x.png?v=1701824565"
+                            alt="05"></div>
                     <div class="name"><span>Attention</span> Charlie Puth</div>
-                    <div class="link"><a href="https://www.youtube.com/watch?v=nfs8NYg7yQM">Listen</a></div>
+                    <div class="link" id="no_5"><i class="ti ti-player-play"></i></div>
                 </div>
 
                 <div class="separator"></div>
                 <div class="box">
                     <div class="number">06</div>
-                    <div class="cover"><img src="http://bit.ly/2vlRum1" alt="03"></div>
-                    <div class="name"><span>Attention</span> Charlie Puth</div>
-                    <div class="link"><a href="https://www.youtube.com/watch?v=nfs8NYg7yQM">Listen</a></div>
+                    <div class="cover"><img
+                            src="https://topmusicarts.com/cdn/shop/files/Dimitri-Vegas-_-Like-Mike-_-Tiesto-_-Dido-_-W_W---Thank-You-_Not-So-Bad_-Ableton-Remake_540x.png?v=1705493755"
+                            alt="06"></div>
+                    <div class="name"><span>Thank You (Not So Bad)</span> Dimitri Vegas & Like Mike</div>
+                    <div class="link" id="no_6"><i class="ti ti-player-play"></i></div>
                 </div>
 
                 <div class="separator"></div>
                 <div class="box">
                     <div class="number">07</div>
-                    <div class="cover"><img src="http://bit.ly/2vlRum1" alt="03"></div>
+                    <div class="cover"><img src="http://bit.ly/2vlRum1" alt="07"></div>
                     <div class="name"><span>Attention</span> Charlie Puth</div>
-                    <div class="link"><a href="https://www.youtube.com/watch?v=nfs8NYg7yQM">Listen</a></div>
+                    <div class="link" id="no_7"><i class="ti ti-player-play"></i></div>
                 </div>
 
                 <div class="separator"></div>
                 <div class="box">
                     <div class="number">08</div>
-                    <div class="cover"><img src="http://bit.ly/2vlRum1" alt="03"></div>
+                    <div class="cover"><img src="http://bit.ly/2vlRum1" alt="08"></div>
                     <div class="name"><span>Attention</span> Charlie Puth</div>
-                    <div class="link"><a href="https://www.youtube.com/watch?v=nfs8NYg7yQM">Listen</a></div>
+                    <div class="link" id="no_8"><i class="ti ti-player-play"></i></div>
                 </div>
 
                 <div class="separator"></div>
                 <div class="box">
                     <div class="number">09</div>
-                    <div class="cover"><img src="http://bit.ly/2vlRum1" alt="03"></div>
+                    <div class="cover"><img src="http://bit.ly/2vlRum1" alt="09"></div>
                     <div class="name"><span>Attention</span> Charlie Puth</div>
-                    <div class="link"><a href="https://www.youtube.com/watch?v=nfs8NYg7yQM">Listen</a></div>
+                    <div class="link" id="no_9"><i class="ti ti-player-play"></i></div>
                 </div>
 
                 <div class="separator"></div>
                 <div class="box">
                     <div class="number">10</div>
-                    <div class="cover"><img src="http://bit.ly/2vlRum1" alt="03"></div>
+                    <div class="cover"><img src="http://bit.ly/2vlRum1" alt="10"></div>
                     <div class="name"><span>Attention</span> Charlie Puth</div>
-                    <div class="link"><a href="https://www.youtube.com/watch?v=nfs8NYg7yQM">Listen</a></div>
+                    <div class="link" id="no_10"><i class="ti ti-player-play"></i></div>
                 </div>
             </div>
         </section>
@@ -489,6 +512,7 @@
     <script src="./js/smoke.js"></script>
     <script src="./js/burger.js"></script>
     <script src="./js/schedule.js"></script>
+    <script src="./js/showlist.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

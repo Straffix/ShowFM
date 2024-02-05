@@ -7,7 +7,7 @@
 .crew {
 	position: relative;
 	width: 100%;
-	min-height: 100vh;
+	min-height: calc(100vh - 80px);
 	padding-top: 40px;
 	overflow: hidden;
 
@@ -27,7 +27,7 @@
 		inset: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(30, 7, 39, 0.562);
+		background-color: rgba(30, 7, 39, 0.877);
 		z-index: -1;
 	}
 }
@@ -39,7 +39,6 @@
 	flex-wrap: wrap;
 	width: 25%;
 	height: 60px;
-	// background-color: #cc00ff23;
 	border-top: 3px solid $c_blue;
 	border-right: 3px solid $c_blue;
 	border-radius: 0 0 100px 0;
@@ -88,6 +87,21 @@
 	}
 }
 
+// .crew-round {
+// 	position: absolute;
+// 	bottom: 0;
+// 	width: 100%;
+// 	height: 600px;
+// 	background-image: url('#');
+// 	background-size: cover;
+// }
+
+.djPrev {
+	font-size: 18px;
+	color: #fff;
+	cursor: pointer;
+}
+
 .crew-box:hover .imgBx img {
 	opacity: 0.5;
 }
@@ -101,12 +115,15 @@
 }
 
 .clr1 {
-	box-shadow: 0 0 10px 1px #201135, 0 0 25px 5px #201135, 0 0 50px 10px #201135;
-	// box-shadow: 0 0 20px #201135;
+	box-shadow: 0 0 10px $c_blue;
 
 	&:hover {
 		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.25);
 	}
+}
+
+.clr-anim {
+	animation: opacityAnimation 1s 0.5s linear infinite alternate;
 }
 
 .imgBx {
@@ -179,34 +196,15 @@
 
 // ===================================BG
 
-@keyframes move {
-	100% {
-		transform: translate3d(0, 0, 1px) rotate(360deg);
-	}
-}
-
 .crew-bg {
 	position: absolute;
 	top: 0;
 	width: 100%;
 	height: 100%;
-	// background-color: #210027;
 	background-color: #0e011a;
 	overflow: hidden;
 	z-index: -10;
 }
-
-// -------------- usuń
-
-.audio-controls {
-	display: flex;
-}
-
-.link {
-	margin-right: 10px;
-}
-
-// ===================
 
 .crew-bg span {
 	width: 16vmin;

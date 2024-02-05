@@ -140,6 +140,35 @@
     transform: translateX(0);
   }
 }
+@keyframes rotate {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes shadow-drop-bl {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  100% {
+    box-shadow: -12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+@keyframes opacityAnimation {
+  0% {
+    box-shadow: 0 0 0 #000;
+  }
+  50% {
+    box-shadow: 0 0 20px #da3636;
+  }
+  100% {
+    box-shadow: 0 0 0 #000;
+  }
+}
 .schedule {
   position: relative;
   width: 100%;
@@ -258,12 +287,16 @@
   width: 100%;
   height: 100%;
   gap: 20px;
-  cursor: pointer;
+}
+
+.rotate-animation {
+  animation: rotate 1s ease-in-out;
 }
 
 .poster-tilt {
   position: relative;
   perspective: 500px;
+  cursor: pointer;
 }
 
 .poster-bg {
@@ -317,7 +350,7 @@
 .crew {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   padding-top: 40px;
   overflow: hidden;
 }
@@ -335,7 +368,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 7, 39, 0.562);
+  background-color: rgba(30, 7, 39, 0.877);
   z-index: -1;
 }
 
@@ -391,6 +424,12 @@
   transition: 1.5s;
 }
 
+.djPrev {
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
 .crew-box:hover .imgBx img {
   opacity: 0.5;
 }
@@ -404,10 +443,14 @@
 }
 
 .clr1 {
-  box-shadow: 0 0 10px 1px #201135, 0 0 25px 5px #201135, 0 0 50px 10px #201135;
+  box-shadow: 0 0 10px #00ccff;
 }
 .clr1:hover {
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.25);
+}
+
+.clr-anim {
+  animation: opacityAnimation 1s 0.5s linear infinite alternate;
 }
 
 .imgBx {
@@ -479,11 +522,6 @@
   font-size: 0.5em;
 }
 
-@keyframes move {
-  100% {
-    transform: translate3d(0, 0, 1px) rotate(360deg);
-  }
-}
 .crew-bg {
   position: absolute;
   top: 0;
@@ -492,14 +530,6 @@
   background-color: #0e011a;
   overflow: hidden;
   z-index: -10;
-}
-
-.audio-controls {
-  display: flex;
-}
-
-.link {
-  margin-right: 10px;
 }
 
 .crew-bg span {
@@ -742,6 +772,15 @@
   color: #fff;
 }
 
+.ti-player-play,
+.ti-player-play-filled,
+.ti-player-pause-filled,
+.ti-brand-youtube,
+.ti-brand-youtube-filled {
+  font-size: 50px;
+  color: #520b4a;
+}
+
 .showlist-bar {
   display: flex;
   align-items: center;
@@ -814,16 +853,9 @@
 /* Button */
 .link {
   text-align: right;
-  line-height: 150px;
+  line-height: 180px;
   margin-right: 25px;
-}
-
-.link a {
-  padding: 9px 12px;
-  border: 1px solid #dfe2e4;
-  color: #a3a8cd;
-  text-decoration: none;
-  font-size: 14px;
+  cursor: pointer;
 }
 
 /* Separator */
@@ -1011,6 +1043,9 @@ body {
   justify-content: center;
   transition: transform 0.5s;
 }
+.nav__item.active {
+  color: #00ccff;
+}
 .nav__item {
   margin: 20px;
   font-size: 18px;
@@ -1042,6 +1077,7 @@ body {
   border: none;
   background: none;
   cursor: pointer;
+  z-index: 1000;
 }
 .burger-icon:hover {
   color: #fff;

@@ -150,3 +150,36 @@
 		transform: translateX(0);
 	}
 }
+
+@keyframes rotate {
+	to {
+		transform: rotateY(360deg); // Tutaj możesz dostosować kąt obrotu
+	}
+}
+
+@keyframes shadow-drop-bl {
+	0% {
+		box-shadow: 0 0 0 0 transparent;
+	}
+	100% {
+		box-shadow: -12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+	}
+}
+
+@keyframes move {
+	100% {
+		transform: translate3d(0, 0, 1px) rotate(360deg);
+	}
+}
+
+@keyframes opacityAnimation {
+	0% {
+		box-shadow: 0 0 0 #000;
+	}
+	50% {
+		box-shadow: 0 0 20px $c_red;
+	}
+	100% {
+		box-shadow: 0 0 0 #000;
+	}
+}

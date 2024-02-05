@@ -28,6 +28,15 @@
 	}
 }
 
+.ti-player-play,
+.ti-player-play-filled,
+.ti-player-pause-filled,
+.ti-brand-youtube,
+.ti-brand-youtube-filled {
+	font-size: 50px;
+	color: $c_purple;
+}
+
 .showlist-bar {
 	display: flex;
 	align-items: center;
@@ -100,15 +109,9 @@
 /* Button */
 .link {
 	text-align: right;
-	line-height: 150px;
+	line-height: 180px;
 	margin-right: 25px;
-}
-.link a {
-	padding: 9px 12px;
-	border: 1px solid #dfe2e4;
-	color: #a3a8cd;
-	text-decoration: none;
-	font-size: 14px;
+	cursor: pointer;
 }
 
 /* Separator */

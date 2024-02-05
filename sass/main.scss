@@ -137,6 +137,10 @@ body {
 	justify-content: center;
 	transition: transform 0.5s;
 
+	&__item.active {
+		color: $c_blue; // Kolor dla aktywnej sekcji
+	}
+
 	&__item {
 		margin: 20px;
 		font-size: 18px;
@@ -148,10 +152,10 @@ body {
 		&:nth-child(2) {
 			display: block;
 		}
-	}
 
-	&__item:hover {
-		color: $c_blue;
+		&:hover {
+			color: $c_blue;
+		}
 	}
 
 	&--scaled {
@@ -172,6 +176,7 @@ body {
 	border: none;
 	background: none;
 	cursor: pointer;
+	z-index: 1000;
 
 	&:hover {
 		color: #fff;

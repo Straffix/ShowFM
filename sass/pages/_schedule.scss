@@ -31,7 +31,6 @@
 	background-color: $c_purple;
 	border-top: 4px solid $c_blue;
 	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.452);
-	// box-shadow: 0 6px 10px rgba(247, 0, 255, 0.452);
 }
 
 // GŁÓWNA PODKATEGORIA RAMÓWKI
@@ -137,13 +136,16 @@
 	width: 100%;
 	height: 100%;
 	gap: 20px;
-	cursor: pointer;
+}
+
+.rotate-animation {
+	animation: rotate 1s ease-in-out;
 }
 
 .poster-tilt {
 	position: relative;
 	perspective: 500px;
-
+	cursor: pointer;
 }
 
 .poster-bg {
