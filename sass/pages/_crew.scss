@@ -37,12 +37,9 @@
 	align-items: center;
 	justify-content: start;
 	flex-wrap: wrap;
-	width: 25%;
+	width: 100%;
 	height: 60px;
-	border-top: 3px solid $c_blue;
-	border-right: 3px solid $c_blue;
-	border-radius: 0 0 100px 0;
-	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.212);
+	background-image: linear-gradient(147deg, #00a2ff98 0%, #dee4ea00 35%);
 }
 
 .crew-container {

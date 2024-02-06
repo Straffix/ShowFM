@@ -67,6 +67,21 @@ document.addEventListener('DOMContentLoaded', function () {
 	setupAudioPlayer(audioPlayer3, playButton3, 'http://eu1.fastcast4u.com:2050/;')
 })
 
+//
+
+function openNewWindow(url, width, height) {
+	window.open(url, '_blank', 'width=' + width + ', height=' + height)
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+	document.querySelectorAll('.web-p1, .web-p2, .web-p3').forEach(function (link) {
+		link.addEventListener('click', function (e) {
+			e.preventDefault()
+			openNewWindow('players.html', 800, 600)
+		})
+	})
+})
+
 // ----------------------- DJ Prev
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -1,28 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
-	const boxes = document.querySelectorAll('.box')
+	const boxes = document.querySelectorAll('.showlistBox')
 
-	boxes.forEach(function (box) {
-		const playIcon = box.querySelector('.ti-player-play')
-		const youtubeIcon = box.querySelector('.ti-brand-youtube')
+	boxes.forEach(function (showlistBox) {
+		const playIcon = showlistBox.querySelector('.ti-player-play')
+		const youtubeIcon = showlistBox.querySelector('.ti-brand-youtube')
 
-		box.addEventListener('mouseover', function () {
-			playIcon.classList.remove('ti-player-play')
-			playIcon.classList.add('ti-player-play-filled')
+		showlistBox.addEventListener('mouseover', function (event) {
+			if (event.target === playIcon) {
+				playIcon.classList.remove('ti-player-play')
+				playIcon.classList.add('ti-player-play-filled')
+			} else if (event.target === youtubeIcon) {
+				youtubeIcon.classList.remove('ti-brand-youtube')
+				youtubeIcon.classList.add('ti-brand-youtube-filled')
+			}
 		})
 
-		box.addEventListener('mouseout', function () {
-			playIcon.classList.remove('ti-player-play-filled')
-			playIcon.classList.add('ti-player-play')
-		})
-
-		box.addEventListener('mouseover', function () {
-			youtubeIcon.classList.remove('ti-brand-youtube')
-			youtubeIcon.classList.add('ti-brand-youtube-filled')
-		})
-
-		box.addEventListener('mouseout', function () {
-			youtubeIcon.classList.remove('ti-brand-youtube-filled')
-			youtubeIcon.classList.add('ti-brand-youtube')
+		showlistBox.addEventListener('mouseout', function (event) {
+			if (event.target === playIcon) {
+				playIcon.classList.remove('ti-player-play-filled')
+				playIcon.classList.add('ti-player-play')
+			} else if (event.target === youtubeIcon) {
+				youtubeIcon.classList.remove('ti-brand-youtube-filled')
+				youtubeIcon.classList.add('ti-brand-youtube')
+			}
 		})
 	})
 
@@ -50,9 +50,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
 				showList.src = showSource
 				showList.play()
-				showButt.innerHTML = '<i class="ti ti-player-pause-filled"></i>'
+				showButt.innerHTML = '<i class="ti ti-player-pause"></i>'
 
 				playButt = showButt
+
+				// Dodaj nasłuchiwanie zdarzeń mouseover i mouseout dla nowych ikon
+				const playIcon = showButt.querySelector('.ti-player-play')
+				const pauseIcon = showButt.querySelector('.ti-player-pause')
+				const youtubeIcon = showButt.querySelector('.ti-brand-youtube')
+
+				showButt.addEventListener('mouseover', function (event) {
+					if (event.target === playIcon) {
+						playIcon.classList.remove('ti-player-play')
+						playIcon.classList.add('ti-player-play-filled')
+					} else if (event.target === pauseIcon) {
+						pauseIcon.classList.remove('ti-player-pause')
+						pauseIcon.classList.add('ti-player-pause-filled')
+					} else if (event.target === youtubeIcon) {
+						youtubeIcon.classList.remove('ti-brand-youtube')
+						youtubeIcon.classList.add('ti-brand-youtube-filled')
+					}
+				})
+
+				showButt.addEventListener('mouseout', function (event) {
+					if (event.target === playIcon) {
+						playIcon.classList.remove('ti-player-play-filled')
+						playIcon.classList.add('ti-player-play')
+					} else if (event.target === pauseIcon) {
+						pauseIcon.classList.remove('ti-player-pause-filled')
+						pauseIcon.classList.add('ti-player-pause')
+					} else if (event.target === youtubeIcon) {
+						youtubeIcon.classList.remove('ti-brand-youtube-filled')
+						youtubeIcon.classList.add('ti-brand-youtube')
+					}
+				})
 			} else {
 				showList.pause()
 				showButt.innerHTML = '<i class="ti ti-player-play"></i>'
@@ -98,38 +129,34 @@ document.addEventListener('DOMContentLoaded', function () {
 	)
 	const no_6Button = document.getElementById('no_6')
 	const no_6 = document.querySelector('.no_6')
-	handleButtonClick(
-		no_6Button,
-		no_6,
-		'https://dawtemplatesmaster.com/_audio_bucket_player/top-music-arts.myshopify.com/8613959205095/xumrprViaSM.mp3'
-	)
+	handleButtonClick(no_6Button, no_6, '/mp3/Riesling feat. Zach Alwin - On My Ride.mp3')
 
 	const no_7Button = document.getElementById('no_7')
 	const no_7 = document.querySelector('.no_7')
 	handleButtonClick(
 		no_7Button,
 		no_7,
-		'https://dawtemplatesmaster.com/_audio_bucket_player/top-music-arts.myshopify.com/8613959205095/xumrprViaSM.mp3'
+		'https://dawtemplatesmaster.com/_audio_bucket_player/top-music-arts.myshopify.com/4752957636657/5ORRlf2tJKM.mp3'
 	)
 	const no_8Button = document.getElementById('no_8')
 	const no_8 = document.querySelector('.no_8')
 	handleButtonClick(
 		no_8Button,
 		no_8,
-		'https://dawtemplatesmaster.com/_audio_bucket_player/top-music-arts.myshopify.com/8613959205095/xumrprViaSM.mp3'
+		'https://dawtemplatesmaster.com/_audio_bucket_player/top-music-arts.myshopify.com/4629643460657/Ug12rNE-Q-8.mp3'
 	)
 	const no_9Button = document.getElementById('no_9')
 	const no_9 = document.querySelector('.no_9')
 	handleButtonClick(
 		no_9Button,
 		no_9,
-		'https://dawtemplatesmaster.com/_audio_bucket_player/top-music-arts.myshopify.com/8613959205095/xumrprViaSM.mp3'
+		'https://dawtemplatesmaster.com/_audio_bucket_player/top-music-arts.myshopify.com/1451225677868/song.mp3'
 	)
 	const no_10Button = document.getElementById('no_10')
 	const no_10 = document.querySelector('.no_10')
 	handleButtonClick(
 		no_10Button,
 		no_10,
-		'https://dawtemplatesmaster.com/_audio_bucket_player/top-music-arts.myshopify.com/8613959205095/xumrprViaSM.mp3'
+		'https://dawtemplatesmaster.com/_audio_bucket_player/top-music-arts.myshopify.com/1498639269932/song.mp3'
 	)
 })

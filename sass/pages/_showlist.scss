@@ -30,6 +30,7 @@
 
 .ti-player-play,
 .ti-player-play-filled,
+.ti-player-pause,
 .ti-player-pause-filled,
 .ti-brand-youtube,
 .ti-brand-youtube-filled {
@@ -47,7 +48,6 @@
 	background-color: $c_purple;
 	border-top: 4px solid $c_blue;
 	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.452);
-	// box-shadow: 0 6px 10px rgba(247, 0, 255, 0.452);
 }
 
 .showlist-card {
@@ -61,11 +61,33 @@
 }
 
 /* Rancking */
-.box {
+.showlistBox {
 	display: block;
 	width: 80%;
 	height: 150px;
 	margin: 20px auto 20px auto;
+
+	&:hover {
+		box-shadow: 1px 1px 40px 0px #dfe2e4;
+		.number {
+			color: $c_blue;
+		}
+		span {
+			color: $c_pink;
+		}
+	}
+}
+
+/* :hover */
+.showlistBox .link a:hover {
+	background-color: $c_pink;
+	color: #fff;
+	border: none;
+}
+.link a:focus {
+	background-color: #fff;
+	color: $c_pink;
+	border: none;
 }
 
 /* Number */
@@ -120,25 +142,4 @@
 	height: 1px;
 	margin: auto;
 	background-color: #dfe2e4;
-}
-
-/* :hover */
-.box:hover {
-	box-shadow: 1px 1px 40px 0px #dfe2e4;
-	.number {
-		color: $c_blue;
-	}
-	span {
-		color: $c_pink;
-	}
-}
-.link a:hover {
-	background-color: $c_pink;
-	color: #fff;
-	border: none;
-}
-.link a:focus {
-	background-color: #fff;
-	color: $c_pink;
-	border: none;
 }
