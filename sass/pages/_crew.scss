@@ -84,15 +84,6 @@
 	}
 }
 
-// .crew-round {
-// 	position: absolute;
-// 	bottom: 0;
-// 	width: 100%;
-// 	height: 600px;
-// 	background-image: url('#');
-// 	background-size: cover;
-// }
-
 .djPrev {
 	font-size: 18px;
 	color: #fff;
@@ -111,8 +102,19 @@
 	color: #fff;
 }
 
+.fa-hand-pointer {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: $c_blue;
+	font-size: 45px;
+	z-index: 10;
+	text-shadow: 0 0 10px black;
+	animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
 .clr1 {
-	box-shadow: 0 0 10px $c_blue;
+	box-shadow: 0 0 10px #003c58;
 
 	&:hover {
 		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.25);
@@ -128,6 +130,7 @@
 	inset: 0;
 	border-radius: 10px;
 	border: 1px solid rgba(255, 255, 255, 0.2);
+	z-index: -1;
 }
 
 .imgBx img {

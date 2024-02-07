@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	document.querySelectorAll('.web-p1, .web-p2, .web-p3').forEach(function (link) {
 		link.addEventListener('click', function (e) {
 			e.preventDefault()
-			openNewWindow('players.html', 800, 600)
+			openNewWindow('players.html', 1200, 165)
 		})
 	})
 })
@@ -267,3 +267,22 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 //
+document.addEventListener('DOMContentLoaded', function () {
+	// Znajdź element z klasą "crew-box antex clr1"
+	var antexBox = document.querySelector('.crew-box.antex.clr1')
+
+	// Jeśli element został znaleziony
+	if (antexBox) {
+		// Dodaj nasłuchiwanie na zdarzenie najechania myszką
+		antexBox.addEventListener('mouseenter', function () {
+			// Znajdź element z klasą "mouse-ico" wewnątrz "antexBox"
+			var mouseIcon = antexBox.querySelector('.mouse-ico')
+
+			// Jeśli ikona została znaleziona
+			if (mouseIcon) {
+				// Ukryj ikonę ustawiając jej styl na "display: none;"
+				mouseIcon.style.display = 'none'
+			}
+		})
+	}
+})

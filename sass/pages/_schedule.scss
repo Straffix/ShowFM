@@ -59,36 +59,121 @@
 		padding: 20px;
 	}
 
+	// button {
+	// 	width: 160px;
+	// 	height: 40px;
+	// 	border-radius: 5px;
+	// 	border: none;
+	// 	cursor: pointer;
+	// 	font-size: 17px;
+	// 	border: 2px solid #242424;
+	// }
+
+	// -------------------------------------------------------------------------------------
+
 	button {
+		position: relative;
 		width: 160px;
 		height: 40px;
 		border-radius: 5px;
 		border: none;
+		font-size: 14px;
+		text-transform: uppercase;
+		border: 2px solid grey;
+		color: #000;
 		cursor: pointer;
-		font-size: 17px;
+		overflow: hidden;
 	}
 
-	.b-trance {
-		border: 2px solid #242424;
+	button::before,
+	button::after {
+		content: '';
+		display: block;
+		position: absolute;
+		transition: all 0.5s;
+	}
 
+	.border {
+		border-radius: 0;
+		overflow: visible;
+		transition: 0.8s;
+	}
+
+	.border::after,
+	.border::before {
+		width: 100%;
+		height: 100%;
+	}
+
+	.border::before {
+		top: 0;
+		left: 0;
+	}
+
+	.border::after {
+		bottom: 0;
+		right: 0;
+	}
+
+	// --------------------------------------------------------------------------
+
+	.b-trance {
 		&:hover {
 			background-color: $c_blue;
+
+			&::before {
+				top: -7px;
+				left: -7px;
+				border-top: 2px solid $c_blue;
+				border-left: 2px solid $c_blue;
+			}
+
+			&::after {
+				bottom: -7px;
+				right: -7px;
+				border-bottom: 2px solid $c_blue;
+				border-right: 2px solid $c_blue;
+			}
 		}
 	}
 
 	.b-chill {
-		border: 2px solid #242424;
-
 		&:hover {
 			background-color: $c_lime;
+
+			&::before {
+				top: -7px;
+				left: -7px;
+				border-top: 2px solid $c_lime;
+				border-left: 2px solid $c_lime;
+			}
+
+			&::after {
+				bottom: -7px;
+				right: -7px;
+				border-bottom: 2px solid $c_lime;
+				border-right: 2px solid $c_lime;
+			}
 		}
 	}
 
 	.b-rock {
-		border: 2px solid #242424;
-
 		&:hover {
 			background-color: $c_red;
+
+			&::before {
+				top: -7px;
+				left: -7px;
+				border-top: 2px solid $c_red;
+				border-left: 2px solid $c_red;
+			}
+
+			&::after {
+				bottom: -7px;
+				right: -7px;
+				border-bottom: 2px solid $c_red;
+				border-right: 2px solid $c_red;
+			}
 		}
 	}
 

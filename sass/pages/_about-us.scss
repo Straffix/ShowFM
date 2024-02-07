@@ -3,24 +3,165 @@
 
 // --------   ..:: ABOUT-US ::..   -------- \\
 
+#stars {
+	position: relative;
+	display: block;
+	width: 100%;
+	min-height: calc(100vh - 80px);
+	z-index: 1;
+}
+
 .about-us {
 	position: relative;
 	width: 100%;
-	height: 100vh;
-	padding-top: 180px;
-	background-image: url('../img/wall-2059909_640.png');
-	background-size: cover;
+	height: 100%;
+	min-height: calc(100vh - 80px);
+	background-color: #1f002e;
 
 	&__bg {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background-color: #00000042;
+		padding-top: 40px;
+		background-color: #00000070;
+	}
+
+	&__bar {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		flex-wrap: wrap;
+		width: 100%;
+		height: 60px;
+		background-image: linear-gradient(147deg, #00a2ff98 0%, #dee4ea00 35%);
+	}
+
+	&__box {
+		position: relative;
+		display: flex;
+		width: 100%;
+		padding: 60px;
+		color: #fff;
+		min-height: calc(100vh - 180px);
+		z-index: 100;
+		overflow: hidden;
+
+		a {
+			color: $c_blue;
+			text-decoration: none;
+		}
+
+		.story {
+			letter-spacing: 2px;
+			font-size: 18px;
+			margin-bottom: 30px;
+		}
+
+		.etc {
+			font-size: 13px;
+		}
+
+		.WaybackMachine {
+			position: absolute;
+			bottom: 10%;
+			left: 50%;
+			font-size: 14px;
+			transform: translateX(-50%);
+			z-index: 100;
+
+			img {
+				transform: scale(0.5);
+			}
+		}
+	}
+
+	.about-us-box1 {
+		width: 100%;
+		padding: 40px;
+
+		.round-bg {
+			position: absolute;
+			bottom: 180px;
+			right: -300px;
+			width: 400px;
+			height: 400px;
+			background-size: cover;
+			z-index: -10;
+		}
+		.round-bg2 {
+			position: absolute;
+			width: 250px;
+			height: 250px;
+			left: -170px;
+			bottom: -100px;
+			background-size: cover;
+			z-index: -10;
+		}
+	}
+	.about-us-box2 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+
+		p {
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+
+		.about-us-container .images {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.images .image {
+			position: relative;
+			width: 45px;
+			height: 183px;
+			margin: 0 5px;
+			background-image: url('/img/oldShow/pump.png');
+			background-position: center;
+			background-size: cover;
+			border-radius: 20px;
+			overflow: hidden;
+			box-shadow: 0 0 6px rgba(2, 4, 3, 0.2);
+			transition: all 0.5s ease-in-out;
+		}
+
+		.images .image:nth-child(2) {
+			background-image: url('/img/oldShow/reaktywacja.png');
+		}
+
+		.images .image:nth-child(3) {
+			background-image: url('/img/oldShow/rekrutacja.png');
+		}
+
+		.images .image:hover {
+			width: 423px;
+			filter: none;
+			border-radius: 10px;
+		}
+
+		.images .image:not(:hover) {
+			filter: grayscale(100%);
+		}
+	}
+
+	&__title {
+		font-size: 23px;
+		margin-left: 80px;
+		color: $c_blue;
+		font-weight: bold;
+
+		&--color {
+			color: #fff;
+		}
 	}
 
 	&__text {
-		width: 100%;
-		height: 100%;
 		color: #fff;
 	}
 
@@ -29,5 +170,70 @@
 		margin-bottom: 40px;
 		color: #fff;
 		animation: pulsate 1.5s infinite alternate;
+	}
+}
+
+// OSOBNA STRONA WWW
+
+.about-us-page {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: calc(100vh - 80px);
+	background-color: #1f002e;
+
+	&__bg {
+		width: 100%;
+		height: 100%;
+		background-color: #00000070;
+	}
+
+	&__bar {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		flex-wrap: wrap;
+		width: 100%;
+		height: 60px;
+		background-image: linear-gradient(147deg, #00a2ff98 0%, #dee4ea00 35%);
+	}
+
+	&__box {
+		position: relative;
+		display: flex;
+		width: 100%;
+		padding: 60px;
+		color: #fff;
+		min-height: calc(100vh - 180px);
+		z-index: 100;
+		overflow: hidden;
+
+		a {
+			color: $c_blue;
+			text-decoration: none;
+		}
+
+		.story {
+			letter-spacing: 2px;
+			font-size: 18px;
+			margin-bottom: 30px;
+		}
+
+		.etc {
+			font-size: 13px;
+		}
+
+		.WaybackMachine {
+			position: absolute;
+			bottom: 10%;
+			left: 50%;
+			font-size: 14px;
+			transform: translateX(-50%);
+			z-index: 100;
+
+			img {
+				transform: scale(0.5);
+			}
+		}
 	}
 }
