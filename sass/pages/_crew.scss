@@ -8,7 +8,6 @@
 	position: relative;
 	width: 100%;
 	min-height: calc(100vh - 80px);
-	padding-top: 40px;
 	overflow: hidden;
 
 	&__title {
@@ -37,6 +36,7 @@
 	align-items: center;
 	justify-content: start;
 	flex-wrap: wrap;
+	margin: 40px 0 40px 0;
 	width: 100%;
 	height: 60px;
 	background-image: linear-gradient(147deg, #00a2ff98 0%, #dee4ea00 35%);
@@ -62,6 +62,7 @@
 	justify-content: center;
 	align-items: center;
 	transition: 0.8s;
+	z-index: 10;
 
 	&:hover {
 		transform: rotate(-15deg);
@@ -81,6 +82,24 @@
 		font-size: 1.25em;
 		scale: 0;
 		transition: 1.5s;
+	}
+}
+
+.crew-square {
+	position: absolute;
+	right: -100px;
+	top: 120px;
+	transform: rotate(-40deg);
+	transition: transform 2s;
+
+	.fa-napster {
+		font-size: 600px;
+		opacity: 50%;
+		color: #e100ff17;
+	}
+
+	&:hover {
+		transform: rotate(-400deg);
 	}
 }
 

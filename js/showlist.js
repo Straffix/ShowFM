@@ -53,8 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				showButt.innerHTML = '<i class="ti ti-player-pause"></i>'
 
 				playButt = showButt
-
-				// Dodaj nasłuchiwanie zdarzeń mouseover i mouseout dla nowych ikon
+				
 				const playIcon = showButt.querySelector('.ti-player-play')
 				const pauseIcon = showButt.querySelector('.ti-player-pause')
 				const youtubeIcon = showButt.querySelector('.ti-brand-youtube')
@@ -160,3 +159,93 @@ document.addEventListener('DOMContentLoaded', function () {
 		'https://dawtemplatesmaster.com/_audio_bucket_player/top-music-arts.myshopify.com/1498639269932/song.mp3'
 	)
 })
+
+// ============================================================
+
+// function toggleList() {
+// 	const showlist = document.querySelector('.showlist')
+// 	const toggleButton = document.querySelector('.toggle-button')
+// 	const toggleButton2 = document.querySelector('.toggle-button2')
+
+// 	const isExpanded = showlist.classList.contains('expanded')
+
+// 	if (!isExpanded) {
+// 		showlist.classList.add('expanded')
+// 		toggleButton.innerHTML =
+// 			'<i class="fa-solid fa-caret-up"></i> Ukryj listę przebojów <i class="fa-solid fa-caret-up"></i>'
+// 		toggleButton2.innerHTML =
+// 			'<i class="fa-solid fa-caret-up"></i> Ukryj listę przebojów <i class="fa-solid fa-caret-up"></i>'
+// 		toggleButton2.style.display = 'block'
+// 	} else {
+// 		showlist.classList.remove('expanded')
+// 		toggleButton.innerHTML =
+// 			'<i class="fa-solid fa-caret-down"></i> Pokaż listę przebojów <i class="fa-solid fa-caret-down"></i>'
+// 		toggleButton2.innerHTML =
+// 			'<i class="fa-solid fa-caret-down"></i> Pokaż listę przebojów <i class="fa-solid fa-caret-down"></i>'
+// 		toggleButton2.style.display = 'none'
+// 	}
+// }
+
+// function toggleListBottom() {
+// 	const showlist = document.querySelector('.showlist')
+// 	const toggleButton2 = document.querySelector('.toggle-button2')
+// 	const toggleButton = document.querySelector('.toggle-button')
+
+// 	const isExpanded = showlist.classList.contains('expanded')
+
+// 	if (isExpanded) {
+// 		showlist.classList.remove('expanded')
+// 		toggleButton.innerHTML =
+// 			'<i class="fa-solid fa-caret-down"></i> Pokaż listę przebojów <i class="fa-solid fa-caret-down"></i>'
+// 		toggleButton2.innerHTML =
+// 			'<i class="fa-solid fa-caret-down"></i> Pokaż listę przebojów <i class="fa-solid fa-caret-down"></i>'
+// 		toggleButton2.style.display = 'none'
+// 	}
+
+// 	showlist.scrollIntoView({ behavior: 'smooth' })
+// }
+
+// ======================================================
+
+function toggleList() {
+	const showlist = document.querySelector('.showlist')
+	const toggleButton = document.querySelector('.toggle-button')
+	const toggleButton2 = document.querySelector('.toggle-button2')
+
+	const isExpanded = showlist.classList.contains('expanded')
+
+	if (!isExpanded) {
+		showlist.classList.add('expanded')
+		toggleButton.innerHTML =
+			'<i class="fa-solid fa-caret-up"></i> Ukryj listę przebojów <i class="fa-solid fa-caret-up"></i>'
+		toggleButton2.innerHTML =
+			'<i class="fa-solid fa-caret-up"></i> Ukryj listę przebojów <i class="fa-solid fa-caret-up"></i>'
+		toggleButton2.style.display = 'block'
+	} else {
+		showlist.classList.remove('expanded')
+		toggleButton.innerHTML =
+			'<i class="fa-solid fa-caret-down"></i> Pokaż listę przebojów <i class="fa-solid fa-caret-down"></i>'
+		toggleButton2.innerHTML =
+			'<i class="fa-solid fa-caret-down"></i> Pokaż listę przebojów <i class="fa-solid fa-caret-down"></i>'
+		toggleButton2.style.display = 'none'
+	}
+}
+
+function toggleListBottom() {
+	const showlist = document.querySelector('.showlist')
+	const toggleButton2 = document.querySelector('.toggle-button2')
+	const toggleButton = document.querySelector('.toggle-button')
+
+	const isExpanded = showlist.classList.contains('expanded')
+
+	if (isExpanded) {
+		showlist.classList.remove('expanded')
+		toggleButton.innerHTML =
+			'<i class="fa-solid fa-caret-down"></i> Pokaż listę przebojów <i class="fa-solid fa-caret-down"></i>'
+		toggleButton2.innerHTML =
+			'<i class="fa-solid fa-caret-down"></i> Pokaż listę przebojów <i class="fa-solid fa-caret-down"></i>'
+		toggleButton2.style.display = 'none'
+	}
+
+	showlist.scrollIntoView({ behavior: 'smooth' })
+}

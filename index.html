@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Montserrat:wght@400;700&family=Radio+Canada:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
@@ -20,7 +20,6 @@
 </head>
 
 <body>
-
     <div class="body-line"></div>
     <div class="body-line2"></div>
 
@@ -43,19 +42,24 @@
         <!-- desktop -->
         <nav class="nav">
             <div class="nav-desktop">
-                <a class="nav__item" href="#home">home</a>
-                <a class="nav__item" href="#players">słuchaj!</a>
-                <a class="nav__item" href="#schedule">ramówka</a>
-                <a class="nav__item" href="#crew">ekipa</a>
-                <a class="nav__item" href="#showlist">showlista</a>
-                <a class="nav__item" href="#about-us">historia</a>
-                <a class="nav__item" href="#contact">kontakt</a>
+                <div class="nav-container circleBehind">
+                    <a class="nav__item " href="#home">home</a>
+                    <a class="nav__item" href="#players">słuchaj!</a>
+                    <a class="nav__item" href="#schedule">ramówka</a>
+                    <a class="nav__item" href="#crew">ekipa</a>
+                    <a class="nav__item" href="#showlist">showlista</a>
+                    <a class="nav__item" href="#about-us">historia</a>
+                    <a class="nav__item" href="#contact">kontakt</a>
+                </div>
             </div>
         </nav>
+
+
 
         <button class="burger-icon"><i class="fa-solid fa-bars"></i></button>
 
         <!-- mobile -->
+
         <div class="nav-mobile">
             <div class="nav-mobile__items">
                 <a class="nav__item" href="#home">home</a>
@@ -260,9 +264,8 @@
                 <span></span>
             </div>
 
-            <div class="crew-round"></div>
-            <!-- ZROBIĆ TUTAJ COŚ FAJNEGO A PÓŹNIEJ USUNĄĆ! -->
-            <div class="crew__overlay"></div>
+            <div class="crew-square"><i class="fa-brands fa-napster"></i></div>
+
 
             <div class="crew-bar">
                 <div class="crew__title">
@@ -351,7 +354,6 @@
         </section>
 
         <!-- // --------   ..:: SHOWLIST ::..   -------- \\ -->
-
         <section class="showlist" id="showlist">
 
             <div class="showlist-bar">
@@ -360,6 +362,10 @@
                 </div>
             </div>
 
+            <div class="toggle-button" onclick="toggleList()"><i class="fa-solid fa-caret-down"></i> Pokaż listę
+                przebojów <i class="fa-solid fa-caret-down"></i></div>
+
+            <div class="showlist-addons"></div>
             <div class="showlist-card">
 
                 <div class="showlistBox">
@@ -462,6 +468,8 @@
                     <div class="link" id="no_10"><i class="ti ti-player-play"></i></div>
                 </div>
             </div>
+            <div class="toggle-button2" onclick="toggleListBottom()"><i class="fa-solid fa-caret-up"></i> Ukryj listę
+                przebojów <i class="fa-solid fa-caret-up"></i></div>
         </section>
 
         <!-- // --------   ..:: ABOUT-US ::..   -------- \\ -->
@@ -497,7 +505,7 @@
 
                         <div class="etc">
                             <p>Ciąg dalszy historii pełnej wzlotów i upadów mojego autorstwa znajdziesz <a
-                                    href="historia.html">TUTAJ!</a>
+                                    href="story.html" target="_blank">TUTAJ!</a>
                             </p>
                         </div>
 
@@ -538,6 +546,8 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!--  -->
 
     <script src="./js/smoke.js"></script>
     <script src="./js/burger.js"></script>
