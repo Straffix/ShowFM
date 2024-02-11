@@ -16,7 +16,6 @@
 	width: 100%;
 	height: 100%;
 	min-height: calc(100vh - 80px);
-	background-color: #1f002e;
 
 	&__bg {
 		position: absolute;
@@ -173,12 +172,46 @@
 	}
 }
 
-// OSOBNA STRONA WWW
+// OSOBNA STRONA WWW ==================================================
 
-.textbox {
-	width: 200px;
-	height: 200px;
-	background-color: #fff;
+.nav-about {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	height: 120px;
+	width: 100%;
+	background-color: $c_purple;
+
+	a {
+		margin: 0 200px;
+	}
+}
+
+.nav-container-about a {
+	position: relative;
+	margin: 0px 10px;
+	padding: 10px 10px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #fff;
+
+	&:hover {
+		color: $c_blue;
+		transform: translateY(-20px);
+	}
+}
+
+.logo-about {
+	position: absolute;
+	top: 0;
+	left: 5%;
+	z-index: 100;
+
+	img {
+		width: 200px;
+		height: 200px;
+	}
 }
 
 .about-us-page {
@@ -189,6 +222,7 @@
 	background-color: #1f002e;
 
 	&__bg {
+		padding: 20px 60px;
 		width: 100%;
 		height: 100%;
 		background-color: #00000070;
@@ -223,6 +257,15 @@
 			letter-spacing: 2px;
 			font-size: 18px;
 			margin-bottom: 30px;
+		}
+
+		.story-drawer {
+			margin: 50px;
+
+			&__title {
+				font-size: 20px;
+				color: $c_pink;
+			}
 		}
 
 		.etc {

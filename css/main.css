@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /* Import */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 @keyframes wavezoom {
   0%, 50%, 100% {
     transform: scale(1, 1);
@@ -200,12 +201,29 @@
     transform: rotate(-360deg);
   }
 }
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
 .schedule {
   position: relative;
   width: 100%;
   height: calc(100vh - 80px);
   padding-top: 40px;
   background-color: #fff;
+  overflow: hidden;
 }
 .schedule__title {
   font-size: 23px;
@@ -1044,13 +1062,6 @@
   background-color: #dfe2e4;
 }
 
-.contact {
-  width: 100%;
-  height: 300px;
-  padding-top: 80px;
-  background-color: #3a0049;
-}
-
 #stars {
   position: relative;
   display: block;
@@ -1064,7 +1075,6 @@
   width: 100%;
   height: 100%;
   min-height: calc(100vh - 80px);
-  background-color: #1f002e;
 }
 .about-us__bg {
   position: absolute;
@@ -1200,10 +1210,41 @@
   animation: pulsate 1.5s infinite alternate;
 }
 
-.textbox {
+.nav-about {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 120px;
+  width: 100%;
+  background-color: #3a0049;
+}
+.nav-about a {
+  margin: 0 200px;
+}
+
+.nav-container-about a {
+  position: relative;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+}
+.nav-container-about a:hover {
+  color: #00ccff;
+  transform: translateY(-20px);
+}
+
+.logo-about {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  z-index: 100;
+}
+.logo-about img {
   width: 200px;
   height: 200px;
-  background-color: #fff;
 }
 
 .about-us-page {
@@ -1214,6 +1255,7 @@
   background-color: #1f002e;
 }
 .about-us-page__bg {
+  padding: 20px 60px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4392156863);
@@ -1246,6 +1288,13 @@
   font-size: 18px;
   margin-bottom: 30px;
 }
+.about-us-page__box .story-drawer {
+  margin: 50px;
+}
+.about-us-page__box .story-drawer__title {
+  font-size: 20px;
+  color: rgb(255, 0, 170);
+}
 .about-us-page__box .etc {
   font-size: 13px;
 }
@@ -1272,7 +1321,7 @@ html {
 }
 
 body {
-  background-color: #333;
+  background-color: #11001a;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -1405,20 +1454,19 @@ body {
 
 .nav-container a {
   position: relative;
-  margin: 0px 10px;
-  padding: 10px 10px;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Circle behind */
 div.circleBehind a:before,
 div.circleBehind a:after {
   position: absolute;
-  top: 22px;
+  top: 10px;
   left: 50%;
   width: 80px;
   height: 30px;
   border: 4px solid rgba(2, 120, 189, 0.3764705882);
-  border: 4px solid rgba(183, 0, 255, 0.3568627451);
   transform: translateX(-50%) translateY(-50%) scale(0.8);
   border-radius: 50%;
   background: transparent;
@@ -1445,8 +1493,8 @@ div.circleBehind a:hover:after {
 
 .burger-icon {
   position: fixed;
-  top: 15px;
-  right: 30px;
+  top: 20px;
+  right: 20px;
   width: 45px;
   height: 45px;
   padding: 10px;
@@ -1512,6 +1560,7 @@ div.circleBehind a:hover:after {
   background-image: url("../img/round-bg.png");
   background-size: cover;
   animation: wavezoom 2s infinite linear both;
+  display: none;
 }
 
 .home {
@@ -1554,7 +1603,7 @@ div.circleBehind a:hover:after {
 .home__text h2 {
   position: absolute;
   left: 40px;
-  color: black;
+  color: #00ccff;
   font-size: 8px;
 }
 .home__text_bg {
@@ -1595,9 +1644,9 @@ div.circleBehind a:hover:after {
   animation: scale-in-center 1s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .girl__bg {
-  bottom: 60px;
+  bottom: 140px;
   width: 200px;
-  height: 250px;
+  height: 150px;
 }
 
 .girl2 {
@@ -1618,6 +1667,7 @@ div.circleBehind a:hover:after {
   animation: scale-in-center 1s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .girl2__bg {
+  display: none;
   left: 6%;
   bottom: 60px;
   width: 500px;
@@ -1963,10 +2013,102 @@ div.circleBehind a:hover:after {
 }
 
 .footer {
+  position: relative;
   width: 100%;
-  height: 300px;
-  padding-top: 80px;
-  background-color: #333;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  color: black;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
 }
 
 @media (min-width: 450px) {
@@ -2022,7 +2164,7 @@ div.circleBehind a:hover:after {
     transform: scale(0.9);
   }
   .nav__item {
-    margin: 6px;
+    margin: 7px;
     font-size: 18px;
   }
   .nav__item:nth-child(2) {
@@ -2046,10 +2188,18 @@ div.circleBehind a:hover:after {
     height: 300px;
   }
   .girl__bg {
-    left: 17%;
-    bottom: 60px;
-    width: 200px;
-    height: 250px;
+    left: 10%;
+    bottom: 100px;
+    width: 300px;
+    height: 200px;
+  }
+  .round-bg {
+    display: block;
+    bottom: 3%;
+    bottom: 500px;
+    right: 25%;
+    width: 240px;
+    height: 230px;
   }
   .home {
     height: 80vh;
@@ -2059,19 +2209,20 @@ div.circleBehind a:hover:after {
   }
   .home__text {
     top: 70%;
-    left: 55%;
+    left: 50%;
   }
   .home__text h1 {
     font-size: 30px;
   }
   .home__text h2 {
     font-size: 15px;
+    color: black;
   }
   .home__text_bg {
     display: block;
-    left: 55%;
+    left: 50%;
     top: 60%;
-    width: 250px;
+    width: 350px;
     height: 200px;
   }
   .player-box {
@@ -2167,17 +2318,29 @@ div.circleBehind a:hover:after {
     left: 50%;
   }
   .nav__item {
-    margin: 5px;
+    margin: 9px;
     font-size: 20px;
+  }
+  .round-bg {
+    bottom: 3%;
+    right: 28%;
+    width: 250px;
+    height: 250px;
   }
 }
 @media (min-width: 992px) {
+  .round-bg {
+    bottom: 4%;
+    right: 28%;
+    width: 300px;
+    height: 300px;
+  }
   .home__bg {
     background-image: url("../img/dj-6472628_1920.jpg");
   }
   .home__text {
     top: 60%;
-    left: 54%;
+    left: 49%;
   }
   .home__text h1 {
     font-size: 40px;
@@ -2187,8 +2350,8 @@ div.circleBehind a:hover:after {
   }
   .home__text_bg {
     top: 45%;
-    left: 55%;
-    width: 320px;
+    left: 50%;
+    width: 450px;
     height: 250px;
   }
   .logo-bg {
@@ -2222,10 +2385,10 @@ div.circleBehind a:hover:after {
     height: 260px;
   }
   .girl__bg {
-    left: 13%;
-    bottom: 4%;
-    width: 200px;
-    height: 250px;
+    left: 10%;
+    bottom: 20%;
+    width: 250px;
+    height: 150px;
   }
   .player-box {
     justify-content: end;
@@ -2306,9 +2469,15 @@ div.circleBehind a:hover:after {
   .logo {
     left: 40%;
   }
+  .round-bg {
+    bottom: 4%;
+    right: 30%;
+    width: 300px;
+    height: 300px;
+  }
   .home__text {
-    top: 50%;
-    left: 59%;
+    top: 60%;
+    left: 49%;
   }
   .home__text h1 {
     font-size: 40px;
@@ -2317,9 +2486,21 @@ div.circleBehind a:hover:after {
     font-size: 20px;
   }
   .home__text_bg {
-    top: 36%;
-    left: 60%;
-    width: 370px;
+    top: 45%;
+    left: 50%;
+    width: 450px;
+    height: 250px;
+  }
+  .girl {
+    left: 6%;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+  }
+  .girl__bg {
+    left: 6%;
+    bottom: 20%;
+    width: 300px;
     height: 200px;
   }
 }
@@ -2332,6 +2513,28 @@ div.circleBehind a:hover:after {
   }
   .nav--scaled .nav__item {
     font-size: 21px;
+  }
+  .round-bg {
+    bottom: 6%;
+    right: 24%;
+    width: 300px;
+    height: 320px;
+  }
+  .home__text {
+    top: 55%;
+    left: 60%;
+  }
+  .home__text h1 {
+    font-size: 40px;
+  }
+  .home__text h2 {
+    font-size: 20px;
+  }
+  .home__text_bg {
+    top: 44%;
+    left: 61%;
+    width: 450px;
+    height: 250px;
   }
   .girl {
     display: none;
@@ -2361,6 +2564,7 @@ div.circleBehind a:hover:after {
     animation: scale-in-center 1s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
   .girl2__bg {
+    display: block;
     left: 7%;
     bottom: 200px;
     width: 320px;

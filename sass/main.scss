@@ -3,7 +3,6 @@
 @use './pages/schedule' as *;
 @use '../sass/pages/crew' as *;
 @use './pages/showlist' as *;
-@use './pages/contact' as *;
 @use './pages/about-us' as *;
 
 * {
@@ -17,7 +16,7 @@ html {
 }
 
 body {
-	background-color: $c_bg;
+	background-color: #11001a;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -165,20 +164,19 @@ body {
 
 .nav-container a {
 	position: relative;
-	margin: 0px 10px;
-	padding: 10px 10px;
+	color: #fff;
+	text-decoration: none;
 }
 
 /* Circle behind */
 div.circleBehind a:before,
 div.circleBehind a:after {
 	position: absolute;
-	top: 22px;
+	top: 10px;
 	left: 50%;
 	width: 80px;
 	height: 30px;
 	border: 4px solid #0278bd60;
-	border: 4px solid #b700ff5b;
 	transform: translateX(-50%) translateY(-50%) scale(0.8);
 	border-radius: 50%;
 	background: transparent;
@@ -205,8 +203,8 @@ div.circleBehind a:hover:after {
 
 .burger-icon {
 	position: fixed;
-	top: 15px;
-	right: 30px;
+	top: 20px;
+	right: 20px;
 	width: 45px;
 	height: 45px;
 	padding: 10px;
@@ -279,6 +277,7 @@ div.circleBehind a:hover:after {
 	background-image: url('../img/round-bg.png');
 	background-size: cover;
 	animation: wavezoom 2s infinite linear both;
+	display: none;
 }
 
 .home {
@@ -325,7 +324,7 @@ div.circleBehind a:hover:after {
 		h2 {
 			position: absolute;
 			left: 40px;
-			color: black;
+			color: $c_blue;
 			font-size: 8px;
 		}
 
@@ -374,9 +373,9 @@ div.circleBehind a:hover:after {
 	height: 300px;
 
 	&__bg {
-		bottom: 60px;
+		bottom: 140px;
 		width: 200px;
-		height: 250px;
+		height: 150px;
 	}
 }
 
@@ -389,6 +388,7 @@ div.circleBehind a:hover:after {
 	height: 600px;
 
 	&__bg {
+		display: none;
 		left: 6%;
 		bottom: 60px;
 		width: 500px;
@@ -608,11 +608,105 @@ div.circleBehind a:hover:after {
 
 // --------   ..:: FOOTER ::..   -------- \\
 
+// FOOTER
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
 .footer {
+	position: relative;
 	width: 100%;
-	height: 300px;
-	padding-top: 80px;
-	background-color: $c_bg;
+	background: #3586ff;
+	min-height: 100px;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 80px;
+}
+
+.social-icon,
+.menu {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 0;
+	flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+	list-style: none;
+}
+
+.social-icon__link {
+	font-size: 2rem;
+	color: #fff;
+	margin: 0 10px;
+	display: inline-block;
+	transition: 0.5s;
+}
+.social-icon__link:hover {
+	transform: translateY(-10px);
+}
+
+.menu__link {
+	font-size: 1.2rem;
+	color: #fff;
+	margin: 0 10px;
+	display: inline-block;
+	transition: 0.5s;
+	text-decoration: none;
+	font-weight: 300;
+}
+
+.menu__link:hover {
+	color: black;
+}
+
+.footer p {
+	color: #fff;
+	margin: 15px 0 10px 0;
+	font-size: 1rem;
+	font-weight: 300;
+}
+
+.wave {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url('https://i.ibb.co/wQZVxxk/wave.png');
+	background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+	z-index: 1000;
+	opacity: 1;
+	bottom: 0;
+	animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+	z-index: 999;
+	opacity: 0.5;
+	bottom: 10px;
+	animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+	z-index: 1000;
+	opacity: 0.2;
+	bottom: 15px;
+	animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+	z-index: 999;
+	opacity: 0.7;
+	bottom: 20px;
+	animation: animate 3s linear infinite;
 }
 
 @import './small';
