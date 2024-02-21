@@ -1551,18 +1551,6 @@ div.circleBehind a:hover:after {
   animation: navItemsAnimation 1s;
 }
 
-.round-bg {
-  position: absolute;
-  bottom: 15%;
-  right: 24%;
-  width: 300px;
-  height: 320px;
-  background-image: url("../img/round-bg.png");
-  background-size: cover;
-  animation: wavezoom 2s infinite linear both;
-  display: none;
-}
-
 .home {
   position: relative;
   width: 100%;
@@ -1677,6 +1665,7 @@ div.circleBehind a:hover:after {
 .player-box {
   position: relative;
   width: 100%;
+  min-height: calc(100vh - 78px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1688,10 +1677,11 @@ div.circleBehind a:hover:after {
 }
 
 .fa-arrow-up-right-from-square {
+  display: none;
   font-size: 12px;
   position: absolute;
   right: 15px;
-  bottom: -13px;
+  bottom: 5px;
   color: rgba(255, 255, 255, 0.231372549);
   cursor: pointer;
 }
@@ -1717,7 +1707,7 @@ div.circleBehind a:hover:after {
 }
 .player__stats {
   position: absolute;
-  width: 250px;
+  width: 220px;
   height: 40px;
   right: 5px;
   overflow: hidden;
@@ -1752,19 +1742,18 @@ div.circleBehind a:hover:after {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 13px;
+  padding: 10px;
   text-decoration: none;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.3843137255);
-  background-color: rgba(174, 0, 255, 0.0823529412);
-  border-radius: 0 0 3px 3px;
+  border-radius: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  left: 110px;
-  bottom: -20px;
+  left: 100px;
+  bottom: -1px;
 }
 .player .greetings_panel:hover {
-  color: #fff;
-  background-color: #3a0049;
+  font-weight: bold;
+  color: #00ccff;
 }
 .player .schedule_panel {
   position: absolute;
@@ -1773,19 +1762,18 @@ div.circleBehind a:hover:after {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 13px;
+  padding: 10px;
   text-decoration: none;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.3843137255);
-  background-color: rgba(174, 0, 255, 0.0823529412);
-  border-radius: 0 0 3px 3px;
+  border-radius: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   right: 40px;
-  bottom: -20px;
+  bottom: -1px;
 }
 .player .schedule_panel:hover {
-  color: #fff;
-  background-color: #3a0049;
+  font-weight: bold;
+  color: #00ccff;
 }
 .player__color {
   color: #00ccff;
@@ -1822,7 +1810,7 @@ div.circleBehind a:hover:after {
 }
 .player-chill__stats {
   position: absolute;
-  width: 250px;
+  width: 220px;
   height: 40px;
   right: 5px;
   overflow: hidden;
@@ -1857,19 +1845,18 @@ div.circleBehind a:hover:after {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 13px;
+  padding: 10px;
   text-decoration: none;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.3843137255);
-  background-color: rgba(174, 0, 255, 0.0823529412);
-  border-radius: 0 0 3px 3px;
+  border-radius: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  left: 90px;
-  bottom: -20px;
+  left: 100px;
+  bottom: -1px;
 }
 .player-chill .greetings_panel:hover {
-  color: #fff;
-  background-color: #3a0049;
+  font-weight: bold;
+  color: #8dd80c;
 }
 .player-chill .schedule_panel {
   position: absolute;
@@ -1878,19 +1865,18 @@ div.circleBehind a:hover:after {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 13px;
+  padding: 10px;
   text-decoration: none;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.3843137255);
-  background-color: rgba(174, 0, 255, 0.0823529412);
-  border-radius: 0 0 3px 3px;
+  border-radius: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   right: 40px;
-  bottom: -20px;
+  bottom: -1px;
 }
 .player-chill .schedule_panel:hover {
-  color: #fff;
-  background-color: #3a0049;
+  font-weight: bold;
+  color: #8dd80c;
 }
 .player-chill__color {
   color: #8dd80c;
@@ -1926,7 +1912,7 @@ div.circleBehind a:hover:after {
 }
 .player-rock__stats {
   position: absolute;
-  width: 250px;
+  width: 220px;
   height: 40px;
   right: 5px;
   overflow: hidden;
@@ -1961,19 +1947,18 @@ div.circleBehind a:hover:after {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 13px;
+  padding: 10px;
   text-decoration: none;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.3843137255);
-  background-color: rgba(174, 0, 255, 0.0823529412);
-  border-radius: 0 0 3px 3px;
+  border-radius: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  left: 90px;
-  bottom: -20px;
+  left: 100px;
+  bottom: -1px;
 }
 .player-rock .greetings_panel:hover {
-  color: #fff;
-  background-color: #3a0049;
+  font-weight: bold;
+  color: #da3636;
 }
 .player-rock .schedule_panel {
   position: absolute;
@@ -1982,19 +1967,18 @@ div.circleBehind a:hover:after {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 13px;
+  padding: 10px;
   text-decoration: none;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.3843137255);
-  background-color: rgba(174, 0, 255, 0.0823529412);
-  border-radius: 0 0 3px 3px;
+  border-radius: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   right: 40px;
-  bottom: -20px;
+  bottom: -1px;
 }
 .player-rock .schedule_panel:hover {
-  color: #fff;
-  background-color: #3a0049;
+  font-weight: bold;
+  color: #da3636;
 }
 .player-rock__color {
   color: #da3636;
@@ -2149,6 +2133,65 @@ div.circleBehind a:hover:after {
   .player-box {
     gap: 100px;
   }
+  .player .greetings_panel {
+    position: absolute;
+    width: 70px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3843137255);
+    border-radius: 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    left: 90px;
+  }
+  .player .schedule_panel {
+    position: absolute;
+    width: 70px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3843137255);
+    border-radius: 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    right: 60px;
+  }
+  .player-chill .greetings_panel {
+    left: 90px;
+  }
+  .player-chill .schedule_panel {
+    right: 60px;
+  }
+  .player-rock .greetings_panel {
+    position: absolute;
+    width: 70px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3843137255);
+    border-radius: 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    left: 90px;
+  }
+  .player-rock .schedule_panel {
+    right: 60px;
+  }
+  .fa-arrow-up-right-from-square {
+    display: block;
+    right: 30px;
+    bottom: 3px;
+  }
   .player-info {
     display: none;
   }
@@ -2183,23 +2226,15 @@ div.circleBehind a:hover:after {
     width: 150px;
   }
   .girl {
-    left: 10%;
+    left: 4%;
     width: 300px;
     height: 300px;
   }
   .girl__bg {
-    left: 10%;
+    left: 4%;
     bottom: 100px;
     width: 300px;
     height: 200px;
-  }
-  .round-bg {
-    display: block;
-    bottom: 3%;
-    bottom: 500px;
-    right: 25%;
-    width: 240px;
-    height: 230px;
   }
   .home {
     height: 80vh;
@@ -2208,7 +2243,7 @@ div.circleBehind a:hover:after {
     background-image: url("../img/dj-6472628_1920.jpg");
   }
   .home__text {
-    top: 70%;
+    top: 60%;
     left: 50%;
   }
   .home__text h1 {
@@ -2221,15 +2256,24 @@ div.circleBehind a:hover:after {
   .home__text_bg {
     display: block;
     left: 50%;
-    top: 60%;
+    top: 50%;
     width: 350px;
     height: 200px;
   }
+  .home .round-bg {
+    position: absolute;
+    right: 19%;
+    top: 40%;
+    width: 300px;
+    height: 310px;
+    background-image: url("../img/round-bg.png");
+    background-size: cover;
+    animation: wavezoom 2s infinite linear both;
+  }
   .player-box {
-    height: 20vh;
+    min-height: 20vh;
     flex-direction: row;
     gap: 30px;
-    padding: 0;
   }
   .player {
     width: 200px;
@@ -2238,13 +2282,18 @@ div.circleBehind a:hover:after {
   .player__title {
     top: -22px;
     right: 10px;
-    font-size: 17px;
+    font-size: 19px;
   }
   .player__stats {
     width: 150px;
   }
+  .player__button {
+    font-size: 25px;
+  }
   .player__button__bg {
-    left: 1px;
+    left: -10px;
+    width: 50px;
+    height: 50px;
   }
   .player .greetings_panel {
     width: 60px;
@@ -2265,13 +2314,18 @@ div.circleBehind a:hover:after {
   .player-chill__title {
     top: -22px;
     right: 10px;
-    font-size: 17px;
+    font-size: 19px;
   }
   .player-chill__stats {
     width: 150px;
   }
+  .player-chill__button {
+    font-size: 25px;
+  }
   .player-chill__button__bg {
-    left: 1px;
+    left: -10px;
+    width: 50px;
+    height: 50px;
   }
   .player-chill .greetings_panel {
     width: 60px;
@@ -2292,13 +2346,18 @@ div.circleBehind a:hover:after {
   .player-rock__title {
     top: -22px;
     right: 10px;
-    font-size: 17px;
+    font-size: 19px;
   }
   .player-rock__stats {
     width: 150px;
   }
+  .player-rock__button {
+    font-size: 25px;
+  }
   .player-rock__button__bg {
-    left: 1px;
+    left: -10px;
+    width: 50px;
+    height: 50px;
   }
   .player-rock .greetings_panel {
     width: 60px;
@@ -2312,6 +2371,10 @@ div.circleBehind a:hover:after {
     right: 14px;
     bottom: -16px;
   }
+  .fa-arrow-up-right-from-square {
+    right: -10px;
+    top: -14px;
+  }
 }
 @media (min-width: 900px) {
   .logo {
@@ -2321,26 +2384,10 @@ div.circleBehind a:hover:after {
     margin: 9px;
     font-size: 20px;
   }
-  .round-bg {
-    bottom: 3%;
-    right: 28%;
-    width: 250px;
-    height: 250px;
-  }
 }
 @media (min-width: 992px) {
-  .round-bg {
-    bottom: 4%;
-    right: 28%;
-    width: 300px;
-    height: 300px;
-  }
   .home__bg {
     background-image: url("../img/dj-6472628_1920.jpg");
-  }
-  .home__text {
-    top: 60%;
-    left: 49%;
   }
   .home__text h1 {
     font-size: 40px;
@@ -2349,10 +2396,14 @@ div.circleBehind a:hover:after {
     font-size: 20px;
   }
   .home__text_bg {
-    top: 45%;
+    bottom: 0;
     left: 50%;
-    width: 450px;
-    height: 250px;
+    width: 400px;
+    height: 220px;
+  }
+  .home .round-bg {
+    right: 25%;
+    top: 40%;
   }
   .logo-bg {
     width: 20%;
@@ -2397,13 +2448,16 @@ div.circleBehind a:hover:after {
   .player {
     width: 260px;
   }
-  .player__title {
-    top: -25px;
-    right: 10px;
-    font-size: 19px;
-  }
   .player__stats {
     width: 190px;
+  }
+  .player__button {
+    font-size: 35px;
+  }
+  .player__button__bg {
+    left: 1px;
+    width: 60px;
+    height: 60px;
   }
   .player .greetings_panel {
     width: 60px;
@@ -2420,13 +2474,16 @@ div.circleBehind a:hover:after {
   .player-chill {
     width: 260px;
   }
-  .player-chill__title {
-    top: -25px;
-    right: 10px;
-    font-size: 19px;
-  }
   .player-chill__stats {
     width: 190px;
+  }
+  .player-chill__button {
+    font-size: 35px;
+  }
+  .player-chill__button__bg {
+    left: 1px;
+    width: 60px;
+    height: 60px;
   }
   .player-chill .greetings_panel {
     width: 60px;
@@ -2444,13 +2501,16 @@ div.circleBehind a:hover:after {
     width: 260px;
     margin-right: 40px;
   }
-  .player-rock__title {
-    top: -25px;
-    right: 10px;
-    font-size: 19px;
-  }
   .player-rock__stats {
     width: 190px;
+  }
+  .player-rock__button {
+    font-size: 35px;
+  }
+  .player-rock__button__bg {
+    left: 1px;
+    width: 60px;
+    height: 60px;
   }
   .player-rock .greetings_panel {
     width: 60px;
@@ -2464,20 +2524,18 @@ div.circleBehind a:hover:after {
     right: 40px;
     bottom: -20px;
   }
+  .fa-arrow-up-right-from-square {
+    right: -10px;
+    top: -17px;
+  }
 }
 @media (min-width: 1200px) {
   .logo {
     left: 40%;
   }
-  .round-bg {
-    bottom: 4%;
-    right: 30%;
-    width: 300px;
-    height: 300px;
-  }
   .home__text {
-    top: 60%;
-    left: 49%;
+    top: 55%;
+    left: 59%;
   }
   .home__text h1 {
     font-size: 40px;
@@ -2487,9 +2545,12 @@ div.circleBehind a:hover:after {
   }
   .home__text_bg {
     top: 45%;
-    left: 50%;
+    left: 60%;
     width: 450px;
     height: 250px;
+  }
+  .home .round-bg {
+    right: 19%;
   }
   .girl {
     left: 6%;
@@ -2514,12 +2575,6 @@ div.circleBehind a:hover:after {
   .nav--scaled .nav__item {
     font-size: 21px;
   }
-  .round-bg {
-    bottom: 6%;
-    right: 24%;
-    width: 300px;
-    height: 320px;
-  }
   .home__text {
     top: 55%;
     left: 60%;
@@ -2535,6 +2590,9 @@ div.circleBehind a:hover:after {
     left: 61%;
     width: 450px;
     height: 250px;
+  }
+  .home .round-bg {
+    right: 24%;
   }
   .girl {
     display: none;

@@ -38,25 +38,16 @@
 	}
 
 	.girl {
-		left: 10%;
+		left: 4%;
 		width: 300px;
 		height: 300px;
 
 		&__bg {
-			left: 10%;
+			left: 4%;
 			bottom: 100px;
 			width: 300px;
 			height: 200px;
 		}
-	}
-
-	.round-bg {
-		display: block;
-		bottom: 3%;
-		bottom: 500px;
-		right: 25%;
-		width: 240px;
-		height: 230px;
 	}
 
 	.home {
@@ -66,7 +57,7 @@
 		}
 
 		&__text {
-			top: 70%;
+			top: 60%;
 			left: 50%;
 
 			h1 {
@@ -81,18 +72,28 @@
 			&_bg {
 				display: block;
 				left: 50%;
-				top: 60%;
+				top: 50%;
 				width: 350px;
 				height: 200px;
 			}
 		}
+
+		.round-bg {
+			position: absolute;
+			right: 19%;
+			top: 40%;
+			width: 300px;
+			height: 310px;
+			background-image: url('../img/round-bg.png');
+			background-size: cover;
+			animation: wavezoom 2s infinite linear both;
+		}
 	}
 
 	.player-box {
-		height: 20vh;
+		min-height: 20vh;
 		flex-direction: row;
 		gap: 30px;
-		padding: 0;
 	}
 
 	@mixin player {
@@ -102,7 +103,7 @@
 		&__title {
 			top: -22px;
 			right: 10px;
-			font-size: 17px;
+			font-size: 19px;
 		}
 
 		&__stats {
@@ -110,10 +111,11 @@
 		}
 
 		&__button {
+			font-size: 25px;
 			&__bg {
-				left: 1px;
-				// width: 50px;
-				// height: 50px;
+				left: -10px;
+				width: 50px;
+				height: 50px;
 			}
 		}
 	}
@@ -169,5 +171,10 @@
 			right: 14px;
 			bottom: -16px;
 		}
+	}
+
+	.fa-arrow-up-right-from-square {
+		right: -10px;
+		top: -14px;
 	}
 }

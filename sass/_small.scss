@@ -52,7 +52,76 @@
 
 	.player-box {
 		gap: 100px;
+		// min-height: 400px;
 	}
+
+	@mixin player {
+		&__stats {
+			width: 250px;
+			height: 40px;
+			right: 5px;
+		}
+
+		&__button {
+			font-size: 35px;
+
+			&__bg {
+				left: 1px;
+				width: 60px;
+				height: 60px;
+			}
+		}
+
+		.fa-play {
+			left: 3px;
+			padding: 20px;
+		}
+	}
+
+	//
+
+	.player {
+		.greetings_panel {
+			@include miniPanels;
+			left: 90px;
+		}
+
+		.schedule_panel {
+			@include miniPanels;
+			right: 60px;
+		}
+	}
+
+	.player-chill {
+		.greetings_panel {
+			left: 90px;
+		}
+
+		.schedule_panel {
+			right: 60px;
+		}
+	}
+
+	.player-rock {
+		.greetings_panel {
+			@include miniPanels;
+			left: 90px;
+		}
+
+		.schedule_panel {
+			right: 60px;
+		}
+	}
+
+	//
+
+	.fa-arrow-up-right-from-square {
+		display: block;
+		right: 30px;
+		bottom: 3px;
+	}
+
+	//
 
 	.player-info {
 		display: none;

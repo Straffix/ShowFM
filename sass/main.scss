@@ -268,18 +268,6 @@ div.circleBehind a:hover:after {
 
 // --------   ..:: MAIN ::..   -------- \\
 
-.round-bg {
-	position: absolute;
-	bottom: 15%;
-	right: 24%;
-	width: 300px;
-	height: 320px;
-	background-image: url('../img/round-bg.png');
-	background-size: cover;
-	animation: wavezoom 2s infinite linear both;
-	display: none;
-}
-
 .home {
 	position: relative;
 	width: 100%;
@@ -401,6 +389,7 @@ div.circleBehind a:hover:after {
 .player-box {
 	position: relative;
 	width: 100%;
+	min-height: calc(100vh - 78px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -430,7 +419,7 @@ div.circleBehind a:hover:after {
 
 	&__stats {
 		position: absolute;
-		width: 250px;
+		width: 220px;
 		height: 40px;
 		right: 5px;
 		overflow: hidden;
@@ -470,25 +459,20 @@ div.circleBehind a:hover:after {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 13px;
+	padding: 10px;
 	text-decoration: none;
 	font-size: 12px;
 	color: #ffffff62;
-	background-color: #ae00ff15;
-	border-radius: 0 0 3px 3px;
+	border-radius: 10px;
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-	&:hover {
-		color: #fff;
-		background-color: $c_purple;
-	}
 }
 
 .fa-arrow-up-right-from-square {
+	display: none;
 	font-size: 12px;
 	position: absolute;
 	right: 15px;
-	bottom: -13px;
+	bottom: 5px;
 	color: #ffffff3b;
 	cursor: pointer;
 
@@ -502,14 +486,24 @@ div.circleBehind a:hover:after {
 
 	.greetings_panel {
 		@include miniPanels;
-		left: 110px;
-		bottom: -20px;
+		left: 100px;
+		bottom: -1px;
+
+		&:hover {
+			font-weight: bold;
+			color: $c_blue;
+		}
 	}
 
 	.schedule_panel {
 		@include miniPanels;
 		right: 40px;
-		bottom: -20px;
+		bottom: -1px;
+
+		&:hover {
+			font-weight: bold;
+			color: $c_blue;
+		}
 	}
 
 	&__color {
@@ -539,14 +533,24 @@ div.circleBehind a:hover:after {
 
 	.greetings_panel {
 		@include miniPanels;
-		left: 90px;
-		bottom: -20px;
+		left: 100px;
+		bottom: -1px;
+
+		&:hover {
+			font-weight: bold;
+			color: $c_lime;
+		}
 	}
 
 	.schedule_panel {
 		@include miniPanels;
 		right: 40px;
-		bottom: -20px;
+		bottom: -1px;
+
+		&:hover {
+			font-weight: bold;
+			color: $c_lime;
+		}
 	}
 
 	&__color {
@@ -575,14 +579,24 @@ div.circleBehind a:hover:after {
 
 	.greetings_panel {
 		@include miniPanels;
-		left: 90px;
-		bottom: -20px;
+		left: 100px;
+		bottom: -1px;
+
+		&:hover {
+			font-weight: bold;
+			color: $c_red;
+		}
 	}
 
 	.schedule_panel {
 		@include miniPanels;
 		right: 40px;
-		bottom: -20px;
+		bottom: -1px;
+
+		&:hover {
+			font-weight: bold;
+			color: $c_red;
+		}
 	}
 
 	&__color {
