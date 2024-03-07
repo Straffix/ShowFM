@@ -112,7 +112,7 @@
   }
   100% {
     transform: translateY(0);
-    opacity: 90%;
+    opacity: 100%;
   }
 }
 @keyframes scale-in-center {
@@ -122,7 +122,7 @@
   }
   100% {
     transform: scale(1);
-    opacity: 90%;
+    opacity: 100%;
   }
 }
 @keyframes pulsate {
@@ -220,14 +220,12 @@
 .schedule {
   position: relative;
   width: 100%;
-  height: calc(100vh - 80px);
-  padding-top: 40px;
   background-color: #fff;
   overflow: hidden;
 }
 .schedule__title {
-  font-size: 23px;
-  margin-left: 80px;
+  font-size: 17px;
+  margin-left: 25px;
   color: #00ccff;
   font-weight: bold;
 }
@@ -241,7 +239,7 @@
   justify-content: start;
   flex-wrap: wrap;
   width: 100%;
-  height: 80px;
+  height: 40px;
   background-color: #3a0049;
   border-top: 4px solid #00ccff;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.452);
@@ -257,7 +255,7 @@
 
 .schedule-box {
   position: relative;
-  width: 50%;
+  width: 100%;
   height: 100%;
 }
 .schedule-box__bar {
@@ -272,11 +270,11 @@
 }
 .schedule-box button {
   position: relative;
-  width: 160px;
+  width: 80px;
   height: 40px;
-  border-radius: 5px;
   border: none;
-  font-size: 14px;
+  padding: 2px;
+  font-size: 9px;
   text-transform: uppercase;
   border: 2px solid grey;
   color: #000;
@@ -363,23 +361,23 @@
 }
 .schedule-box__content .contentSchedule {
   width: 100%;
-  height: 100%;
-  background-color: #fff;
+  height: 350px;
 }
 .schedule-box .schedule-board {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 350px;
   color: #fff;
   background-color: #242424;
   box-shadow: 0 0 5px black;
   border-radius: 7px;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .posters-box {
+  display: none;
   position: relative;
   width: 50%;
   height: 100%;
@@ -1403,10 +1401,10 @@ body {
 
 .logo {
   position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 90px;
-  height: 90px;
+  top: 20%;
+  left: 20%;
+  width: 70px;
+  height: 70px;
   background-image: url("../img/logo.png");
   background-size: cover;
   animation: flicker 2s linear both;
@@ -1493,8 +1491,8 @@ div.circleBehind a:hover:after {
 
 .burger-icon {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 30px;
   width: 45px;
   height: 45px;
   padding: 10px;
@@ -2195,6 +2193,23 @@ div.circleBehind a:hover:after {
   .player-info {
     display: none;
   }
+  .schedule {
+    height: calc(100vh - 80px);
+    padding-top: 40px;
+  }
+  .schedule__title {
+    font-size: 23px;
+    margin-left: 80px;
+  }
+  .schedule-bar {
+    height: 80px;
+  }
+  .schedule-box button {
+    top: 20px;
+    width: 160px;
+    height: 50px;
+    font-size: 14px;
+  }
 }
 @media (min-width: 768px) {
   .burger-icon {
@@ -2527,6 +2542,26 @@ div.circleBehind a:hover:after {
   .fa-arrow-up-right-from-square {
     right: -10px;
     top: -17px;
+  }
+  .schedule-box {
+    width: 50%;
+  }
+  .posters-box {
+    display: block;
+  }
+  .poster-bg {
+    position: relative;
+    margin: 10px;
+  }
+  .poster-card {
+    width: 200px;
+    height: 300px;
+    font-size: 3rem;
+  }
+  .poster-card img {
+    translate: 0 0 80px;
+    width: 100px;
+    height: 100px;
   }
 }
 @media (min-width: 1200px) {

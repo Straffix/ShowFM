@@ -167,6 +167,31 @@
 		right: -10px;
 		top: -17px;
 	}
+
+	.schedule-box {
+		width: 50%;
+	}
+
+	.posters-box {
+		display: block;
+	}
+
+	.poster-bg {
+		position: relative;
+		margin: 10px;
+	}
+
+	.poster-card {
+		width: 200px;
+		height: 300px;
+		font-size: 3rem;
+
+		& img {
+			translate: 0 0 80px;
+			width: 100px;
+			height: 100px;
+		}
+	}
 }
 
 // ============================= M1200

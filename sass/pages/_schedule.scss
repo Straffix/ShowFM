@@ -5,14 +5,12 @@
 .schedule {
 	position: relative;
 	width: 100%;
-	height: calc(100vh - 80px);
-	padding-top: 40px;
 	background-color: #fff;
 	overflow: hidden;
 
 	&__title {
-		font-size: 23px;
-		margin-left: 80px;
+		font-size: 17px;
+		margin-left: 25px;
 		color: $c_blue;
 		font-weight: bold;
 
@@ -28,13 +26,12 @@
 	justify-content: start;
 	flex-wrap: wrap;
 	width: 100%;
-	height: 80px;
+	height: 40px;
 	background-color: $c_purple;
 	border-top: 4px solid $c_blue;
 	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.452);
 }
 
-// GŁÓWNA PODKATEGORIA RAMÓWKI
 .schedule-boxes {
 	position: relative;
 	display: flex;
@@ -43,10 +40,9 @@
 	height: calc(100% - 80px);
 }
 
-//box odpowiedzialny za tło ramówki
 .schedule-box {
 	position: relative;
-	width: 50%;
+	width: 100%;
 	height: 100%;
 
 	&__bar {
@@ -60,25 +56,13 @@
 		padding: 20px;
 	}
 
-	// button {
-	// 	width: 160px;
-	// 	height: 40px;
-	// 	border-radius: 5px;
-	// 	border: none;
-	// 	cursor: pointer;
-	// 	font-size: 17px;
-	// 	border: 2px solid #242424;
-	// }
-
-	// -------------------------------------------------------------------------------------
-
 	button {
 		position: relative;
-		width: 160px;
+		width: 80px;
 		height: 40px;
-		border-radius: 5px;
 		border: none;
-		font-size: 14px;
+		padding: 2px;
+		font-size: 9px;
 		text-transform: uppercase;
 		border: 2px solid grey;
 		color: #000;
@@ -115,8 +99,6 @@
 		bottom: 0;
 		right: 0;
 	}
-
-	// --------------------------------------------------------------------------
 
 	.b-trance {
 		&:hover {
@@ -186,11 +168,9 @@
 		height: calc(100% - 80px);
 		padding: 0 20px 20px 20px;
 
-		//box odpowiedzialny za RAMÓWKĘ
 		.contentSchedule {
 			width: 100%;
-			height: 100%;
-			background-color: #fff;
+			height: 350px;
 		}
 	}
 
@@ -199,16 +179,17 @@
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		height: 100%;
+		height: 350px;
 		color: #fff;
 		background-color: #242424;
 		box-shadow: 0 0 5px black;
 		border-radius: 7px;
-		font-size: 30px;
+		font-size: 18px;
 	}
 }
 
 .posters-box {
+	display: none;
 	position: relative;
 	width: 50%;
 	height: 100%;
