@@ -444,12 +444,14 @@ div.circleBehind a:hover:after {
 			box-shadow: 0 0 20px rgba(0, 0, 0, 0.599);
 		}
 	}
+}
 
-	.fa-play {
-		position: relative;
-		left: 3px;
-		padding: 20px;
-	}
+.fa-play {
+	font-size: 30px;
+}
+
+.fa-stop {
+	font-size: 30px;
 }
 
 @mixin miniPanels {

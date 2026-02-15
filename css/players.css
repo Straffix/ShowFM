@@ -110,12 +110,14 @@ body {
   background-color: rgba(174, 0, 255, 0.0823529412);
   border-radius: 0 0 3px 3px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  left: 80px;
-  bottom: -20px;
 }
 .player .greetings_panel:hover {
   color: #fff;
   background-color: #3a0049;
+}
+.player .greetings_panel {
+  left: 80px;
+  bottom: -20px;
 }
 .player .schedule_panel {
   position: absolute;
@@ -131,12 +133,14 @@ body {
   background-color: rgba(174, 0, 255, 0.0823529412);
   border-radius: 0 0 3px 3px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  right: 40px;
-  bottom: -20px;
 }
 .player .schedule_panel:hover {
   color: #fff;
   background-color: #3a0049;
+}
+.player .schedule_panel {
+  right: 40px;
+  bottom: -20px;
 }
 .player__color {
   color: #00ccff;
@@ -215,12 +219,14 @@ body {
   background-color: rgba(174, 0, 255, 0.0823529412);
   border-radius: 0 0 3px 3px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  left: 80px;
-  bottom: -20px;
 }
 .player-chill .greetings_panel:hover {
   color: #fff;
   background-color: #3a0049;
+}
+.player-chill .greetings_panel {
+  left: 80px;
+  bottom: -20px;
 }
 .player-chill .schedule_panel {
   position: absolute;
@@ -236,12 +242,14 @@ body {
   background-color: rgba(174, 0, 255, 0.0823529412);
   border-radius: 0 0 3px 3px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  right: 40px;
-  bottom: -20px;
 }
 .player-chill .schedule_panel:hover {
   color: #fff;
   background-color: #3a0049;
+}
+.player-chill .schedule_panel {
+  right: 40px;
+  bottom: -20px;
 }
 .player-chill__color {
   color: #8dd80c;
@@ -266,7 +274,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 40px;
 }
 .player-rock__title {
   position: absolute;
@@ -306,6 +313,9 @@ body {
   left: 3px;
   padding: 20px;
 }
+.player-rock {
+  margin-right: 40px;
+}
 .player-rock .greetings_panel {
   position: absolute;
   width: 60px;
@@ -320,12 +330,14 @@ body {
   background-color: rgba(174, 0, 255, 0.0823529412);
   border-radius: 0 0 3px 3px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  left: 80px;
-  bottom: -20px;
 }
 .player-rock .greetings_panel:hover {
   color: #fff;
   background-color: #3a0049;
+}
+.player-rock .greetings_panel {
+  left: 80px;
+  bottom: -20px;
 }
 .player-rock .schedule_panel {
   position: absolute;
@@ -341,12 +353,14 @@ body {
   background-color: rgba(174, 0, 255, 0.0823529412);
   border-radius: 0 0 3px 3px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  right: 40px;
-  bottom: -20px;
 }
 .player-rock .schedule_panel:hover {
   color: #fff;
   background-color: #3a0049;
+}
+.player-rock .schedule_panel {
+  right: 40px;
+  bottom: -20px;
 }
 .player-rock__color {
   color: #da3636;
