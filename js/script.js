@@ -56,16 +56,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const audioPlayer1 = new Audio()
 	const playButton1 = document.getElementById('play-button')
-	//setupAudioPlayer(audioPlayer1, playButton1, 'https://eu1.fastcast4u.com:1938/;')
 	setupAudioPlayer(audioPlayer1, playButton1, 'https://eu1.fastcast4u.com/proxy/sonix/autodj')
 
 	const audioPlayer2 = new Audio()
 	const playButton2 = document.getElementById('play-button2')
-	setupAudioPlayer(audioPlayer2, playButton2, 'https://eu1.fastcast4u.com:1942/;')
+	setupAudioPlayer(audioPlayer2, playButton2, 'https://eu1.fastcast4u.com/proxy/arkadiusz/autodj;')
 
 	const audioPlayer3 = new Audio()
 	const playButton3 = document.getElementById('play-button3')
-	setupAudioPlayer(audioPlayer3, playButton3, 'https://eu1.fastcast4u.com:2050/;')
+	setupAudioPlayer(audioPlayer3, playButton3, 'https://eu1.fastcast4u.com/proxy/straffix/autodj')
 })
 
 //
