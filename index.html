@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowFM - Twoje radio internetowe!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+    <script src="https://kit.fontawesome.com/bc955bc9a2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="body-line"></div>
+    <div class="body-line2"></div>
+
+    <!-- // --------   ..:: HEADER ::..   -------- \\ -->
+
+    <header class="header">
+        <div class="smallNavBg"></div>
+
+        <div class="logo-bg">
+
+            <a href="#">
+                <div class="logo"></div>
+            </a>
+
+        </div>
+
+        <!-- // --------   ..:: NAVIGATION ::..   -------- \\ -->
+
+
+        <!-- desktop -->
+        <nav class="nav">
+            <div class="nav-desktop">
+                <div class="nav-container circleBehind">
+                    <a class="nav__item " href="#home">home</a>
+                    <a class="nav__item" href="#players">słuchaj!</a>
+                    <a class="nav__item" href="#schedule">ramówka</a>
+                    <a class="nav__item" href="#crew">ekipa</a>
+                    <a class="nav__item" href="#showlist">showlista</a>
+                    <a class="nav__item" href="#about-us">historia</a>
+                    <a class="nav__item" href="#contact">kontakt</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <button class="burger-icon"><i class="fa-solid fa-bars"></i></button>
+
+        <!-- mobile -->
+
+        <div class="nav-mobile">
+            <div class="nav-mobile__items">
+                <a class="nav__item" href="#home">home</a>
+                <a class="nav__item" href="#players">słuchaj!</a>
+                <a class="nav__item" href="#schedule">ramówka</a>
+                <a class="nav__item" href="#crew">ekipa</a>
+                <a class="nav__item" href="#showlist">showlista</a>
+                <a class="nav__item" href="#about-us">historia</a>
+                <a class="nav__item" href="#contact">kontakt</a>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- // --------   ..:: MAIN ::..   -------- \\ -->
+
+    <main class="main">
+
+        <section id="home" class="home">
+
+            <div class="home__bg">
+                <div class="round-bg"></div>
+                <div class="home__bg--overlay"></div>
+                <div class="home__smoke"></div>
+            </div>
+
+            <div class="home__text_bg"></div>
+            <div class="home__text">
+                <h1>Twój świat muzyki!</h1>
+                <h2>Twoje miejsce w sieci!</h2>
+            </div>
+
+
+            <div class="girl-box">
+                <div class="girl__bg"></div>
+                <div class="girl"></div>
+            </div>
+        </section>
+
+        <!-- // --------   ..:: PLAYERS ::..   -------- \\ -->
+
+        <section class="player-box" id="players">
+            <button class="player-pin-button" id="playerPinButton" type="button"
+                aria-label="Przypnij pasek playerów do dołu strony" aria-pressed="false">
+                <i class="fa-solid fa-lock-open"></i>
+            </button>
+
+            <div class="girl2__bg"></div>
+            <div class="girl2"></div>
+
+            <!-- trance channel -->
+            <div class="player">
+                <div class="player__title">
+                    <p>Kanał <span class="player__color">Trance</span></p>
+                </div>
+
+                <div class="player__stats">
+                    <script type="text/javascript"
+                        src="https://staty.portalradiowy.pl/wstats/wstats.php?var1=1&var2=13&var3=1&var4=1&var5=296&var6=FFFFFF&var7=1&var8=1&var9=13&var10=1&var11=24&var12=296&var13=FFFFFF&var14=1&var15=0&var16=14&var17=105&var18=1&var19=000000&var20=1&var27=0&var28=14&var29=1&var30=48&var31=100&var32=000000&var33=1&var34=0&var35=160&var36=1&var37=50&var38=50&var39=300&var40=80&var41=https%3A%2F%2Falisiecki.pl%2Fimages%2F300x80.png&var42=eu1.fastcast4u.com&var43=1938"></script>
+                </div>
+                <div class="player__button__bg">
+                    <div class="player__button" id="play-button"><i class="fa-solid fa-play"></i></div>
+                </div>
+
+                <a class="greetings_panel greetings-trigger" href="#greetingsModal" data-greeting-channel="Kanał Trance"
+                    data-greeting-accent="#00ccff">Pozdrów</a>
+                <a class="schedule_panel schedule-trigger" href="#schedulePopup" data-schedule-channel="trance"
+                    data-schedule-title="Kanał Trance" data-schedule-accent="#00ccff">Ramówka</a>
+
+                <i class="web-p1 fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+
+            <!-- chill channel -->
+            <div class="player-chill">
+
+                <div class="player-chill__title">
+                    <p>Kanał <span class="player-chill__color">Chill</span></p>
+                </div>
+
+                <div class="player-chill__stats">
+                    <script type="text/javascript"
+                        src="https://staty.portalradiowy.pl/wstats/wstats.php?var1=1&var2=13&var3=1&var4=1&var5=296&var6=FFFFFF&var7=1&var8=1&var9=13&var10=1&var11=24&var12=296&var13=FFFFFF&var14=1&var15=0&var16=14&var17=105&var18=1&var19=000000&var20=1&var27=0&var28=14&var29=1&var30=48&var31=100&var32=000000&var33=1&var34=0&var35=160&var36=1&var37=50&var38=50&var39=300&var40=80&var41=https%3A%2F%2Falisiecki.pl%2Fimages%2F300x80.png&var42=eu1.fastcast4u.com&var43=1942"></script>
+                </div>
+
+
+                <div class="player-chill__button__bg">
+                    <div class="player-chill__button" id="play-button2"><i class="fa-solid fa-play"></i></div>
+                </div>
+
+
+                <a class="greetings_panel greetings-trigger" href="#greetingsModal" data-greeting-channel="Kanał Chill"
+                    data-greeting-accent="#8dd80c">Pozdrów</a>
+                <a class="schedule_panel schedule-trigger" href="#schedulePopup" data-schedule-channel="chill"
+                    data-schedule-title="Kanał Chill" data-schedule-accent="#8dd80c">Ramówka</a>
+
+                <i class="web-p2 fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+
+            <!-- rock channel -->
+            <div class="player-rock">
+
+                <div class="player-rock__title">
+                    <p>Kanał <span class="player-rock__color">Rock</span></p>
+                </div>
+
+                <div class="player-rock__stats">
+                    <script type="text/javascript"
+                        src="https://staty.portalradiowy.pl/wstats/wstats.php?var1=1&var2=13&var3=1&var4=1&var5=296&var6=FFFFFF&var7=1&var8=1&var9=13&var10=1&var11=24&var12=296&var13=FFFFFF&var14=1&var15=0&var16=14&var17=105&var18=1&var19=000000&var20=1&var27=0&var28=14&var29=1&var30=48&var31=100&var32=000000&var33=1&var34=0&var35=160&var36=1&var37=50&var38=50&var39=300&var40=80&var41=https%3A%2F%2Falisiecki.pl%2Fimages%2F300x80.png&var42=eu1.fastcast4u.com&var43=2050"></script>
+                </div>
+
+                <div class="player-rock__button__bg">
+                    <div class="player-rock__button" id="play-button3"><i class="fa-solid fa-play"></i></div>
+                </div>
+
+
+                <a class="greetings_panel greetings-trigger" href="#greetingsModal" data-greeting-channel="Kanał Rock"
+                    data-greeting-accent="#da3636">Pozdrów</a>
+                <a class="schedule_panel schedule-trigger" href="#schedulePopup" data-schedule-channel="rock"
+                    data-schedule-title="Kanał Rock" data-schedule-accent="#da3636">Ramówka</a>
+
+                <i class="web-p3 fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+        </section>
+
+        <!-- // --------   ..:: SCHEDULE ::..   -------- \\ -->
+
+        <section class="schedule" id="schedule">
+
+            <div class="schedule-bar">
+                <div class="schedule__title">
+                    <p><span class="schedule__title--color">Rozkład</span> jazdy naszej stacji</p>
+                </div>
+            </div>
+
+
+            <div class="schedule-boxes">
+                <div class="schedule-box">
+
+                    <div class="schedule-box__bar">
+                        <button class="b-trance border" onclick="tranceSchedule()">Kanał Trance</button>
+                        <button class="b-chill border" onclick="chillSchedule()">Kanał Chill</button>
+                        <button class="b-rock border" onclick="rockSchedule()">Kanał Rock</button>
+                    </div>
+
+                    <div class="schedule-box__content">
+                        <div class="contentSchedule" id="contentSchedule">
+                            <div class="schedule-board">
+                                <p><i class="fa-solid fa-arrow-up"></i> Wybierz swój kanał <i
+                                        class="fa-solid fa-arrow-up"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="posters-box">
+                    <div class="posters">
+                        <div class="poster-tilt rotate-tilt-1"
+                            onclick="openImageInNewTab('./img/plakaty/burn_paradise.png', '#e69d00')">
+                            <div class="poster-card poster-bg poster-center"
+                                style="--color:#ffae00;--url:url('../img/plakaty/burn_paradise.png');">
+                            </div>
+                        </div>
+                        <div class="poster-tilt rotate-tilt-2"
+                            onclick="openImageInNewTab('./img/plakaty/9350699.png', '#da70d6')">
+                            <div class="poster-card poster-bg poster-center"
+                                style="--color:#ff00f7;--url:url('../img/plakaty/9350699.png');">
+                            </div>
+                        </div>
+                        <div class="poster-tilt rotate-tilt-3"
+                            onclick="openImageInNewTab('./img/plakaty/global_chill.png', '#9bc744')">
+                            <div class="poster-card poster-bg poster-center"
+                                style="--color:#aaff00;--url:url('../img/plakaty/global_chill.png');">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- // --------   ..:: CREW ::..   -------- \\ -->
+
+
+        <section class="crew" id="crew">
+
+            <div class="crew-bg">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="crew-square"><i class="fa-brands fa-napster"></i></div>
+
+
+            <div class="crew-bar">
+                <div class="crew__title">
+                    <p><span class="crew__title--color">Radiowe</span> gwiazdy ShowFM</p>
+                </div>
+            </div>
+
+            <div class="crew-container">
+                <div class="crew-box nexi clr1">
+                    <div class="imgBx">
+                        <img src="./img/ekipa/Nexi.png" alt="dj nexi photo">
+                        <div class="glass">
+                            <h3>Dj Nexi<br><span>Założyciel Radia<br><br>House, Electro House</span></h3>
+                            <ul>
+                                <a href="#crew" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
+                                <a href="#crew" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
+                                <a href="#crew" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                <div class="djPrev" id="djNexi"><i class="fa-solid fa-play"></i></div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crew-box jody clr1">
+                    <div class="imgBx">
+                        <img src="./img/ekipa/djka.png" alt="dj jody photo">
+                        <div class="glass">
+                            <h3>Dj Jody<br><span>Lokalna gwiazda<br><br>Deep House / Chill</span></h3>
+                            <ul>
+                                <a href="#crew" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
+                                <a href="#crew" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
+                                <a href="#crew" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                <div class="djPrev" id="djJody"><i class="fa-solid fa-play"></i></div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crew-box antex clr1">
+                    <div class="imgBx">
+                        <div class="mouse-ico"><i class="fa-solid fa-hand-pointer"></i></div>
+                        <img src="./img/ekipa/dj-1449978_1280.png" alt="dj antex photo">
+                        <div class="glass">
+                            <h3>Dj Antex<br><span>Rezydent klubu w Łodzi<br><br>DnB / Techno / Remix</span></h3>
+                            <ul>
+                                <a href="#crew" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
+                                <a href="#crew" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
+                                <a href="#crew" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                <div class="djPrev" id="djAntex"><i class="fa-solid fa-play"></i></div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crew-box kris clr1">
+                    <div class="imgBx">
+                        <img src="./img/ekipa/tomek.png" alt="dj kris photo">
+                        <div class="glass">
+                            <h3>Dj Kris<br><span>DJ<br><br>Trance / Vocal Trance</span></h3>
+                            <ul>
+                                <a href="#crew" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
+                                <a href="#crew" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
+                                <a href="#crew" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                <div class="djPrev" id="djKris"><i class="fa-solid fa-play"></i></div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crew-box robert clr1">
+                    <div class="imgBx">
+                        <img src="./img/ekipa/dj-5057795_1280.jpg" alt="presenter robert photo">
+                        <div class="glass">
+                            <h3>Robert<br><span>Prezenter<br><br>Rock / Metal</span></h3>
+                            <ul>
+                                <a href="#crew" style="--i:1;"><ion-icon name="logo-facebook"></ion-icon></a>
+                                <a href="#crew" style="--i:2;"><ion-icon name="logo-instagram"></ion-icon></a>
+                                <a href="#crew" style="--i:3;"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                <div class="djPrev" id="robert"><i class="fa-solid fa-play"></i></div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- // --------   ..:: SHOWLIST ::..   -------- \\ -->
+        <section class="showlist" id="showlist">
+
+            <div class="showlist-bar">
+                <div class="showlist__title">
+                    <p><span class="showlist__title--color">SHOWLISTA</span> - Twoja lista przebojów!</p>
+                </div>
+            </div>
+
+            <div class="toggle-button" onclick="toggleList()"><i class="fa-solid fa-caret-down"></i> Pokaż listę
+                przebojów <i class="fa-solid fa-caret-down"></i></div>
+
+            <div class="showlist-addons"></div>
+            <div class="showlist-card">
+
+                <div class="showlistBox">
+                    <div class="number">01</div>
+                    <div class="cover"><img
+                            src="https://topmusicarts.com/cdn/shop/files/T.-Matthias-_-Alimish---Exhale-TMA_540x.png?v=1697164841"
+                            alt="01">
+                    </div>
+                    <div class="name"><span>Exhale</span> T.Matthias & Alimish</div>
+                    <div class="link" id="no_1"><i class="ti ti-player-play"></i></div>
+                </div>
+
+                <div class="separator"></div>
+                <div class="showlistBox">
+                    <div class="number">02</div>
+                    <div class="cover"><img
+                            src="https://iknurow.pl/wp-content/uploads/2023/01/69D22903-08FE-4D3F-BBEA-47BFD8948181.jpeg"
+                            alt="02"></div>
+                    <div class="name"><span>Milkshake</span> C-Bool</div>
+                    <div class="link" id="no_2"><i class="ti ti-brand-youtube"></i></div>
+                </div>
+
+                <div class="separator"></div>
+                <div class="showlistBox">
+                    <div class="number">03</div>
+                    <div class="cover"><img
+                            src="https://topmusicarts.com/cdn/shop/files/Marnik-x-Naeleck---Boyz-In-Paris-_with-VINAI_-TMA_540x.png?v=1703715643"
+                            alt="03"></div>
+                    <div class="name"><span>Boyz In Paris</span> Marnik & Naeleck</div>
+                    <div class="link" id="no_3"><i class="ti ti-player-play"></i></div>
+                </div>
+
+                <div class="separator"></div>
+                <div class="showlistBox">
+                    <div class="number">04</div>
+                    <div class="cover"><img
+                            src="https://topmusicarts.com/cdn/shop/files/John-Summit-_-Mathame---Hungover-_with-Camden-Cox_TMA_540x.png?v=1703281917"
+                            alt="04"></div>
+                    <div class="name"><span>Hungover</span> John-Summit</div>
+                    <div class="link" id="no_4"><i class="ti ti-player-play"></i></div>
+                </div>
+
+                <div class="separator"></div>
+                <div class="showlistBox">
+                    <div class="number">05</div>
+                    <div class="cover"><img
+                            src="https://topmusicarts.com/cdn/shop/files/Skrillex-_-BEAM---Selecta-TMA_540x.png?v=1701824565"
+                            alt="05"></div>
+                    <div class="name"><span>BEAM</span> Skrillex</div>
+                    <div class="link" id="no_5"><i class="ti ti-player-play"></i></div>
+                </div>
+
+                <div class="separator"></div>
+                <div class="showlistBox">
+                    <div class="number">06</div>
+                    <div class="cover"><img src="https://i1.sndcdn.com/artworks-uphGpRNKMnMywJEk-CFpfMA-t500x500.jpg"
+                            alt="06"></div>
+                    <div class="name"><span>On My Ride</span> Riesling</div>
+                    <div class="link" id="no_6"><i class="ti ti-player-play"></i></div>
+                </div>
+
+                <div class="separator"></div>
+                <div class="showlistBox">
+                    <div class="number">07</div>
+                    <div class="cover"><img
+                            src="https://topmusicarts.com/cdn/shop/products/JoelCurryftMNEK-Head_HeartAbletonRemake_540x.png?v=1598063274"
+                            alt="07"></div>
+                    <div class="name"><span>Head & Heart</span> Joel Corry ft. MNEK</div>
+                    <div class="link" id="no_7"><i class="ti ti-player-play"></i></div>
+                </div>
+
+                <div class="separator"></div>
+                <div class="showlistBox">
+                    <div class="number">08</div>
+                    <div class="cover"><img
+                            src="https://topmusicarts.com/cdn/shop/products/CharliePuth-AttentionAbletonRemake_540x.png?v=1589674392"
+                            alt="08"></div>
+                    <div class="name"><span>Attention</span> Charlie Puth</div>
+                    <div class="link" id="no_8"><i class="ti ti-player-play"></i></div>
+                </div>
+
+                <div class="separator"></div>
+                <div class="showlistBox">
+                    <div class="number">09</div>
+                    <div class="cover"><img
+                            src="https://topmusicarts.com/cdn/shop/products/cover_38_Happier_540x.jpg?v=1541962231"
+                            alt="09"></div>
+                    <div class="name"><span>Happier</span> Marshmello & Bastille</div>
+                    <div class="link" id="no_9"><i class="ti ti-player-play"></i></div>
+                </div>
+
+                <div class="separator"></div>
+                <div class="showlistBox">
+                    <div class="number">10</div>
+                    <div class="cover"><img
+                            src="https://topmusicarts.com/cdn/shop/products/cover_41_Coldplay_540x.jpg?v=1543427917"
+                            alt="10"></div>
+                    <div class="name"><span>Something Just Like</span>
+                        The chainsmokers & Coldplay</div>
+                    <div class="link" id="no_10"><i class="ti ti-player-play"></i></div>
+                </div>
+            </div>
+            <div class="toggle-button2" onclick="toggleListBottom()"><i class="fa-solid fa-caret-up"></i> Ukryj listę
+                przebojów <i class="fa-solid fa-caret-up"></i></div>
+        </section>
+
+        <!-- // --------   ..:: ABOUT-US ::..   -------- \\ -->
+
+        <section class="about-us" id="about-us">
+
+            <div class="about-us__bg">
+
+                <div class="about-us__bar">
+                    <div class="about-us__title">
+                        <p><span class="about-us__title--color">Historia</span> radia ShowFM</p>
+                    </div>
+                </div>
+
+                <div class="about-us__box">
+                    <div class="about-us-box1">
+                        <div class="round-bg"></div>
+                        <div class="round-bg round-bg2"></div>
+                        <div class="story">
+                            <p>
+                                <em>"ShowFM powstało przypadkiem. Grałem w grę komputerową i wpadłem na pomysł
+                                    połączenia radia internetowego z serwerem gry. Stworzyłem obiekty klubu
+                                    muzycznego w
+                                    <b>MTAConstructor</b> i napisałem skrypt w
+                                    <a href="https://www.compuphase.com/pawn/pawn.htm" target="_blank">PAWN</a>. Tak powstał
+                                    <a href="https://www.youtube.com/watch?v=Nm91TRczz9c&pp=ygUTaWJpemEgY2x1YiBtcnVjem5paw%3D%3D"
+                                        target="_blank">Ibiza
+                                        Club</a>".</em>
+                            </p>
+                        </div>
+
+                        <div class="etc">
+                            <p>Ciąg dalszy historii pełnej wzlotów i upadów ShowFM znajdziesz <a
+                                    href="story.html" target="_blank">TUTAJ!</a>
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="about-us-box2">
+                        <p>Reklamy stacji 2013r.</p>
+
+                        <section class="about-us-container">
+                            <div class="images">
+                                <div class="image">
+                                </div>
+                                <div class="image">
+                                </div>
+                                <div class="image">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="WaybackMachine">
+                        <img src="./img/wayback-machine-logo.png" alt="logo wayback machine">
+                        <p>Zobacz jak wyglądała <a href="https://web.archive.org/web/20130422201136/http://showfm.eu/"
+                                target="_blank">pierwsza strona</a> ShowFM</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <canvas id="stars"></canvas>
+        </section>
+
+    </main>
+
+    <button class="scroll-top-button" id="scrollTopButton" type="button" aria-label="Przewiń stronę do góry">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <div class="greetings-modal" id="greetingsModal" aria-hidden="true">
+        <div class="greetings-modal__backdrop" data-greetings-close></div>
+        <div class="greetings-modal__dialog" role="dialog" aria-modal="true"
+            aria-labelledby="greetingsModalTitle">
+            <button class="greetings-modal__close" type="button" aria-label="Zamknij okno"
+                data-greetings-close><i class="fa-solid fa-xmark"></i></button>
+
+            <p class="greetings-modal__eyebrow">Pozdrowienia</p>
+            <h2 class="greetings-modal__title" id="greetingsModalTitle">Wyślij pozdrowienia</h2>
+            <p class="greetings-modal__hint">Napisz krótką wiadomość dla słuchaczy i podpisz się na końcu.</p>
+
+            <form class="greetings-modal__form" id="greetingsForm">
+                <label class="greetings-modal__field">
+                    <span>Treść pozdrowień</span>
+                    <textarea id="greetingsMessage" name="message"
+                        placeholder="Hej ShowFM! Pozdrawiam całą ekipę i wszystkich słuchaczy..." rows="5"
+                        maxlength="240" required></textarea>
+                </label>
+
+                <label class="greetings-modal__field">
+                    <span>Podpis</span>
+                    <input id="greetingsSignature" name="signature" type="text" placeholder="Np. Damian z Łodzi"
+                        maxlength="40" required>
+                </label>
+
+                <p class="greetings-modal__feedback" id="greetingsFeedback" aria-live="polite"></p>
+
+                <div class="greetings-modal__actions">
+                    <button class="greetings-modal__button greetings-modal__button--ghost" type="button"
+                        data-greetings-close>Zamknij</button>
+                    <button class="greetings-modal__button" type="submit">Wyślij pozdrowienia</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="schedule-popup" id="schedulePopup" aria-hidden="true">
+        <div class="schedule-popup__backdrop" data-schedule-close></div>
+        <div class="schedule-popup__dialog" role="dialog" aria-modal="true" aria-labelledby="schedulePopupTitle">
+            <button class="schedule-popup__close" type="button" aria-label="Zamknij okno"
+                data-schedule-close><i class="fa-solid fa-xmark"></i></button>
+
+            <p class="schedule-popup__eyebrow">Ramówka</p>
+            <h2 class="schedule-popup__title" id="schedulePopupTitle">Ramówka kanału</h2>
+            <p class="schedule-popup__hint">Sprawdź przykładowy rozkład audycji dla wybranego kanału.</p>
+
+            <div class="schedule-popup__content" id="schedulePopupContent"></div>
+        </div>
+    </div>
+
+    <div class="poster-popup" id="posterPopup" aria-hidden="true">
+        <div class="poster-popup__backdrop" data-poster-close></div>
+        <div class="poster-popup__dialog" role="dialog" aria-modal="true" aria-labelledby="posterPopupTitle">
+            <button class="poster-popup__close" type="button" aria-label="Zamknij okno"
+                data-poster-close><i class="fa-solid fa-xmark"></i></button>
+
+            <p class="poster-popup__eyebrow">Plakat</p>
+            <h2 class="poster-popup__title" id="posterPopupTitle">ShowFM</h2>
+            <div class="poster-popup__image-wrap">
+                <img class="poster-popup__image" id="posterPopupImage" src="" alt="Powiększony plakat ShowFM">
+            </div>
+        </div>
+    </div>
+
+    <section class="contact-strip" id="contact">
+        <div class="contact-strip__inner">
+            <div class="contact-strip__heading">
+                <p class="contact-strip__eyebrow">Kontakt</p>
+                <h2>Napisz do ShowFM</h2>
+            </div>
+
+            <div class="contact-strip__cards">
+                <a class="contact-strip__card" href="mailto:kontakt@showfm.eu">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="contact-strip__label">E-mail</span>
+                    <strong>kontakt@showfm.eu</strong>
+                </a>
+
+                <a class="contact-strip__card" href="https://vulpine.panelradiowy.pl/embed.php?script=pozdrowienia"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <span class="contact-strip__label">Pozdrowienia</span>
+                    <strong>Wyślij wiadomość</strong>
+                </a>
+
+                <div class="contact-strip__card">
+                    <i class="fa-solid fa-headphones"></i>
+                    <span class="contact-strip__label">Studio</span>
+                    <strong>Nadajemy 24/7</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- // --------   ..:: footer / contact ::..   -------- \\ -->
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+        <p>&copy;2024 Arkadiusz Lisiecki | All Rights Reserved</p>
+    </footer>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!--  -->
+
+    <script src="./js/smoke.js"></script>
+    <script src="./js/burger.js"></script>
+    <script src="./js/schedule.js"></script>
+    <script src="./js/showlist.js"></script>
+    <script src="./js/delaunay.js"></script>
+    <script src="./js/require.js"></script>
+    <script src="./js/stars.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

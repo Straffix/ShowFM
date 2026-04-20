@@ -1,0 +1,392 @@
+@use '../components/colors' as *;
+@use '../components/animations' as *;
+
+/* Import */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+// --------   ..:: SHOWLIST ::..   -------- \\
+
+.showlist {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	min-height: 100dvh;
+	padding-top: 0;
+	overflow: hidden;
+	background-color: #fbfbfb;
+	transition: max-height 0.3s ease;
+	z-index: 10;
+
+	&__title {
+		p {
+			font-size: clamp(16px, 2vw, 23px);
+			margin-left: clamp(16px, 6vw, 80px);
+			color: $c_blue;
+			font-weight: bold;
+		}
+
+		&--color {
+			color: #fff;
+		}
+	}
+}
+
+.showlist-addons {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 300px;
+	background-image: url('../img/sep-bar.png');
+	background-size: cover;
+	opacity: 20%;
+	z-index: -10;
+}
+
+.ti-player-play,
+.ti-player-play-filled,
+.ti-player-pause,
+.ti-player-pause-filled,
+.ti-brand-youtube,
+.ti-brand-youtube-filled {
+	font-size: 36px;
+	color: $c_purple;
+}
+
+.showlist-bar {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 80px;
+	flex: 0 0 80px;
+	background-color: $c_purple;
+	border-top: 4px solid $c_blue;
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.452);
+}
+
+.toggle-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 18px;
+	width: min(600px, calc(100% - 32px));
+	min-height: 48px;
+	height: auto;
+	padding: 10px 18px;
+	line-height: 1.2;
+	margin: clamp(18px, 4vh, 34px) auto 0;
+	text-align: center;
+	font-size: clamp(18px, 3.2vw, 24px);
+	border-radius: 7px;
+	color: $c_purple;
+	background-color: $c_blue;
+	border: 2px solid #0000002a;
+	cursor: pointer;
+	box-sizing: border-box;
+
+	&:hover {
+		color: white;
+	}
+}
+
+.toggle-button2 {
+	display: none;
+	cursor: pointer;
+	width: fit-content;
+	max-width: calc(100% - 32px);
+	padding: 14px 22px;
+	margin: 14px auto 28px;
+	opacity: 0;
+	transform: translateY(20px);
+	text-align: center;
+	font-size: 18px;
+	color: $c_purple;
+	border-radius: 7px;
+	background-color: #fff;
+	transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.toggle-button2.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.showlist-card {
+	display: block;
+	width: min(1120px, calc(100% - 32px));
+	padding: 0;
+	margin: 0 auto;
+	border-radius: 8px;
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition:
+		max-height 0.45s ease,
+		padding 0.35s ease,
+		margin 0.35s ease,
+		opacity 0.35s ease;
+}
+
+.showlist-card.is-open {
+	padding: 14px;
+	margin: clamp(16px, 3vh, 26px) auto 0;
+	overflow-y: auto;
+	opacity: 1;
+	pointer-events: auto;
+	background-color: rgba(255, 255, 255, 0.94);
+	box-shadow: 0 18px 48px rgba(17, 0, 26, 0.12);
+	scrollbar-color: $c_blue #f1f1f1;
+	scrollbar-width: thin;
+}
+
+.showlist-card.is-open::-webkit-scrollbar {
+	width: 8px;
+}
+
+.showlist-card.is-open::-webkit-scrollbar-track {
+	background-color: #f1f1f1;
+	border-radius: 999px;
+}
+
+.showlist-card.is-open::-webkit-scrollbar-thumb {
+	background-color: $c_blue;
+	border-radius: 999px;
+}
+
+.showlistBox {
+	display: grid;
+	grid-template-columns: 64px 72px minmax(0, 1fr) 64px;
+	align-items: center;
+	gap: 14px;
+	width: 100%;
+	min-height: 76px;
+	height: auto;
+	max-height: 0;
+	margin: 0;
+	padding: 0 14px;
+	overflow: hidden;
+	opacity: 0;
+	transform: translateY(18px);
+	pointer-events: none;
+	border-radius: 8px;
+	box-sizing: border-box;
+	scroll-margin-top: 110px;
+	transition:
+		max-height 0.35s ease,
+		padding 0.35s ease,
+		margin 0.35s ease,
+		opacity 0.35s ease,
+		transform 0.35s ease;
+
+	&.is-visible {
+		max-height: 100px;
+		padding: 10px 14px;
+		margin: 0;
+		opacity: 1;
+		transform: translateY(0);
+		pointer-events: auto;
+	}
+
+	&:hover {
+		background-color: #b700ff15;
+		.number {
+			color: $c_blue;
+		}
+		span {
+			color: $c_pink;
+		}
+	}
+}
+
+.showlistBox .link a:hover {
+	background-color: $c_pink;
+	color: #fff;
+	border: none;
+}
+
+.showlistBox .link:hover,
+.showlistBox .link:focus,
+.link a:focus {
+	background-color: #fff;
+	color: $c_pink;
+	border: none;
+}
+
+/* Number */
+.showlistBox .number {
+	font-weight: bold;
+	font-size: 28px;
+	width: auto;
+	height: auto;
+	line-height: 1;
+	color: #2222225d;
+	margin: 0;
+	z-index: 1000;
+}
+
+/* Cover */
+.showlistBox .cover {
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+.showlistBox .cover img {
+	display: block;
+	width: 58px;
+	height: 58px;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+/* Name */
+.showlistBox .name {
+	min-width: 0;
+	height: auto;
+	line-height: 1.25;
+	font-size: 15px;
+	color: #a3a8cd;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	span {
+		display: block;
+		font-weight: bold;
+		font-size: 17px;
+		color: black;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+/* Button */
+.showlistBox .link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	line-height: 1;
+	margin: 0;
+	cursor: pointer;
+	border-radius: 8px;
+	transition:
+		background-color 0.2s ease,
+		color 0.2s ease;
+}
+
+/* Separator */
+.separator {
+	width: 100%;
+	height: 1px;
+	max-height: 0;
+	margin: 0 auto;
+	overflow: hidden;
+	background-color: #dfe2e4;
+	opacity: 0;
+	transform: translateY(8px);
+	transition:
+		max-height 0.35s ease,
+		margin 0.35s ease,
+		opacity 0.35s ease,
+		transform 0.35s ease;
+
+	&.is-visible {
+		max-height: 1px;
+		margin: 6px auto;
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 640px) {
+	.showlist {
+		min-height: 100vh;
+		min-height: 100dvh;
+	}
+
+	.showlist__title {
+		p {
+			font-size: 15px;
+			margin-left: 16px;
+		}
+	}
+
+	.showlist-bar {
+		height: 64px;
+		flex-basis: 64px;
+	}
+
+	.toggle-button {
+		gap: 12px;
+		width: calc(100% - 24px);
+		min-height: 50px;
+		margin-top: 16px;
+		padding: 10px 12px;
+		font-size: clamp(18px, 6.4vw, 24px);
+	}
+
+	.showlist-card {
+		width: calc(100% - 24px);
+	}
+
+	.showlist-card.is-open {
+		padding: 10px;
+		margin-top: 14px;
+	}
+
+	.showlistBox {
+		grid-template-columns: 38px 54px minmax(0, 1fr) 42px;
+		gap: 10px;
+		min-height: 70px;
+		padding: 0 10px;
+	}
+
+	.showlistBox.is-visible {
+		max-height: 92px;
+		padding: 8px 10px;
+	}
+
+	.showlistBox .number {
+		font-size: 18px;
+	}
+
+	.showlistBox .cover img {
+		width: 50px;
+		height: 50px;
+	}
+
+	.showlistBox .name {
+		font-size: 12px;
+	}
+
+	.showlistBox .name span {
+		font-size: 14px;
+	}
+
+	.showlistBox .link {
+		min-width: 42px;
+		min-height: 42px;
+	}
+
+	.ti-player-play,
+	.ti-player-play-filled,
+	.ti-player-pause,
+	.ti-player-pause-filled,
+	.ti-brand-youtube,
+	.ti-brand-youtube-filled {
+		font-size: 30px;
+	}
+
+	.separator.is-visible {
+		margin: 4px auto;
+	}
+
+	.toggle-button2 {
+		padding: 12px 18px;
+		margin-bottom: 20px;
+		font-size: 16px;
+	}
+}

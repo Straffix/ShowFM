@@ -1,0 +1,240 @@
+// ============================= M768
+
+@media (min-width: 768px) {
+	.header {
+		--nav-scale-start: 0.9;
+		--nav-scale-end: 1;
+		--nav-translate-x-end: 0px;
+		--nav-translate-y-end: -24px;
+	}
+
+	.burger-icon {
+		display: none;
+	}
+
+	.nav {
+		top: 40px;
+		height: 50px;
+		width: 100%;
+
+		&__item {
+			margin: 7px;
+			font-size: 18px;
+
+			&:nth-child(2) {
+				display: none;
+			}
+		}
+	}
+
+	.nav-desktop {
+		display: block;
+	}
+
+	.logo {
+		left: 20%;
+	}
+
+	.logo-bg {
+		width: 150px;
+	}
+
+	.girl {
+		left: 4%;
+		width: 300px;
+		height: 300px;
+
+		&__bg {
+			left: 4%;
+			bottom: 100px;
+			width: 300px;
+			height: 200px;
+		}
+	}
+
+	.home {
+		height: 80vh;
+		&__bg {
+			background-image: url('../img/dj-6472628_1920.jpg');
+		}
+
+		&__text {
+			top: 60%;
+			left: 50%;
+
+			h1 {
+				font-size: 30px;
+			}
+
+			h2 {
+				font-size: 15px;
+				color: black;
+			}
+
+			&_bg {
+				display: block;
+				left: 50%;
+				top: 50%;
+				width: 350px;
+				height: 200px;
+			}
+		}
+
+		.round-bg {
+			position: absolute;
+			right: 19%;
+			top: 40%;
+			width: 300px;
+			height: 310px;
+			background-image: url('../img/round-bg.png');
+			background-size: cover;
+			animation: wavezoom 2s infinite linear both;
+		}
+	}
+
+	.player-box {
+		min-height: 20vh;
+		flex-direction: row;
+		gap: 30px;
+
+		&.is-pinned {
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			min-height: var(--player-pinned-height, 180px);
+			z-index: 1200;
+			box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.35);
+			border-top: 1px solid rgba(255, 255, 255, 0.08);
+			overflow: visible;
+		}
+	}
+
+	body.player-bar-pinned {
+		padding-bottom: var(--player-pinned-height, 180px);
+	}
+
+	.player-pin-button {
+		position: absolute;
+		left: 18px;
+		top: 50%;
+		z-index: 20;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 38px;
+		height: 38px;
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		border-radius: 8px;
+		background: rgba(58, 0, 73, 0.68);
+		color: rgba(255, 255, 255, 0.62);
+		cursor: pointer;
+		transform: translateY(-50%);
+		transition:
+			color 0.25s ease,
+			border-color 0.25s ease,
+			background-color 0.25s ease,
+			box-shadow 0.25s ease;
+
+		&:hover,
+		&:focus-visible {
+			outline: none;
+			color: $c_blue;
+			border-color: rgba(0, 204, 255, 0.58);
+			background: rgba(58, 0, 73, 0.92);
+			box-shadow: 0 0 16px rgba(0, 204, 255, 0.18);
+		}
+
+		.is-pinned & {
+			color: $c_blue;
+			border-color: rgba(0, 204, 255, 0.65);
+		}
+
+		i {
+			font-size: 17px;
+			pointer-events: none;
+		}
+	}
+
+	@mixin player {
+		width: 200px;
+		height: 60px;
+
+		&__title {
+			top: -22px;
+			right: 10px;
+			font-size: 19px;
+		}
+
+		&__stats {
+			width: 150px;
+		}
+
+		&__button {
+			font-size: 25px;
+			&__bg {
+				left: -10px;
+				width: 50px;
+				height: 50px;
+			}
+		}
+	}
+
+	@mixin miniPanels {
+		width: 60px;
+		height: 15px;
+	}
+
+	.player {
+		@include player;
+
+		.greetings_panel {
+			@include miniPanels;
+			left: 55px;
+			bottom: -16px;
+		}
+
+		.schedule_panel {
+			@include miniPanels;
+			right: 14px;
+			bottom: -16px;
+		}
+	}
+
+	.player-chill {
+		@include player;
+
+		.greetings_panel {
+			@include miniPanels;
+			left: 55px;
+			bottom: -16px;
+		}
+
+		.schedule_panel {
+			@include miniPanels;
+			right: 14px;
+			bottom: -16px;
+		}
+	}
+
+	.player-rock {
+		@include player;
+
+		.greetings_panel {
+			@include miniPanels;
+			left: 55px;
+			bottom: -16px;
+		}
+
+		.schedule_panel {
+			@include miniPanels;
+			right: 14px;
+			bottom: -16px;
+		}
+	}
+
+	.fa-arrow-up-right-from-square {
+		right: -10px;
+		top: -14px;
+	}
+}
